@@ -2,9 +2,11 @@
 
 PayProbe is a locally runnable payment-boundary testing prototype. Payments are deterministic simulations; no PayPal account, credentials or API calls are involved. DeepSeek provides real AI planning and optional explanation. There is no hosted demo, supplied API key or judge account.
 
+The [Devpost project](https://devpost.com/software/payprobe-wng98r) was submitted to the PayPal AI Hackathon on 10 November 2026; the submission owner observed Devpost's confirmation. This records submission, not eligibility or real PayPal integration.
+
 ## Choose an access route
 
-- **Watch:** [the public 2:50 demonstration](https://youtu.be/N5HF1Um5x_U). A recording does not provide live app access.
+- **Watch:** [the public 2:50 demonstration](https://youtu.be/N5HF1Um5x_U). Publication/public visibility and playback in the owner's signed-in browser were confirmed; signed-out playback was not independently checked. A recording does not provide live app access.
 - **Inspect or run:** use the [public repository](https://github.com/desanv01/PayProbe) or [verified simulated prerelease](https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated). The immutable prerelease archive predates the final video and these updated delivery notes; the repository contains newer documentation/video source.
 - **Run fresh AI workflows:** supply your own DeepSeek API key with API access and balance. No credentials or private saved runs are shipped. Never send your key to the project owner or place it in a public report.
 

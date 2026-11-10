@@ -1,6 +1,6 @@
 # Delivery and submission checklist
 
-Updated 10 November 2026. Current payment behavior is explicitly simulated. The user authorized submission despite the known PayPal-integration eligibility mismatch; acceptance and real-provider verification are not claimed.
+Updated 10 November 2026. PayProbe is submitted on Devpost. Current payment behavior is explicitly simulated. The user authorized submission despite the known PayPal-integration eligibility mismatch; eligibility, judging acceptance and real-provider verification are not claimed.
 
 ## Completed implementation and source delivery
 
@@ -22,14 +22,17 @@ Updated 10 November 2026. Current payment behavior is explicitly simulated. The 
 - [x] Video source/records backed up in merged commit `882548db246df2b4761caeadc2038f981008fbb6`.
 - [x] User approved public YouTube upload to DV and the upload Terms.
 - [x] Upload owner observed YouTube's published confirmation on 10 November 2026 with completed checks/no issues: [public video](https://youtu.be/N5HF1Um5x_U).
+- [x] Public visibility setting confirmed and watch playback observed advancing to 0:30 of 2:50 in the owner's signed-in browser.
 - [ ] Signed-out watch playback independently confirmed by the upload/submission owner.
 
 ## Submission and judge access
 
 - [x] User explicitly authorized proceeding despite the known simulation/PayPal eligibility mismatch; keep that scope truthful in submission text.
-- [x] Devpost draft exists (`1292802`, [project slug](https://devpost.com/software/payprobe-wng98r)); title, tagline and story saved by the submission owner.
+- [x] Devpost project `1292802` has saved title, tagline and story with truthful scope, AI-use, source/release and video information: [submitted project](https://devpost.com/software/payprobe-wng98r).
 - [x] [Submission copy](SUBMISSION-DRAFT.md) and [judge guide](JUDGE-GUIDE.md) describe implemented behavior and access limits.
-- [ ] Submission owner confirms final saved fields, public video/repository links and actual Devpost submission receipt before any submitted claim.
-- [ ] Submission owner records independently observed submission outcome.
+- [x] After explicit user confirmation of required eligibility/survey responses and binding Rules/Terms, the submission owner clicked final submit.
+- [x] Submission owner observed “Project submitted!” and “SUBMITTED TO PayPal AI Hackathon” on the project page; private screenshot/DOM receipt retained outside public source.
+
+The observed receipt permits edits until 12 November 2026 at 3:00 pm EST (13 November at 4:00 am Asia/Kuala_Lumpur). Signed-out video playback remains unverified because the inspected browser shared the owner's signed-in cookies.
 
 There is no hosted live demo, supplied API key or judge account. Local setup is the available execution route; fresh AI calls require the judge's own DeepSeek access. Real PayPal integration/validation remains a separate deferred stage and is not established by the current submission authorization.

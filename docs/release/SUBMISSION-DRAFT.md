@@ -1,6 +1,6 @@
 # PayProbe submission copy
 
-Updated 10 November 2026. The user authorized submission with the known simulation/PayPal eligibility mismatch disclosed. This does not establish eligibility, acceptance or real PayPal integration. A Devpost draft exists; actual submission remains pending confirmation.
+Updated 10 November 2026. PayProbe was submitted to the PayPal AI Hackathon on Devpost after explicit user authorization, with the known simulation/PayPal eligibility mismatch disclosed. The submission owner observed the “Project submitted!” confirmation and “SUBMITTED TO PayPal AI Hackathon” sidebar. Submission does not establish eligibility, judging acceptance or real PayPal integration.
 
 **Name:** PayProbe
 
@@ -36,7 +36,9 @@ Built with TypeScript, Node 24, Fastify, Commander, Zod and SQLite. Current cove
 | Video source and delivery records | Merged source commit `882548db246df2b4761caeadc2038f981008fbb6`; [delivery receipt](../../video-production/payprobe-demo/deliverables/DELIVERY-RECEIPT.md) |
 | Public film | [PayProbe demo on YouTube](https://youtu.be/N5HF1Um5x_U), published 10 November 2026; 170 seconds (2:50), 1920×1080, 30 fps |
 | Judge access | [Local setup and access guide](JUDGE-GUIDE.md); no hosted demo, supplied API credentials or judge account |
-| Devpost | [Project page](https://devpost.com/software/payprobe-wng98r), draft `1292802`; title, tagline and story saved; actual submission pending |
+| Devpost | [Submitted project](https://devpost.com/software/payprobe-wng98r), project `1292802`; submission confirmation observed 10 November 2026 |
+
+YouTube's public visibility setting and publication confirmation were observed. Watch playback advanced to 0:30 of 2:50 in the owner's signed-in browser; signed-out playback was not independently verified. Devpost's receipt states that editing remains available until 12 November 2026 at 3:00 pm EST (13 November at 4:00 am Asia/Kuala_Lumpur). Private receipt evidence is retained outside the public source.
 
 The source archive contains no private key or saved private database. Judges need their own DeepSeek key and API access for fresh AI planning/explanation. Installed deterministic test suites can run without a key. The video demonstrates the recorded workflow without granting live application access.
 
