@@ -70,7 +70,14 @@ export class SampleStore {
       this.complete(order,payment);
       this.store.setOperation(operationId,'completed',{providerOrderId:payment.id,captureId:payment.captures[0]?.id});
     } catch (e) {
-      this.store.setOperation(operationId,'uncertain'); this.store.updateOrder(id,'capture_uncertain'); throw e;
+      // The simulator rejects this request before any capture mutation. Preserve
+      // its identity so explicit later approval can retry the same operation.
+      if (e instanceof AppError && e.code === 'simulated_buyer_approval_required') {
+        this.store.setOperation(operationId,'prepared'); this.store.updateOrder(id,'awaiting_approval');
+      } else {
+        this.store.setOperation(operationId,'uncertain'); this.store.updateOrder(id,'capture_uncertain');
+      }
+      throw e;
     }
     return this.observe(id);
   }
