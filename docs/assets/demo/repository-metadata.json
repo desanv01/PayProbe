@@ -1,0 +1,15 @@
+{
+  "description": "Payment lifecycle diagnostics with reviewed AI plans, fault scenarios and inspectable evidence | PayPal AI Hackathon 2026",
+  "topics": [
+    "paypal-ai-hackathon-2026",
+    "typescript",
+    "nodejs",
+    "cli",
+    "deepseek",
+    "payment-testing",
+    "fault-injection",
+    "sqlite",
+    "developer-tools"
+  ],
+  "homepage": "https://youtu.be/N5HF1Um5x_U"
+}
