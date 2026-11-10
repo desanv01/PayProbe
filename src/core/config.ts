@@ -8,8 +8,9 @@ const schema = z.object({
   PAYPAL_CLIENT_ID: optional, PAYPAL_CLIENT_SECRET: optional, PAYPAL_MERCHANT_ID: optional,
   PAYPROBE_API_TOKEN: optional,
   PAYPROBE_HOST: z.string().default('127.0.0.1'),
-  PAYPROBE_PORT: z.coerce.number().int().min(1).max(65535).default(3210),
-  PAYPROBE_PUBLIC_URL: z.url().default('http://127.0.0.1:3210'),
+  PAYPROBE_PROVIDER: z.literal('simulated').default('simulated'),
+  PAYPROBE_PORT: z.coerce.number().int().min(1).max(65535).default(4310),
+  PAYPROBE_PUBLIC_URL: z.url().default('http://127.0.0.1:4310'),
   PAYPROBE_DB_PATH: z.string().default('.payprobe/payprobe.sqlite'),
 });
 export type Config = z.infer<typeof schema>;
