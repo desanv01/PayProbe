@@ -15,6 +15,8 @@ This version supersedes the Python/OpenAI-runtime plan. The product architecture
 
 LATEST USER OVERRIDE — 10 November 2026: Finish all remaining non-video implementation, fixes, packaging and GitHub tasks in parallel. All video tasks remain ON HOLD until everything else is complete and the user discusses the video again. Do not capture, render, assemble, inspect MajuPilot video assets or continue storyboard production. Future video is intended to use HyperFrames and MajuPilot as a design reference with the actual PayProbe terminal, but execution is not authorized now.
 
+VIDEO APPROVAL UPDATE — 10 November 2026: The user approved the 170-second MajuPilot-style HyperFrames plan and actual CLI demonstration, and selected standard synthetic English narration for the preview. Video authoring, genuine CLI capture, assembly and preview verification are authorized now. Show the full playable Studio preview; do not render the final film until the user explicitly approves that preview. This supersedes the earlier video hold; PayPal integration and later repository presentation redesign remain separately deferred.
+
 ## 1. Agreed decisions
 
 - Standalone PayPal integration diagnostic tool, not a MajuPilot extension.

@@ -1,5 +1,5 @@
 # PayProbe task board
-Updated: 2026-11-10 — non-video parallel execution; all video work ON HOLD by user.
+Updated: 2026-11-10 — video authoring resumed by user; final render requires full-preview approval.
 Legend: DONE = implemented/observed at stated scope; ACTIVE = underway; TODO = not yet completed; WAIT = external/approval/dependency; DEFERRED = intentionally later.
 Payment scope: explicit simulator only. Real DeepSeek probe passed. No real PayPal behavior is verified.
 Main owns this board; workers update docs/handoffs/Pn.md and send meaningful progress.
@@ -71,12 +71,12 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P5.8 Clean install from exact remote UI source, npm ci/build/compiled doctor/server/demo passed. Hosted access remains unverified and separately pending.
 - DONE P5.9 Final tests/matrix/handover merged via PR #27 at f09860f. No outstanding known blocking defect in tested local paths.
 
-## P6 — Delivery [NON-VIDEO LOCAL SCOPE DONE; video held; external stages pending]
+## P6 — Delivery [NON-VIDEO LOCAL SCOPE DONE; video authoring active; final render approval pending]
 - DONE P6.1 Simulation-only narrative/attribution draft; actual release claims remain gated.
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Initial historical storyboard prepared. Future video must use HyperFrames/MajuPilot reference after a new discussion; all related work held.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- WAIT P6.5 VIDEO HOLD: no further capture/render/assembly or MajuPilot reference inspection until implementation complete and user discussion. Prior drafts preserved.
+- ACTIVE P6.5 User approved 170-second MajuPilot-style HyperFrames video with actual CLI and standard synthetic English narration. P6 composition/P4 capture/P5 preview verification. Complete Studio preview before any final film render.
 - DONE P6.6 Public repository and prerelease tag/assets verified, including anonymous ZIP download and checksum. Video/public live-demo links remain future work.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
 - DONE P6.8 Simulated GitHub prerelease v0.1.0-simulated published; hackathon submission remains a separate uncompleted stage.

@@ -20,18 +20,18 @@ Release tag points to frozen source; anonymous download matches the accepted arc
 - Final package independently verified: ZIP CRC/paths/allowlist, sidecar, all 52 hashes and frozen Git blob matches, complete TypeScript inputs, blank credential templates and packaged Markdown links. No further install was needed because dependencies/build inputs were unchanged and the small runtime changes had already been verified.
 
 ## Durable constraints
-- VIDEO HOLD remains absolute until the user discusses/resumes video after implementation completion. No capture, render, assembly, storyboard work or MajuPilot video inspection. Preserve prior drafts privately. Future intended direction is HyperFrames using MajuPilot as the visual reference and actual PayProbe terminal footage.
+- VIDEO PRODUCTION AUTHORIZED: user approved the 170-second MajuPilot-style plan, actual CLI, and standard synthetic English voice for the preview. P6 authors video-production/payprobe-demo; P4 captures CLI privately; P5 verifies full preview. Final film rendering still requires explicit approval after the complete Studio preview. Prior draft captures are historical and must not substitute for the approved treatment.
 - Payments remain simulated. Real PayPal account setup, API integration and sandbox validation are deferred under issue #9. No PayPal calls or credentials requested.
 - Runtime AI uses DeepSeek exclusively through the compatible SDK. deepseek-flash is the configured rolling alias for the requested model; immutable model pinning is not claimed.
 - No local Git initialization/commits/worktrees. Remote changes use explicit public-file allowlists. Never publish .env.local, keys, databases, private artifacts or internal coordination identifiers.
 - Approved UI palette is graphite/amber/ivory/plum. User approved layout/interactions and delegated the palette adjustment.
 
 ## What remains separately
-Issue #7 remains open for video (held), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
+Issue #7 remains open for video (now active, final render gated by preview approval), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
 No known blocking defect remains in the tested current local workflows. This does not imply universal payment testing or production qualification.
 
 ## Run and handover
 Node 24.14+ within 24.x: npm ci; npm run build; npm start -- doctor; npm start -- serve. Browser: http://127.0.0.1:4310/demo. Saved terminal report: npm start -- ledger RUN_ID. See README.md and docs/release/SETUP.md for the complete command sequence.
 Browser sessions are memory-only and expire on restart; recorded runs persist in SQLite. node:sqlite emits its experimental warning before the TUI opens.
 Full phase/task checklist and worker ownership: TASK-BOARD.md. Detailed acceptance: docs/stabilization and docs/design/runtime-check. Package script/deployment templates: docs/release.
-Private validation evidence and video drafts remain in ignored local storage; no active validation server remains.
+Private validation evidence remains excluded from publication.
