@@ -1,16 +1,18 @@
-# Local setup and proposed hosting
+# Local setup
 
 Status: instructions checked against the integrated command source on 10 November 2026. Payments are deterministic simulations. No PayPal account, credentials, or API access is needed. DeepSeek is the only external runtime API. Main observed a real planner response, a reviewed simulated run with all four checks passing, and the repaired real explainer succeeding with valid references for all four cases and all 42 evidence events supplied. Native terminal/browser checks and a clean install passed locally. Browser fixture checks used an AI client double; those checks do not independently establish a fresh browser-to-DeepSeek journey or hosted availability.
 
+PayProbe is submitted to the **PayPal AI Hackathon 2026**. Watch the [public 2:50 demonstration](https://youtu.be/N5HF1Um5x_U), inspect the [submitted project](https://devpost.com/software/payprobe-wng98r), or follow this guide to run locally. No hosted backend, judge account or API credentials are supplied. Fresh AI requests need your own DeepSeek key/access; no private accepted plan or saved database is shipped. Submission does not establish eligibility or real PayPal integration. See the [judge guide](JUDGE-GUIDE.md) for access choices.
+
 ## Local headless setup
 
-Use Node 24.14 or newer within the Node 24 line and npm. Obtain a checkout of the implementation revision selected by the orchestrator; the default branch may lag phase branches. From the project root:
+Use Node 24.14 or newer within the Node 24 line and npm. Obtain the [public source](https://github.com/desanv01/PayProbe) or the verified [v0.1.0-simulated source archive](https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated). The immutable archive contains the runnable implementation; later documentation and video source are in the repository. From the project root:
 
 ```powershell
 npm ci
 npm run typecheck
 npm run build
-npm run dev -- doctor
+npm start -- doctor
 npm start -- serve
 ```
 
@@ -64,25 +66,14 @@ The integrated `npm start -- ledger RUN_ID` opens the approved read-only termina
 
 Output paths for `plan` and `explain --out` use exclusive creation: choose new filenames for later attempts; existing files are never overwritten. `.private/` is ignored and must remain outside API publication allowlists. Use synthetic sample requirements and inspect artifacts before sharing them. Check `npm start -- COMMAND --help` for the selected integrated revision.
 
-UI layout/interactions are approved with a graphite/amber/ivory/plum palette adjustment, implemented and locally checked. Design preview fixtures are not runtime evidence. There is no public judge URL. Video work is on hold; these setup instructions do not authorize capture or production work.
+The approved graphite/amber/ivory/plum terminal and browser interfaces are implemented and locally checked. Design preview fixtures are not runtime evidence. The final 170-second film is rendered, verified and publicly published; [delivery and submission status](CHECKLIST.md) distinguishes this from unprovisioned live hosting. Public video visibility and owner-signed-in playback were confirmed; signed-out playback remains unverified.
 
-Stop with Ctrl+C. Keep the SQLite file to preserve state. Do not delete it as a recovery technique or publish it as demonstration evidence. Redacted report export must be checked separately.
+Stop with Ctrl+C. Keep the SQLite file to preserve state. Do not delete it as a recovery technique or publish it as demonstration evidence. Redaction and report export passed focused local checks; inspect any new export before sharing it.
 
-## Hosting proposal — no service provisioned
+## Deployment status
 
-For the concrete local source ZIP script, Dockerfile/build-context exclusions, and persistent-volume Compose rehearsal, see [local delivery](LOCAL-DELIVERY.md). These files do not provision a public service or establish completed container/runtime acceptance.
+No public backend has been provisioned. The local Docker image build, loopback health check and simulated-order persistence across a named-volume restart passed using synthetic credentials, without a DeepSeek key in the container. See [local delivery](LOCAL-DELIVERY.md) for packaging and container commands. These checks establish the rehearsed local container behavior, not hosted availability.
 
-The current architecture needs one continuously available Node process, a writable persistent SQLite directory, backend-only secrets, HTTPS, and outbound access to DeepSeek. Static hosting alone does not provide this backend.
+The backend needs one running Node process, writable persistent SQLite storage and backend-only secrets. Fresh AI requests require outbound DeepSeek access. A future public deployment also needs HTTPS, a selected host/budget and an availability/access check; static file hosting alone cannot run this backend.
 
-| Option | Practical fit | Setup to resolve before provisioning |
-| --- | --- | --- |
-| Render paid web service + persistent disk | Simplest proposed managed option; one service instance | Pin Node 24; build with `npm ci` then `npm run build`; start `npm start -- serve`; mount `/var/data`; use DB path `/var/data/payprobe.sqlite` |
-| Fly.io Machine + volume | Alternative if the owner already uses Fly | Package Node 24; run exactly one Machine/process with a volume mounted at `/data`; use `/data/payprobe.sqlite`; configure HTTPS routing and secrets |
-
-Render disks require a paid service and preserve only the mounted path; disk-backed services have single-instance constraints. [Render disks](https://render.com/docs/disks). Render requires public services to bind `0.0.0.0` and defaults to port 10000. [Render web services](https://render.com/docs/web-services).
-
-For Render, explicitly set `PAYPROBE_HOST=0.0.0.0`, `PAYPROBE_PORT=10000`, `PAYPROBE_PUBLIC_URL` to the assigned HTTPS origin, `PAYPROBE_DB_PATH=/var/data/payprobe.sqlite`, and `PAYPROBE_PROVIDER=simulated`. The app reads `PAYPROBE_PORT`, not generic `PORT`. Put the DeepSeek key and a strong API token in the host's private environment settings, never source or build output. Use `/health` for the liveness probe. Disable automatic production releases while phase branches are being integrated.
-
-Fly volumes attach to individual Machines and are not automatically replicated; a single Machine is a simplicity tradeoff with downtime/data-loss risk, not high availability. [Fly volumes](https://docs.fly.io/volumes/overview). Fly injects stored secrets at runtime. [Fly secrets](https://docs.fly.io/apps/secrets).
-
-Before any judge access: select a verified integrated commit, obtain host/budget approval, verify persistence across restart, keep secrets server-side, and define an approved access flow. Current bearer authentication protects all non-health routes, including simulator controls; sharing the backend token grants mutation access. An unrestricted public shared backend is not a finished multi-user judge experience. P4/main must resolve the actual access boundary before publishing instructions or recording. No paid service, deployment, or availability claim is made here.
+The browser's fixed-target `/demo` session owns its own plans and runs, has bounded requests and does not require the administrative bearer token. The administrative API token grants mutation access; do not distribute it as a browser login. Demo-session protections and local fixture checks do not establish production multi-user isolation. Hosting, public judge access and real PayPal sandbox integration/validation remain separate deferred work; no paid service or availability commitment is made here.

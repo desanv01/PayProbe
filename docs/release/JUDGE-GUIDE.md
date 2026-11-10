@@ -2,7 +2,7 @@
 
 PayProbe is a locally runnable payment-boundary testing prototype. Payments are deterministic simulations; no PayPal account, credentials or API calls are involved. DeepSeek provides real AI planning and optional explanation. There is no hosted demo, supplied API key or judge account.
 
-The [Devpost project](https://devpost.com/software/payprobe-wng98r) was submitted to the PayPal AI Hackathon on 10 November 2026; the submission owner observed Devpost's confirmation. This records submission, not eligibility or real PayPal integration.
+The [Devpost project](https://devpost.com/software/payprobe-wng98r) was submitted to the PayPal AI Hackathon 2026 on 10 November 2026; the submission owner observed Devpost's confirmation. This records submission, not eligibility or real PayPal integration.
 
 ## Choose an access route
 
@@ -75,4 +75,4 @@ These establish local test behavior, not a fresh external AI response. A fresh e
 
 Look for approval without fulfillment, matching capture with one entitlement, repeat processing without duplicate delivery, and recovery after a suppressed capture response. The deliberately faulty store fixture demonstrates duplicate delivery; the corrected fixture passes. Provider observations come from a separate simulated ledger path, not a real payment provider. Current scope is the controlled sample, USD single full capture and sequential repeats; refunds, subscriptions, webhooks and production qualification are outside this demonstration.
 
-See [detailed setup](SETUP.md) for configuration and command behavior. Historical video-hold language there predates the approved completed film; [the current checklist](CHECKLIST.md) records delivery/submission status. Public hosting and real PayPal sandbox validation remain deferred.
+See [detailed setup](SETUP.md) for configuration and command behavior, [contributions and credits](CONTRIBUTIONS.md) for attribution, and [the current checklist](CHECKLIST.md) for delivery/submission status. Public hosting and real PayPal sandbox validation remain deferred.

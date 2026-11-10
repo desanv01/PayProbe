@@ -1,6 +1,6 @@
 # Delivery and submission checklist
 
-Updated 10 November 2026. PayProbe is submitted on Devpost. Current payment behavior is explicitly simulated. The user authorized submission despite the known PayPal-integration eligibility mismatch; eligibility, judging acceptance and real-provider verification are not claimed.
+Updated 10 November 2026. PayProbe is submitted to the PayPal AI Hackathon 2026 on Devpost. Current payment behavior is explicitly simulated. The user authorized submission despite the known PayPal-integration eligibility mismatch; eligibility, judging acceptance and real-provider verification are not claimed.
 
 ## Completed implementation and source delivery
 
@@ -31,7 +31,7 @@ Updated 10 November 2026. PayProbe is submitted on Devpost. Current payment beha
 - [x] Devpost project `1292802` has saved title, tagline and story with truthful scope, AI-use, source/release and video information: [submitted project](https://devpost.com/software/payprobe-wng98r).
 - [x] [Submission copy](SUBMISSION-DRAFT.md) and [judge guide](JUDGE-GUIDE.md) describe implemented behavior and access limits.
 - [x] After explicit user confirmation of required eligibility/survey responses and binding Rules/Terms, the submission owner clicked final submit.
-- [x] Submission owner observed “Project submitted!” and “SUBMITTED TO PayPal AI Hackathon” on the project page; private screenshot/DOM receipt retained outside public source.
+- [x] Submission owner observed “Project submitted!” and “SUBMITTED TO PayPal AI Hackathon” on the project page (literal Devpost wording); private screenshot/DOM receipt retained outside public source.
 
 The observed receipt permits edits until 12 November 2026 at 3:00 pm EST (13 November at 4:00 am Asia/Kuala_Lumpur). Signed-out video playback remains unverified because the inspected browser shared the owner's signed-in cookies.
 

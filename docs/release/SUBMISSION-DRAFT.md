@@ -1,6 +1,6 @@
 # PayProbe submission copy
 
-Updated 10 November 2026. PayProbe was submitted to the PayPal AI Hackathon on Devpost after explicit user authorization, with the known simulation/PayPal eligibility mismatch disclosed. The submission owner observed the “Project submitted!” confirmation and “SUBMITTED TO PayPal AI Hackathon” sidebar. Submission does not establish eligibility, judging acceptance or real PayPal integration.
+Updated 10 November 2026. PayProbe was submitted to the PayPal AI Hackathon 2026 on Devpost after explicit user authorization, with the known simulation/PayPal eligibility mismatch disclosed. The submission owner observed the “Project submitted!” confirmation and “SUBMITTED TO PayPal AI Hackathon” sidebar (literal Devpost wording). Submission does not establish eligibility, judging acceptance or real PayPal integration.
 
 **Name:** PayProbe
 
@@ -42,4 +42,4 @@ YouTube's public visibility setting and publication confirmation were observed. 
 
 The source archive contains no private key or saved private database. Judges need their own DeepSeek key and API access for fresh AI planning/explanation. Installed deterministic test suites can run without a key. The video demonstrates the recorded workflow without granting live application access.
 
-Video narration uses the standard Microsoft Zira synthetic voice. Music, font and asset disclosures are in [media credits](../../video-production/payprobe-demo/assets/MEDIA-CREDITS.md). The film uses MajuPilot-inspired editorial framing around the actual PayProbe terminal. Team/contribution fields must reflect the owner's actual contributions; no additional team member is asserted here.
+PayProbe is a solo project by desan vasu (DV), built with Codex assistance. Video narration uses the standard Microsoft Zira synthetic voice. Music, font and asset disclosures are in [media credits](../../video-production/payprobe-demo/assets/MEDIA-CREDITS.md); the [contributions page](CONTRIBUTIONS.md) records the creator, AI assistance, FollowThrough UI direction and MajuPilot video reference. No additional human team member is asserted here.

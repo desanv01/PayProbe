@@ -83,9 +83,9 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P6.9 Delivery docs/templates/packager merged via PR #31; final 52-file ZIP matches frozen source 32e036d3cae80a915625319140ffdfc01b736e6d. Independent artifact verification passed; Docker build/health/restart persistence passed.
 - DONE P6.10 User-approved public YouTube upload, correct credits and scope: https://youtu.be/N5HF1Um5x_U . Published confirmation observed; watch playback advanced to 0:30/2:50 in an authenticated browser. Signed-out playback was not verified.
 - DONE P6.11 Project story, technical disclosures, repository/build/video links, judge instructions, confirmed declarations/survey and final terms saved in Devpost.
-- DONE P6.12 Actual Submit project completed; Project submitted! and SUBMITTED TO PayPal AI Hackathon observed. Entry: https://devpost.com/software/payprobe-wng98r . Private screenshot/receipt saved; public receipt in SUBMISSION-RECEIPT.md.
+- DONE P6.12 Actual Submit project completed; Project submitted! confirmation and event listing for PayPal AI Hackathon 2026 observed. Entry: https://devpost.com/software/payprobe-wng98r . Private screenshot/receipt saved; public receipt in SUBMISSION-RECEIPT.md.
 - TODO P6.13 Optional hosted judge experience and independent signed-out link checks. No public live backend, judge account or supplied AI key exists; local setup/build is the submitted access route.
-- DEFERRED P6.14 FollowThrough-style README/About/repository presentation; Desktop instruction file saved for a later user-triggered task.
+- ACTIVE P6.14 User invoked the Desktop FollowThrough brief; README/About/topics/homepage/assets and supporting content updated for PayPal AI Hackathon 2026. Rendered verification and remote publication under issue #37.
 
 Release: https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated
 Archive SHA256: 9858c0759b8754272bda7956db96d7d6d88e51869cc5bcb9c487e11127ee84f3
