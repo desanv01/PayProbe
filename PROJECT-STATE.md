@@ -1,6 +1,6 @@
 # PayProbe project state
 Updated: 2026-11-10, Asia/Kuala_Lumpur
-Canonical folder: <project-root>
+Canonical folder: the project root
 
 ## Current result
 All current local non-video implementation, observed bug fixes, packaging and GitHub prerelease work are complete. The CLI, interactive terminal ledger, browser workflow, deterministic simulator, persisted evidence/recovery and real DeepSeek planning/explanation are connected and verified at the documented scope.
@@ -27,15 +27,16 @@ Release tag points to frozen source; anonymous download matches the accepted arc
 - Approved UI palette is graphite/amber/ivory/plum. User approved layout/interactions and delegated the palette adjustment.
 
 ## What remains separately
-Issue #7 remains open for video hosting/upload (local film complete), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
+Public YouTube upload and actual Devpost submission are complete. The user authorized submission of the disclosed simulation-only prototype, confirmed the required declarations and accepted the final terms. Devpost displayed Project submitted! and lists PayProbe under the PayPal AI Hackathon. Submission: https://devpost.com/software/payprobe-wng98r . Public video: https://youtu.be/N5HF1Um5x_U . See SUBMISSION-RECEIPT.md. Actual PayPal integration remains deferred; organizer eligibility/qualification is not established by the receipt.
+Public live-demo hosting remains unprovisioned, with no supplied judge credential/API key. Complete local instructions and the packaged build were supplied instead. Fresh AI use requires the evaluator's own DeepSeek access. Optional hosting and real integration are separate follow-up work.
 No known blocking defect remains in the tested current local workflows. This does not imply universal payment testing or production qualification.
 
 ## Run and handover
 Node 24.14+ within 24.x: npm ci; npm run build; npm start -- doctor; npm start -- serve. Browser: http://127.0.0.1:4310/demo. Saved terminal report: npm start -- ledger RUN_ID. See README.md and docs/release/SETUP.md for the complete command sequence.
 Browser sessions are memory-only and expire on restart; recorded runs persist in SQLite. node:sqlite emits its experimental warning before the TUI opens.
 Full phase/task checklist and worker ownership: TASK-BOARD.md. Detailed acceptance: docs/stabilization and docs/design/runtime-check. Package script/deployment templates: docs/release.
-Private validation evidence remains excluded from publication.
+Private local verification artifacts are retained outside the public repository.
 
-Video source and referenced assets are published in draft PR #35. User approved the complete preview; final HyperFrames delivery rendering and artifact verification are complete. The Studio server stays running for review. Later FollowThrough-style repository presentation remains deferred until the agreed later stage.
+Video source and referenced assets are published in merged PR #35. User approved the complete preview; final HyperFrames delivery rendering and artifact verification are complete. The Studio server stays running for review. FollowThrough-style repository presentation remains a separate deferred task, with its Desktop instructions saved; do not start automatically.
 
-Final video: video-production/payprobe-demo/deliverables/PayProbe-Demo-v1.mp4. Verified 170.000 seconds, H.264 1920x1080/30fps/5100 frames, AAC48kHz stereo, full decode PASS, true peak -1.1dBFS. SHA25694af5559e653a112b5b3758baf07f1491286c4f5ff3def66e4bf67e6f2213368. Actual rendered contact sheet and API/export frames inspected. See VIDEO-DELIVERY.md. Final MP4 remains local; no video upload/submission performed.
+Final video: video-production/payprobe-demo/deliverables/PayProbe-Demo-v1.mp4. Verified 170.000 seconds, H.264 1920x1080/30fps/5100 frames, AAC48kHz stereo, full decode PASS, true peak -1.1dBFS. SHA25694af5559e653a112b5b3758baf07f1491286c4f5ff3def66e4bf67e6f2213368. Actual rendered contact sheet and API/export frames inspected. See VIDEO-DELIVERY.md. The master remains local and the approved film is now publicly hosted on YouTube and linked in the submitted entry.

@@ -1,5 +1,5 @@
 # PayProbe task board
-Updated: 2026-11-10 — local video delivery complete after user approval; external stages remain separate.
+Updated: 2026-11-10 — video publicly uploaded and Devpost submission confirmed; PayPal integration and optional hosting remain separate.
 Legend: DONE = implemented/observed at stated scope; ACTIVE = underway; TODO = not yet completed; WAIT = external/approval/dependency; DEFERRED = intentionally later.
 Payment scope: explicit simulator only. Real DeepSeek probe passed. No real PayPal behavior is verified.
 Main owns this board; workers update docs/handoffs/Pn.md and send meaningful progress.
@@ -71,16 +71,21 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P5.8 Clean install from exact remote UI source, npm ci/build/compiled doctor/server/demo passed. Hosted access remains unverified and separately pending.
 - DONE P5.9 Final tests/matrix/handover merged via PR #27 at f09860f. No outstanding known blocking defect in tested local paths.
 
-## P6 — Delivery [NON-VIDEO LOCAL SCOPE DONE; LOCAL VIDEO COMPLETE; external stages pending]
+## P6 — Delivery [IMPLEMENTATION, RELEASE, VIDEO UPLOAD AND DEVPOST SUBMISSION DONE]
 - DONE P6.1 Simulation-only narrative/attribution draft; actual release claims remain gated.
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Initial historical storyboard prepared. Future video must use HyperFrames/MajuPilot reference after a new discussion; all related work held.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- DONE P6.5 Complete 170-second MajuPilot-style narrated HyperFrames preview built. Genuine native console recordings include actual DeepSeek request/full six-second wait/returned response, execution, observed FAIL, corrected case and S4 evidence. Checks and normal-speed 170/170 playback pass. Studio: http://localhost:4390/#project/payprobe-demo. Source/assets: draft PR #35. User approved the preview; final HyperFrames MP4 rendered and verified: 2:50,1080p30,H.264/AAC,full decode passed. Actual rendered contact/API/export frames inspected. See VIDEO-DELIVERY.md. Local delivery complete; public upload/submission remain separate.
+- DONE P6.5 Complete 170-second MajuPilot-style narrated HyperFrames preview built. Genuine native console recordings include actual DeepSeek request/full six-second wait/returned response, execution, observed FAIL, corrected case and S4 evidence. Checks and normal-speed 170/170 playback pass. Studio: http://localhost:4390/#project/payprobe-demo. Source/assets: merged PR #35. User approved the preview; final HyperFrames MP4 rendered and verified: 2:50,1080p30,H.264/AAC,full decode passed. Actual rendered contact/API/export frames inspected. See VIDEO-DELIVERY.md. Local delivery complete; public upload and actual Devpost submission are complete.
 - DONE P6.6 Public repository and prerelease tag/assets verified, including anonymous ZIP download and checksum. Video/public live-demo links remain future work.
-- WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
-- DONE P6.8 Simulated GitHub prerelease v0.1.0-simulated published; hackathon submission remains a separate uncompleted stage.
+- DONE P6.7 Current requirements checked; user explicitly directed submission despite the known simulation/PayPal mismatch. Honest scope retained; organizer qualification is not claimed.
+- DONE P6.8 Simulated GitHub prerelease v0.1.0-simulated published. Actual Devpost submission is now separately confirmed.
 - DONE P6.9 Delivery docs/templates/packager merged via PR #31; final 52-file ZIP matches frozen source 32e036d3cae80a915625319140ffdfc01b736e6d. Independent artifact verification passed; Docker build/health/restart persistence passed.
+- DONE P6.10 User-approved public YouTube upload, correct credits and scope: https://youtu.be/N5HF1Um5x_U . Published confirmation observed; watch playback advanced to 0:30/2:50 in an authenticated browser. Signed-out playback was not verified.
+- DONE P6.11 Project story, technical disclosures, repository/build/video links, judge instructions, confirmed declarations/survey and final terms saved in Devpost.
+- DONE P6.12 Actual Submit project completed; Project submitted! and SUBMITTED TO PayPal AI Hackathon observed. Entry: https://devpost.com/software/payprobe-wng98r . Private screenshot/receipt saved; public receipt in SUBMISSION-RECEIPT.md.
+- TODO P6.13 Optional hosted judge experience and independent signed-out link checks. No public live backend, judge account or supplied AI key exists; local setup/build is the submitted access route.
+- DEFERRED P6.14 FollowThrough-style README/About/repository presentation; Desktop instruction file saved for a later user-triggered task.
 
 Release: https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated
 Archive SHA256: 9858c0759b8754272bda7956db96d7d6d88e51869cc5bcb9c487e11127ee84f3
@@ -104,10 +109,10 @@ No cross-owner file edits without coordination. All source writes are local work
 
 | Phase | Persistent chat | Issue |
 |---|---|---|
-| P1 | [local worker reference] | #2 |
-| P2 | [local worker reference] | #3 |
-| P3 | [local worker reference] | #4 |
-| P4 | [local worker reference] | #5 |
-| P5 | [local worker reference] | #6 |
-| P6 | [local worker reference] | #7 |
+| P1 | [private worker chat] | #2 |
+| P2 | [private worker chat] | #3 |
+| P3 | [private worker chat] | #4 |
+| P4 | [private worker chat] | #5 |
+| P5 | [private worker chat] | #6 |
+| P6 | [private worker chat] | #7 |
 
