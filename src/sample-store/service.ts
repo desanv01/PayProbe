@@ -1,6 +1,6 @@
 import type { Store, Order } from '../storage/database.js';
 import type { PaymentOrder, PaymentProvider } from '../providers/payment.js';
-import { AppError, type PurchaseInput } from '../core/schemas.js';
+import { AppError, type PurchaseInput, type FixtureMode } from '../core/schemas.js';
 
 // This boundary discards a completed capture response before target business logic sees it.
 export class TargetPaymentTransport {
@@ -16,8 +16,9 @@ export class TargetPaymentTransport {
 export class SampleStore {
   private transport: TargetPaymentTransport;
   constructor(private store: Store, provider: PaymentProvider) { this.transport = new TargetPaymentTransport(provider,store); }
-  async create(input: PurchaseInput, operationId: string) {
+  async create(input: PurchaseInput, operationId: string, fixtureMode: FixtureMode = 'corrected') {
     let order = this.store.createOrder(input);
+    this.store.setFixtureMode(input.purchaseId,fixtureMode);
     const op = this.store.operation(operationId,input.purchaseId,'create',input);
     if (order.providerOrderId) return this.observe(input.purchaseId);
     // Unknown create response may be retried with its persisted exact identity in this simulator.
@@ -39,7 +40,9 @@ export class SampleStore {
   private complete(order: Order,payment: PaymentOrder) {
     const capture = this.matching(order,payment);
     if (!capture) throw new AppError('completed_matching_capture_not_observed',409);
+    const alreadyFulfilled = Boolean(this.store.db.prepare('SELECT id FROM entitlements WHERE purchaseId=?').get(order.purchaseId));
     this.store.fulfill(order.purchaseId,capture.id);
+    if (alreadyFulfilled && this.store.fixtureMode(order.purchaseId) === 'duplicate_processing') this.store.seedDelivery(order.purchaseId,'duplicate_processing');
   }
   async buyerReturn(id: string) {
     const order = this.store.order(id);
@@ -47,7 +50,12 @@ export class SampleStore {
     const payment = await this.transport.get(order.providerOrderId);
     // Return NEVER captures; S1 can independently observe APPROVED before capture.
     if (this.matching(order,payment)) this.complete(order,payment);
-    else this.store.updateOrder(id,payment.status === 'APPROVED' ? 'approved_unpaid' : 'awaiting_approval');
+    else {
+      this.store.updateOrder(id,payment.status === 'APPROVED' ? 'approved_unpaid' : 'awaiting_approval');
+      // Disclosed simulation-only seeded bug: deliver on approval without capture.
+      // Evaluator observes count/access and independent provider truth, never this flag.
+      if (payment.status === 'APPROVED' && this.store.fixtureMode(id) === 'premature_fulfillment' && this.store.count(id) === 0) this.store.seedDelivery(id,'premature_fulfillment');
+    }
     return this.observe(id);
   }
   async capture(id: string, operationId: string) {
@@ -62,7 +70,14 @@ export class SampleStore {
       this.complete(order,payment);
       this.store.setOperation(operationId,'completed',{providerOrderId:payment.id,captureId:payment.captures[0]?.id});
     } catch (e) {
-      this.store.setOperation(operationId,'uncertain'); this.store.updateOrder(id,'capture_uncertain'); throw e;
+      // The simulator rejects this request before any capture mutation. Preserve
+      // its identity so explicit later approval can retry the same operation.
+      if (e instanceof AppError && e.code === 'simulated_buyer_approval_required') {
+        this.store.setOperation(operationId,'prepared'); this.store.updateOrder(id,'awaiting_approval');
+      } else {
+        this.store.setOperation(operationId,'uncertain'); this.store.updateOrder(id,'capture_uncertain');
+      }
+      throw e;
     }
     return this.observe(id);
   }

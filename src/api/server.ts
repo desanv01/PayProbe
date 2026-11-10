@@ -2,10 +2,10 @@ import Fastify from 'fastify';
 import { timingSafeEqual } from 'node:crypto';
 import { z } from 'zod';
 import { credentialPresence, type Config } from '../core/config.js';
-import { adapterVersion, capabilities, purchaseSchema, operationSchema, AppError } from '../core/schemas.js';
+import { adapterVersion, capabilities, purchaseSchema, operationSchema, fixtureModeSchema, AppError } from '../core/schemas.js';
 import { Store } from '../storage/database.js';
 import { SimulatedProvider } from '../providers/simulated.js';
-import { DeepSeekClient } from '../providers/deepseek.js';
+import { DeepSeekClient,safeDeepSeekDiagnostics } from '../providers/deepseek.js';
 import { SampleStore } from '../sample-store/service.js';
 
 export function buildServer(config: Config, suppliedStore?: Store) {
@@ -22,7 +22,7 @@ export function buildServer(config: Config, suppliedStore?: Store) {
   });
   app.setErrorHandler((error,_request,reply) => {
     if (error instanceof z.ZodError) return reply.code(400).send({error:'invalid_input',fields:error.issues.map(i=>i.path.join('.'))});
-    if (error instanceof AppError) return reply.code(error.statusCode).send({error:error.code,provenance:'simulated'});
+    if (error instanceof AppError) return reply.code(error.statusCode).send({error:error.code,provenance:'simulated',...safeDeepSeekDiagnostics(error)});
     return reply.code(500).send({error:'internal_error'});
   });
   app.get('/health',async()=>({ok:true,provider:'simulated',realPayPalVerified:false}));
@@ -30,8 +30,8 @@ export function buildServer(config: Config, suppliedStore?: Store) {
   app.post('/api/deepseek/probe',async()=>ai.probe());
   app.get('/adapter/capabilities',async()=>({version:adapterVersion,capabilities,provider:'simulated',provenance:'simulated'}));
   app.post('/adapter/orders',async(request)=>{
-    const body = purchaseSchema.extend({operationId:z.string().uuid()}).parse(request.body);
-    const {operationId,...input} = body; return target.create(input,operationId);
+    const body = purchaseSchema.extend({operationId:z.string().uuid(),fixtureMode:fixtureModeSchema.default('corrected')}).parse(request.body);
+    const {operationId,fixtureMode,...input} = body; return target.create(input,operationId,fixtureMode);
   });
   const idFrom = (params: unknown) => z.object({id:z.string().uuid()}).parse(params).id;
   app.get('/adapter/orders/:id',async(request)=>target.observe(idFrom(request.params)));

@@ -2,7 +2,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
-import { AppError, type PurchaseInput } from '../core/schemas.js';
+import { AppError, type PurchaseInput, type FixtureMode } from '../core/schemas.js';
 
 export type Order = PurchaseInput & { providerOrderId: string | null; state: string; approvalUrl: string | null; downloadToken: string; fault: string; faultFired: number };
 export type Operation = { id: string; purchaseId: string; kind: string; requestHash: string; state: string; result: string | null; createdAt: string };
@@ -20,6 +20,8 @@ export class Store {
       CREATE TABLE IF NOT EXISTS orders(purchaseId TEXT PRIMARY KEY, amountCents INTEGER NOT NULL, currency TEXT NOT NULL, productId TEXT NOT NULL, providerOrderId TEXT UNIQUE, state TEXT NOT NULL, approvalUrl TEXT, downloadToken TEXT NOT NULL UNIQUE, fault TEXT NOT NULL DEFAULT 'none', faultFired INTEGER NOT NULL DEFAULT 0);
       CREATE TABLE IF NOT EXISTS operations(id TEXT PRIMARY KEY, purchaseId TEXT NOT NULL REFERENCES orders(purchaseId), kind TEXT NOT NULL, requestHash TEXT NOT NULL, state TEXT NOT NULL, result TEXT, createdAt TEXT NOT NULL, UNIQUE(purchaseId,kind));
       CREATE TABLE IF NOT EXISTS entitlements(id TEXT PRIMARY KEY, purchaseId TEXT NOT NULL UNIQUE REFERENCES orders(purchaseId), captureId TEXT NOT NULL UNIQUE, createdAt TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS simulated_fixture_modes(purchaseId TEXT PRIMARY KEY REFERENCES orders(purchaseId), mode TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS simulated_fixture_deliveries(id TEXT PRIMARY KEY, purchaseId TEXT NOT NULL REFERENCES orders(purchaseId), reason TEXT NOT NULL, createdAt TEXT NOT NULL);
     `);
     // A process may have stopped after the provider accepted a mutation.
     this.db.prepare("UPDATE operations SET state='uncertain' WHERE state='in_flight'").run();
@@ -63,7 +65,19 @@ export class Store {
       this.db.exec('COMMIT');
     } catch (e) { this.db.exec('ROLLBACK'); throw e; }
   }
-  count(purchaseId: string): number { return Number(this.db.prepare('SELECT COUNT(*) AS n FROM entitlements WHERE purchaseId=?').get(purchaseId)!.n); }
+  count(purchaseId: string): number {
+    return Number(this.db.prepare('SELECT (SELECT COUNT(*) FROM entitlements WHERE purchaseId=?) + (SELECT COUNT(*) FROM simulated_fixture_deliveries WHERE purchaseId=?) AS n').get(purchaseId,purchaseId)!.n);
+  }
+  setFixtureMode(purchaseId: string,mode: FixtureMode) {
+    this.db.prepare('INSERT OR IGNORE INTO simulated_fixture_modes VALUES(?,?)').run(purchaseId,mode);
+    if (this.fixtureMode(purchaseId) !== mode) throw new AppError('fixture_mode_conflict',409);
+  }
+  fixtureMode(purchaseId: string): FixtureMode {
+    return (this.db.prepare('SELECT mode FROM simulated_fixture_modes WHERE purchaseId=?').get(purchaseId)?.mode as FixtureMode | undefined) ?? 'corrected';
+  }
+  seedDelivery(purchaseId: string,reason: 'premature_fulfillment' | 'duplicate_processing') {
+    this.db.prepare('INSERT INTO simulated_fixture_deliveries VALUES(?,?,?,?)').run(randomUUID(),purchaseId,reason,new Date().toISOString());
+  }
   operations(purchaseId: string) { return this.db.prepare('SELECT id,kind,state,createdAt FROM operations WHERE purchaseId=?').all(purchaseId); }
   armFault(purchaseId: string) { this.db.prepare("UPDATE orders SET fault='suppress_capture_response',faultFired=0 WHERE purchaseId=? AND faultFired=0").run(purchaseId); }
   consumeFault(purchaseId: string) {

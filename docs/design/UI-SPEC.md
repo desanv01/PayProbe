@@ -1,7 +1,15 @@
-# PayProbe UI proposal v1
+# PayProbe UI specification v1.1
 
-Status: DRAFT — explicit user approval pending. No production UI is authorized by this document.
+Status: layout, controls, compact behavior and states APPROVED by the user through Main on 2026-11-10, with user-authorized palette change. Production implementation is authorized within that scope.
 Date: 2026-11-10. Owner: persistent P4 worker. Tracking: issue #5.
+
+## Approval record and active palette
+
+User response relayed by Main: “yes approve all but change the color scheme to something else, as this color scheme was already used for another project of mine”. This approves the reviewed structure/controls/states and delegates a different color scheme. Main selected graphite/amber/ivory/plum; the user did not pick individual hex values. Revision v1.1 keeps the approved structure and changes palette only. No further palette approval gate is inferred.
+
+Active tokens supersede the historical cyan references below: background #17191E; panels #20232B; text #F4F0E8; accent/header #E9B44C with dark header text; selected row #4B3B68 with ivory text; muted #B8B3AA; PASS #8DBF91; FAIL/ERROR #ED8080; uncertainty amber with textual labels. No cyan in production or v1.1 renders.
+
+Current review package: `review-v1.1/index.html`, `review-v1.1/browser.html`, 28 exact SVG grids and six representative PNGs with unchanged filenames. v1 remains historical provenance, not the active palette target.
 
 ## Scope and provenance
 
@@ -68,4 +76,4 @@ Four original 12ui candidate images and seven branch images were inspected. Raw 
 
 All 14 states are available in both grid sizes: doctor, missing-key, plan, approval, running, uncertain, reconcile, ledger, evidence, inconclusive, unsupported, error, empty, filter. This is more explicit than the eight grouped conceptual screens. Gallery controls select snapshots; browser buttons/exports navigate or download synthetic preview content only. Runtime j/k/filter/input handling remains a proposed interaction contract for implementation after approval.
 
-Approval must identify proposal v1 and these concrete reviewed artifacts; elapsed time is not approval. No user approval has been recorded.
+User approval now identifies the v1 layout with the explicitly requested palette change realized in v1.1. Runtime implementation exports `showReportTui` and `registerDemoUi`; integration remains P1/Main-owned. The browser uses one fixed-target bounded demo/session, server-owned run membership and mutations, no administrator bearer or arbitrary target URL input. All payment evidence remains simulated.
