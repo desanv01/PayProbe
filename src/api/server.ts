@@ -5,7 +5,7 @@ import { credentialPresence, type Config } from '../core/config.js';
 import { adapterVersion, capabilities, purchaseSchema, operationSchema, fixtureModeSchema, AppError } from '../core/schemas.js';
 import { Store } from '../storage/database.js';
 import { SimulatedProvider } from '../providers/simulated.js';
-import { DeepSeekClient } from '../providers/deepseek.js';
+import { DeepSeekClient,safeDeepSeekDiagnostics } from '../providers/deepseek.js';
 import { SampleStore } from '../sample-store/service.js';
 
 export function buildServer(config: Config, suppliedStore?: Store) {
@@ -22,7 +22,7 @@ export function buildServer(config: Config, suppliedStore?: Store) {
   });
   app.setErrorHandler((error,_request,reply) => {
     if (error instanceof z.ZodError) return reply.code(400).send({error:'invalid_input',fields:error.issues.map(i=>i.path.join('.'))});
-    if (error instanceof AppError) return reply.code(error.statusCode).send({error:error.code,provenance:'simulated'});
+    if (error instanceof AppError) return reply.code(error.statusCode).send({error:error.code,provenance:'simulated',...safeDeepSeekDiagnostics(error)});
     return reply.code(500).send({error:'internal_error'});
   });
   app.get('/health',async()=>({ok:true,provider:'simulated',realPayPalVerified:false}));

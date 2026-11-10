@@ -12,6 +12,8 @@ Prepared 10 November 2026. Documentation preparation can finish now; release, re
 
 ## Before freezing a demonstration
 
+Current evidence update: main observed a real planner response and a reviewed simulated CLI run with all four cases PASS / 42 evidence events. An actual explainer call truncated at 1200 tokens; repair verification remains open. UI layout/interactions are approved with the v1.1 palette adjustment, but actual runtime conformance is not yet checked. Main restored the root MIT LICENSE locally. These facts do not close the combined gates below.
+
 - [ ] Main integrates phase dependencies and records exact remote source SHA.
 - [ ] P4 mockups explicitly approved; actual screens match approval.
 - [ ] P1–P4 connected workflow works, including a real DeepSeek plan and evidence-referenced explanation.

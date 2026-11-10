@@ -18,3 +18,6 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
       - run: npm test
+      - run: npm run test:runner
+      - run: npm run test:workflow
+      - run: npm run test:stabilization

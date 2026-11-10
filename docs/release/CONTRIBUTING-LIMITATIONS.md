@@ -6,7 +6,7 @@ For a focused contribution, describe the observable problem, change only relevan
 
 Current development uses remote GitHub commits, phase branches, and draft PRs; no local Git initialization, commits, or worktrees in the canonical workspace. The orchestrator owns integration and shared documentation. Follow the repository's `AGENTS.md` and current user scope before changing phase-owned files.
 
-Attribution: FollowThrough informs UI direction. Keep a concrete source/file/license record if code or assets are reused; no audit of all future UI assets has occurred. Runtime dependencies include Fastify, Commander, Zod, dotenv, and the OpenAI-compatible SDK pointed at DeepSeek. Retain applicable package licenses. The root README currently says MIT, but P6's local file inventory did not contain a root `LICENSE`; the orchestrator must verify the remote license and reconcile local packaging before release. Do not invent author or contributor credits.
+Attribution: FollowThrough informs UI direction. Keep a concrete source/file/license record if code or assets are reused; no audit of all future UI assets has occurred. Runtime dependencies include Fastify, Commander, Zod, dotenv, and the OpenAI-compatible SDK pointed at DeepSeek. Retain applicable package licenses. The root `LICENSE` is MIT; main restored the local copy from the existing remote file. Check its inclusion in final packaged source and do not invent author or contributor credits.
 
 ## Honest boundaries
 
