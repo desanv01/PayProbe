@@ -4,7 +4,7 @@ Canonical folder: <project-root>
 Full checklist: TASK-BOARD.md. Plan: PayProbe-Implementation-Gameplan-v2-2026-11-10.md; current-scope overrides supersede historical milestones.
 
 ## Current result
-The reviewed headless workflow is connected. Actual DeepSeek planning and explanation pass against a completed four-scenario simulated run with 42 evidence events. Approved graphite/amber/ivory/plum TUI/browser modules are connected via PR #24. Native terminal and browser workflow checks pass; browser export/filter checks pass. Packaging and recording are underway.
+The reviewed headless workflow is connected. Actual DeepSeek planning and explanation pass against a completed four-scenario simulated run with 42 evidence events. Approved graphite/amber/ivory/plum TUI/browser modules are connected via PR #24. Native terminal and browser workflow checks pass; browser export/filter checks pass. Non-video packaging and GitHub completion are underway. All video tasks are ON HOLD until the user discusses them again after implementation completion.
 
 ## Scope and working rules
 - Only deterministic simulated payments. No PayPal credentials or calls until the user resumes the deferred provider stage (#9).
@@ -40,5 +40,5 @@ node:sqlite emits an experimental warning. Browser sessions are currently memory
 ## Next work
 1. P1 implementation and wildcard stabilization test discovery are complete and merged.
 2. P4 actual browser export/filter verification passed; final record publication is underway. P5 local acceptance and clean installation are complete.
-3. P6 prepares actual runtime recording and concrete deployment/package guidance. Main integrates README/progress docs.
+3. P6 finalizes non-video packaging/deployment guidance and artifacts; P5 checks the package. No video or MajuPilot video inspection. Main integrates GitHub changes and shared docs.
 4. Public hosting/video/submission need actual access and evidence; do not infer readiness from local completion. Real PayPal stays separately deferred.

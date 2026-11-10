@@ -1,5 +1,5 @@
 # PayProbe task board
-Updated: 2026-11-10 — parallel execution.
+Updated: 2026-11-10 — non-video parallel execution; all video work ON HOLD by user.
 Legend: DONE = implemented/observed at stated scope; ACTIVE = underway; TODO = not yet completed; WAIT = external/approval/dependency; DEFERRED = intentionally later.
 Payment scope: explicit simulator only. Real DeepSeek probe passed. No real PayPal behavior is verified.
 Main owns this board; workers update docs/handoffs/Pn.md and send meaningful progress.
@@ -55,8 +55,8 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P4.4 Results/evidence/verdict/empty/filter/error previews exist.
 - DONE P4.5 Browser mockups rendered; copy refinements applied. Complete review-v1 gallery ready.
 - DONE P4.6 User approved all layout/interactions/states with requested palette change. Main selected graphite/amber/ivory/plum, v1.1.
-- DONE P4.7 Warm v1.1 previews/spec and TUI module implemented; focused grid/navigation/restoration checks pass. CLI binding pending.
-- DONE P4.8 Browser session/plan/review/approval/report modules implemented; actual runner test PASS PASS FAIL PASS for seeded duplicate fixture. Source, tests and warm palette artifacts merged in PR #13 at b6b5d80. Production bindings pending.
+- DONE P4.7 Warm v1.1 previews/spec and TUI module implemented; focused grid/navigation/restoration checks pass. CLI binding merged and verified.
+- DONE P4.8 Browser session/plan/review/approval/report modules implemented; actual runner test PASS PASS FAIL PASS for seeded duplicate fixture. Source, tests and warm palette artifacts merged in PR #13 at b6b5d80. Production bindings merged and verified.
 - ACTIVE P4.9 Local package/container configuration prepared by P6; public hosting/access remains pending.
 - DONE P4.10 Runtime wiring merged #24; native terminal verified and warning fix merged #26. Actual browser wide/mobile, full fixture workflow, filtering, evidence and text/JSON downloads verified. Final verification documentation publication underway.
 
@@ -76,11 +76,11 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Under-three-minute script/storyboard prepared; no recording yet.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- ACTIVE P6.5 Recording actual saved-run CLI/TUI replay, explicitly labeled; no invented model activity or payment outcomes.
+- WAIT P6.5 VIDEO HOLD: no further capture/render/assembly or MajuPilot reference inspection until implementation complete and user discussion. Prior drafts preserved.
 - TODO P6.6 Verify public repo/video/demo links and access.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
 - TODO P6.8 Final release and actual submission verification when ready.
-- ACTIVE P6.9 Preparation and command-alignment docs/handover merged via PRs #14 and #23; allowlisted local source package with hashes and container templates prepared, final publication/recording underway.
+- ACTIVE P6.9 Preparation and command-alignment docs/handover merged via PRs #14 and #23; allowlisted local source package with hashes and container templates prepared, non-video publication/package verification underway; video remains on hold.
 
 ## Deferred real-provider stage
 - DEFERRED D1 PayPal developer account access and private sandbox credentials.

@@ -1,5 +1,7 @@
 # PayProbe development rules
 
+Current user update: resume all remaining non-video implementation, fixes, packaging and GitHub work in parallel. All video work is ON HOLD until implementation is complete and the user discusses the video again. Do not capture, render, assemble, inspect MajuPilot video assets, or continue storyboard work. Preserve existing drafts. This supersedes earlier video-production instructions.
+
 Read PayProbe-Implementation-Gameplan-v2-2026-11-10.md and PROJECT-STATE.md before phase work. User instructions prevail.
 
 Current user scope override (2026-11-10): implement and fix all current phases using an explicitly simulated, deterministic payment provider. Default provider is simulated; no PayPal network/API calls or PayPal credential requests. Real PayPal integration/validation is a separate deferred stage after implementation/stabilization. Only DeepSeek is a current external API dependency. Never describe simulated approval/capture as PayPal verification or established submission readiness. Preserve the user's .env.local and key. Use documented deepseek-flash API alias (currently DeepSeek-V4.1-Flash-1017; rolling alias, not immutable pinning).
