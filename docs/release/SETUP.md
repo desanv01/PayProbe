@@ -1,6 +1,6 @@
 # Local setup and proposed hosting
 
-Status: instructions checked against the integrated P1/P3 headless command source on 10 November 2026. Payments are deterministic simulations. No PayPal account, credentials, or API access is needed. DeepSeek is the only external runtime API. Main observed a real planner response and a reviewed simulated run with all four checks passing; the live explainer truncation repair and running UI verification are still pending.
+Status: instructions checked against the integrated command source on 10 November 2026. Payments are deterministic simulations. No PayPal account, credentials, or API access is needed. DeepSeek is the only external runtime API. Main observed a real planner response, a reviewed simulated run with all four checks passing, and the repaired real explainer succeeding with valid references for all four cases and all 42 evidence events supplied. Native terminal/browser checks and a clean install passed locally. Browser fixture checks used an AI client double; those checks do not independently establish a fresh browser-to-DeepSeek journey or hosted availability.
 
 ## Local headless setup
 
@@ -54,19 +54,23 @@ $runId = 'PASTE_ACTUAL_RUN_ID'
 npm start -- resume $runId --auto-approve-simulated
 npm start -- report $runId --format text
 npm start -- report $runId --format json
-# Optional real DeepSeek request; live truncation repair is still under verification:
+# Optional real DeepSeek request; reuse a saved explanation when no fresh call is needed:
 npm start -- explain $runId --out .private/demo/explanation.json
 ```
 
 `resume` uses persisted run/order/operation state and does not replan. `report` defaults to text and also supports `--format json`. `run` and `resume` emit JSON reports. Deterministic findings remain separate from the optional AI explanation; an explanation failure does not establish a failed payment check or change its verdict. Both planner and explainer calls may consume API credit; report/review/run/resume do not call DeepSeek.
 
+The integrated `npm start -- ledger RUN_ID` opens the approved read-only terminal ledger for an existing saved run; it does not process payments or call DeepSeek. Use arrow keys or j/k to select, Enter for evidence, `/` to filter, and q to leave. Noninteractive output falls back to plain text. Open `http://127.0.0.1:4310/demo` while the server runs for the browser workflow. Its fixed-target session owns its own runs and does not import a prior CLI run. Browser sessions expire on server restart; saved runs remain in SQLite. The browser does not need the administrative bearer token. These local checks do not prove public hosting access.
+
 Output paths for `plan` and `explain --out` use exclusive creation: choose new filenames for later attempts; existing files are never overwritten. `.private/` is ignored and must remain outside API publication allowlists. Use synthetic sample requirements and inspect artifacts before sharing them. Check `npm start -- COMMAND --help` for the selected integrated revision.
 
-UI layout/interactions are approved with a graphite/amber/ivory/plum palette adjustment; P4 runtime implementation is underway. These CLI instructions do not establish final UI verification or a public judge URL. Design preview fixtures are not runtime evidence.
+UI layout/interactions are approved with a graphite/amber/ivory/plum palette adjustment, implemented and locally checked. Design preview fixtures are not runtime evidence. There is no public judge URL. Video work is on hold; these setup instructions do not authorize capture or production work.
 
 Stop with Ctrl+C. Keep the SQLite file to preserve state. Do not delete it as a recovery technique or publish it as demonstration evidence. Redacted report export must be checked separately.
 
 ## Hosting proposal — no service provisioned
+
+For the concrete local source ZIP script, Dockerfile/build-context exclusions, and persistent-volume Compose rehearsal, see [local delivery](LOCAL-DELIVERY.md). These files do not provision a public service or establish completed container/runtime acceptance.
 
 The current architecture needs one continuously available Node process, a writable persistent SQLite directory, backend-only secrets, HTTPS, and outbound access to DeepSeek. Static hosting alone does not provide this backend.
 

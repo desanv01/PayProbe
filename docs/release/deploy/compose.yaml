@@ -1,0 +1,22 @@
+# Local rehearsal only. No paid resources or public exposure.
+services:
+  payprobe:
+    build:
+      context: ../../..
+      dockerfile: docs/release/deploy/Dockerfile
+    ports:
+      - "127.0.0.1:4310:4310"
+    environment:
+      PAYPROBE_HOST: 0.0.0.0
+      PAYPROBE_PORT: "4310"
+      PAYPROBE_PROVIDER: simulated
+      PAYPROBE_PUBLIC_URL: http://127.0.0.1:4310
+      PAYPROBE_DB_PATH: /data/payprobe.sqlite
+      PAYPROBE_API_TOKEN: ${PAYPROBE_API_TOKEN:?Supply a private API token via --env-file}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_MODEL: deepseek-flash
+    volumes:
+      - payprobe-data:/data
+    restart: unless-stopped
+volumes:
+  payprobe-data:

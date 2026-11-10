@@ -1,0 +1,10 @@
+# Default deny build context; applies to this Dockerfile from repository root.
+**
+!package.json
+!package-lock.json
+!tsconfig.json
+!LICENSE
+!src/
+!src/**
+!examples/
+!examples/download-contract.json
