@@ -22,6 +22,6 @@ test('interactive exit restores original terminal mode and cursor',async()=>{
   Object.assign(input,{isTTY:true,isRaw:false,setRawMode:(value:boolean)=>{raw=value;return input;}});
   let outputText='';const output=new Writable({write(chunk,_encoding,callback){outputText+=chunk.toString();callback();}}) as WriteStream;
   Object.assign(output,{isTTY:true,columns:80,rows:24});
-  const running=showReportTui(report,{input,output});input.emit('keypress','q',{name:'q'});await running;
+  const running=showReportTui(report,{input,output});await new Promise<void>(resolve=>setImmediate(resolve));input.emit('keypress','q',{name:'q'});await running;
   assert.equal(raw,false);assert.ok(outputText.endsWith('\x1b[0m\x1b[?25h\x1b[?1049l'));assert.equal(input.listenerCount('keypress'),0);
 });

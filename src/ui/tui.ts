@@ -91,6 +91,10 @@ export async function showReportTui(report:RunReport,options:{input?:ReadStream;
   const input=options.input??process.stdin,output=options.output??process.stdout;
   if(!input.isTTY||!output.isTTY||typeof input.setRawMode!=='function'){output.write(formatReport(report,'text')+'\n');return;}
   if((output.columns??80)<60||(output.rows??24)<18){output.write('Terminal too small for interactive view; showing text report.\n'+formatReport(report,'text')+'\n');return;}
+  // node:sqlite emits its startup warning asynchronously. Let pending startup
+  // diagnostics flush before entering the alternate screen, where stderr would
+  // otherwise overwrite the first frame and keyboard hints.
+  await new Promise<void>(resolve=>setImmediate(resolve));
   const state=initialLedgerState(),wasRaw=input.isRaw,wasPaused=input.isPaused();
   await new Promise<void>((resolve)=>{
     let done=false;
