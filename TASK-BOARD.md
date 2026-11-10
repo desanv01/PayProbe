@@ -1,5 +1,5 @@
 # PayProbe task board
-Updated: 2026-11-10 — video authoring resumed by user; final render requires full-preview approval.
+Updated: 2026-11-10 — local video delivery complete after user approval; external stages remain separate.
 Legend: DONE = implemented/observed at stated scope; ACTIVE = underway; TODO = not yet completed; WAIT = external/approval/dependency; DEFERRED = intentionally later.
 Payment scope: explicit simulator only. Real DeepSeek probe passed. No real PayPal behavior is verified.
 Main owns this board; workers update docs/handoffs/Pn.md and send meaningful progress.
@@ -71,12 +71,12 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P5.8 Clean install from exact remote UI source, npm ci/build/compiled doctor/server/demo passed. Hosted access remains unverified and separately pending.
 - DONE P5.9 Final tests/matrix/handover merged via PR #27 at f09860f. No outstanding known blocking defect in tested local paths.
 
-## P6 — Delivery [NON-VIDEO LOCAL SCOPE DONE; video authoring active; final render approval pending]
+## P6 — Delivery [NON-VIDEO LOCAL SCOPE DONE; LOCAL VIDEO COMPLETE; external stages pending]
 - DONE P6.1 Simulation-only narrative/attribution draft; actual release claims remain gated.
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Initial historical storyboard prepared. Future video must use HyperFrames/MajuPilot reference after a new discussion; all related work held.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- DONE P6.5 Complete 170-second MajuPilot-style narrated HyperFrames preview built. Genuine native console recordings include actual DeepSeek request/full six-second wait/returned response, execution, observed FAIL, corrected case and S4 evidence. Checks and normal-speed 170/170 playback pass. Studio: http://localhost:4390/#project/payprobe-demo. Source/assets: draft PR #35. User reviewed the preview and approved it; final HyperFrames rendering and artifact verification ACTIVE.
+- DONE P6.5 Complete 170-second MajuPilot-style narrated HyperFrames preview built. Genuine native console recordings include actual DeepSeek request/full six-second wait/returned response, execution, observed FAIL, corrected case and S4 evidence. Checks and normal-speed 170/170 playback pass. Studio: http://localhost:4390/#project/payprobe-demo. Source/assets: draft PR #35. User approved the preview; final HyperFrames MP4 rendered and verified: 2:50,1080p30,H.264/AAC,full decode passed. Actual rendered contact/API/export frames inspected. See VIDEO-DELIVERY.md. Local delivery complete; public upload/submission remain separate.
 - DONE P6.6 Public repository and prerelease tag/assets verified, including anonymous ZIP download and checksum. Video/public live-demo links remain future work.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
 - DONE P6.8 Simulated GitHub prerelease v0.1.0-simulated published; hackathon submission remains a separate uncompleted stage.

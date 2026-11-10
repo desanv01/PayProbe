@@ -20,14 +20,14 @@ Release tag points to frozen source; anonymous download matches the accepted arc
 - Final package independently verified: ZIP CRC/paths/allowlist, sidecar, all 52 hashes and frozen Git blob matches, complete TypeScript inputs, blank credential templates and packaged Markdown links. No further install was needed because dependencies/build inputs were unchanged and the small runtime changes had already been verified.
 
 ## Durable constraints
-- VIDEO PRODUCTION AUTHORIZED: user approved the 170-second MajuPilot-style plan, actual CLI, and standard synthetic English voice for the preview. The complete 170-second HyperFrames preview is live at http://localhost:4390/#project/payprobe-demo; native console recordings show actual CLI execution and a real DeepSeek API request with its full six-second wait and returned response. P6 authored the composition, P4 captured the actual consoles, and P5 completed normal-speed playback to 170/170 with no material defect. Standard Microsoft Zira narration, timed captions and credited music are included. User reviewed the complete Studio preview and approved it; final film rendering is now authorized. Prior draft captures are historical and must not substitute for the approved treatment.
+- VIDEO PRODUCTION AUTHORIZED: user approved the 170-second MajuPilot-style plan, actual CLI, and standard synthetic English voice for the preview. The complete 170-second HyperFrames preview is live at http://localhost:4390/#project/payprobe-demo; native console recordings show actual CLI execution and a real DeepSeek API request with its full six-second wait and returned response. P6 authored the composition, P4 captured the actual consoles, and P5 completed normal-speed playback to 170/170 with no material defect. Standard Microsoft Zira narration, timed captions and credited music are included. User reviewed the complete Studio preview and approved it; the final 170-second MP4 has been rendered and verified. Prior draft captures are historical and must not substitute for the approved treatment.
 - Payments remain simulated. Real PayPal account setup, API integration and sandbox validation are deferred under issue #9. No PayPal calls or credentials requested.
 - Runtime AI uses DeepSeek exclusively through the compatible SDK. deepseek-flash is the configured rolling alias for the requested model; immutable model pinning is not claimed.
 - No local Git initialization/commits/worktrees. Remote changes use explicit public-file allowlists. Never publish .env.local, keys, databases, private artifacts or internal coordination identifiers.
 - Approved UI palette is graphite/amber/ivory/plum. User approved layout/interactions and delegated the palette adjustment.
 
 ## What remains separately
-Issue #7 remains open for video (now active, final render gated by preview approval), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
+Issue #7 remains open for video hosting/upload (local film complete), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
 No known blocking defect remains in the tested current local workflows. This does not imply universal payment testing or production qualification.
 
 ## Run and handover
@@ -35,4 +35,7 @@ Node 24.14+ within 24.x: npm ci; npm run build; npm start -- doctor; npm start -
 Browser sessions are memory-only and expire on restart; recorded runs persist in SQLite. node:sqlite emits its experimental warning before the TUI opens.
 Full phase/task checklist and worker ownership: TASK-BOARD.md. Detailed acceptance: docs/stabilization and docs/design/runtime-check. Package script/deployment templates: docs/release.
 Private validation evidence remains excluded from publication.
-\nVideo source and referenced assets are published in draft PR #35. User approved the complete preview; final HyperFrames delivery rendering and artifact verification are underway. The Studio server stays running for review. Later FollowThrough-style repository presentation remains deferred until the agreed later stage.\n
+
+Video source and referenced assets are published in draft PR #35. User approved the complete preview; final HyperFrames delivery rendering and artifact verification are complete. The Studio server stays running for review. Later FollowThrough-style repository presentation remains deferred until the agreed later stage.
+
+Final video: video-production/payprobe-demo/deliverables/PayProbe-Demo-v1.mp4. Verified 170.000 seconds, H.264 1920x1080/30fps/5100 frames, AAC48kHz stereo, full decode PASS, true peak -1.1dBFS. SHA25694af5559e653a112b5b3758baf07f1491286c4f5ff3def66e4bf67e6f2213368. Actual rendered contact sheet and API/export frames inspected. See VIDEO-DELIVERY.md. Final MP4 remains local; no video upload/submission performed.

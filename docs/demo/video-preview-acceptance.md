@@ -1,6 +1,6 @@
 # PayProbe video preview acceptance
 
-Date: 2026-11-10. **Preview verification complete; no material blocker found in the final reviewed preview. USER PREVIEW APPROVED:** main relayed the user's “looks good” approval of the complete preview. P6 is authorized to render the same approved source. No final render or new model/payment request was performed by P5.
+Date: 2026-11-10. **Preview verification complete; no material blocker found in the final reviewed preview. USER PREVIEW APPROVED:** main relayed the user's “looks good” approval of the complete preview. P6 rendered that approved source; P5's bounded rendered-frame check also passed. No final render or new model/payment request was performed by P5.
 
 ## Actual checks
 
@@ -36,4 +36,8 @@ P5 independently checked that the current faulty report and exported report shar
 - V4 wrapped synthetic ID: not a secret/security blocker; final native shots accurately allow visible fixture IDs rather than claim masking.
 - V5 blank export and V6 blank execute, plus stale optimized-terminal redraw: replaced by actual native pixels; source frames and assembled export/execute views verified.
 
-Preview service remains alive. P6 owns the approved-source delivery render, decode, metadata and rendered contact-sheet checks; main owns GitHub and final handoff. P5 may inspect the actual rendered API/export critical frames for provenance/privacy without duplicating those checks. No new source edits or API calls are required. Payments remain simulated; this video does not establish PayPal verification or submission readiness.
+## Rendered critical-frame check
+
+P5 inspected only P6's actual master-extracted frames at150s and153.8s: **PASS**, no privacy/provenance defect observed. The API frame retains the actual returned response, matching evidence references and explicit simulated-payment/deterministic-verdict labels. The export frame is nonblank and readable, with31events, PASS/PASS/FAIL/PASS, simulated provider and realPayPalVerified:false; it explicitly states export did not call AI or rerun payments. No keys, tokens or personal paths appear in these two frames.
+
+Artifact identification from P6's verification record: `PayProbe-Demo-v1.mp4`, SHA256 `94af5559e653a112b5b3758baf07f1491286c4f5ff3def66e4bf67e6f2213368`. P6 owns the full decode/metadata/audio/contact-sheet verification; P5 did not duplicate it. Main owns GitHub and final handoff. No composition edits or further API calls were needed. Payments remain simulated; this video does not establish PayPal verification or submission readiness.
