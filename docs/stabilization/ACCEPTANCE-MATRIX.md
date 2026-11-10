@@ -19,6 +19,8 @@ This is a bounded checklist for the connected product, not a new test framework.
 | UI / access | Approved representative sizes, keyboard/filter/evidence flow and judge access work; read-only navigation makes no mutations | Actual production buildServer access check PASS: demo public, admin/lookalikes protected, CSRF/origin/session ownership enforced, missing key503/no purchase, unreviewed409, session expiry after restart. P4 owns separate actual visual/native-key report; hosted access is unverified |
 | Rehearsal | One clean install and hosted central journey against integrated revision after fixes | Clean install/build/compiled startup/demo/session PASS at frozen remote UI revision. No external deployment/hosted rehearsal performed |
 
+Final source ZIP integrity/link gate also passed independently at revision `32e036d3cae80a915625319140ffdfc01b736e6d`: 52 public files, exact remote blob equality, all manifest/ZIP hashes, four local Markdown links and byte-identical stable publication copy. Runtime/dependency comparison found no material install gap requiring another install. See [artifact acceptance](ARTIFACT-ACCEPTANCE.md). This documentation/verifier publication is outside the frozen package; video remains on hold and hosted access remains unverified.
+
 ## Focused command
 
 `node --import tsx --test tests/stabilization/payment-http.test.ts`
