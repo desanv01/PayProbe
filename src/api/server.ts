@@ -7,6 +7,12 @@ import { Store } from '../storage/database.js';
 import { SimulatedProvider } from '../providers/simulated.js';
 import { DeepSeekClient,safeDeepSeekDiagnostics } from '../providers/deepseek.js';
 import { SampleStore } from '../sample-store/service.js';
+import { registerDemoUi } from '../web/routes.js';
+import { HttpAdapter } from '../adapters/http.js';
+import { resume,report } from '../runner/index.js';
+import { RunRepository } from '../runner/repository.js';
+import { ReviewedPlanStore } from '../ai/review-store.js';
+import { toRunnerPlan } from '../ai/planner.js';
 
 export function buildServer(config: Config, suppliedStore?: Store) {
   const db = suppliedStore ?? new Store(config.PAYPROBE_DB_PATH);
@@ -15,6 +21,9 @@ export function buildServer(config: Config, suppliedStore?: Store) {
   const app = Fastify({ logger:false,bodyLimit:32768 });
   app.addHook('onRequest',async (request,reply) => {
     if (request.url === '/health') return;
+    // Exempt only matched demo routes, never a lookalike path or admin route.
+    const route=request.routeOptions.url;
+    if (route === '/demo' || route?.startsWith('/demo/')) return;
     if (config.PAYPROBE_API_TOKEN) {
       const actual = Buffer.from(request.headers.authorization ?? ''), expected = Buffer.from(`Bearer ${config.PAYPROBE_API_TOKEN}`);
       if (actual.length !== expected.length || !timingSafeEqual(actual,expected)) return reply.code(401).send({error:'unauthorized'});
@@ -26,7 +35,7 @@ export function buildServer(config: Config, suppliedStore?: Store) {
     return reply.code(500).send({error:'internal_error'});
   });
   app.get('/health',async()=>({ok:true,provider:'simulated',realPayPalVerified:false}));
-  app.get('/api/doctor',async()=>({node:process.version,credentials:credentialPresence(config),provider:'simulated',provenance:'simulated',paypalRequired:false,realPayPalVerified:false,uiApproval:'pending'}));
+  app.get('/api/doctor',async()=>({node:process.version,credentials:credentialPresence(config),provider:'simulated',provenance:'simulated',paypalRequired:false,realPayPalVerified:false}));
   app.post('/api/deepseek/probe',async()=>ai.probe());
   app.get('/adapter/capabilities',async()=>({version:adapterVersion,capabilities,provider:'simulated',provenance:'simulated'}));
   app.post('/adapter/orders',async(request)=>{
@@ -56,6 +65,39 @@ export function buildServer(config: Config, suppliedStore?: Store) {
   app.post('/simulated/orders/:id/approve',async(request)=>provider.approve(z.object({id:z.string()}).parse(request.params).id));
   // Independent observer: reads provider ledger without target processing or fixture-mode decisions.
   app.get('/provider/orders/:id',async(request)=>provider.get(z.object({id:z.string()}).parse(request.params).id));
+  // Fixed self-target transport keeps the evaluator on HTTP adapter boundaries,
+  // without exposing the admin bearer or accepting a browser-supplied target.
+  const demoAdapter=new HttpAdapter({baseUrl:'http://payprobe.internal',token:config.PAYPROBE_API_TOKEN,fetch:async(input,init)=>{
+    const request=new Request(input,init),url=new URL(request.url);
+    if(url.origin!=='http://payprobe.internal'||!['GET','POST'].includes(request.method)) throw new AppError('demo_target_rejected',400);
+    const response=await app.inject({method:request.method as 'GET'|'POST',url:url.pathname+url.search,
+      headers:Object.fromEntries(request.headers),...(request.method==='POST'?{payload:await request.text()}:{})});
+    return new Response(response.body,{status:response.statusCode,headers:{'content-type':'application/json'}});
+  }});
+  const reviews=new ReviewedPlanStore(db),runs=new RunRepository(db);
+  const resumeReviewed=(id:string)=>{
+    const saved=reviews.forRun(id);
+    if(!saved)throw new AppError('reviewed_run_source_missing',409);
+    reviews.attach(id,saved);
+    return resume({store:db,adapter:demoAdapter,runId:id,autoApproveSimulated:false});
+  };
+  registerDemoUi(app,{
+    client:ai,doctor:()=>({deepseekKeyPresent:Boolean(config.DEEPSEEK_API_KEY)}),
+    start:async(input)=>{
+      const saved=reviews.save(input),id=runs.create(toRunnerPlan(saved.plan));
+      reviews.attach(id,saved);
+      return resumeReviewed(id);
+    },
+    resume:resumeReviewed,report:(id)=>report(db,id),
+    approve:async(run,purchaseId)=>{
+      if(run.state!=='awaiting_approval'||!run.approvals.some(item=>item.purchaseId===purchaseId))throw new AppError('demo_approval_not_pending',409);
+      const order=db.order(purchaseId);
+      if(!order.providerOrderId)throw new AppError('provider_order_missing',409);
+      const payment=await provider.get(order.providerOrderId);
+      if(payment.purchaseId!==purchaseId)throw new AppError('provider_purchase_mismatch',409);
+      await provider.approve(order.providerOrderId);
+    },
+  });
   app.addHook('onClose',async()=>{if (!suppliedStore) db.close();});
   return {app,db,provider,target,ai};
 }
