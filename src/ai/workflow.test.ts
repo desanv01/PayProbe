@@ -72,3 +72,33 @@ test('reviewed AI selection connects through HTTP execution to report and ground
     assert.equal(explained.explanations.length,4);assert.ok(formatReport(result,'json').includes('realPayPalVerified'));
   } finally {await app.close();store.close();}
 });
+test('four-scenario explanation stays concise without echoing or dropping long evidence lists',async()=>{
+  const input=report(),ids=['S1','S2','S3','S4'] as const;
+  input.state='finished';input.plan.scenarios=[...ids];
+  let sequence=0;
+  input.evidence=ids.flatMap((scenarioId,index)=>Array.from({length:[7,6,18,11][index]!},()=>({
+    ...input.evidence[0]!,scenarioId,sequence:++sequence,id:`81d0fcb9-efe2-4a6b-898a-45f62f053f1d:${sequence}`,data:{entitlementCount:1,provenance:'simulated'},
+  })));
+  input.cases=ids.map(scenarioId=>({scenarioId,verdict:'PASS',reason:'Recorded observations establish the simulated assertion.',evidenceIds:input.evidence.filter(e=>e.scenarioId===scenarioId).map(e=>e.id)}));
+  const compact={explanations:input.cases.map(c=>({scenarioId:c.scenarioId,evidenceIds:c.evidenceIds.slice(0,2),explanation:c.reason,hypotheses:[]}))};
+  let observedRequest=false;
+  const inspectingClient:JsonClient={json:async(system,payload,schema,example,attempts)=>{
+    observedRequest=true;
+    const context=payload as {cases:RunReport['cases'];evidence:RunReport['evidence'];omittedEvidence:number};
+    assert.equal(context.cases.find(c=>c.scenarioId==='S3')?.evidenceIds.length,18);
+    assert.equal(context.evidence.length,42);assert.equal(context.omittedEvidence,0);assert.equal(attempts,2);
+    assert.match(system,/at most 240 characters/);assert.match(system,/only 1 or 2 actual relevant/);assert.match(system,/empty for PASS/);assert.match(system,/1200 output tokens/);
+    const sample=example as typeof compact;
+    assert.equal(sample.explanations.length,4);assert.ok(sample.explanations.every(e=>e.evidenceIds.length<=2&&e.explanation.length<=240&&e.hypotheses.length===0));
+    const expensive=structuredClone(compact);expensive.explanations[2]!.evidenceIds=[...input.cases[2]!.evidenceIds];assert.equal(schema.safeParse(expensive).success,false);
+    const verbose=structuredClone(compact);verbose.explanations[0]!.explanation='x'.repeat(241);assert.equal(schema.safeParse(verbose).success,false);
+    const hypothesis=(text:string)=>({explanations:[{...compact.explanations[0],hypotheses:[{text,evidenceIds:compact.explanations[0]!.evidenceIds}]}]});
+    assert.equal(schema.safeParse(hypothesis('x'.repeat(161))).success,false);
+    const duplicateHypotheses=hypothesis('Possible cause');duplicateHypotheses.explanations[0]!.hypotheses.push({text:'Another possible cause',evidenceIds:compact.explanations[0]!.evidenceIds});assert.equal(schema.safeParse(duplicateHypotheses).success,false);
+    return client(compact).json(system,payload,schema,example,attempts);
+  }};
+  const explained=await explainReport(inspectingClient,input);
+  assert.ok(observedRequest);assert.equal(explained.explanations.length,4);assert.deepEqual(explained.deterministicCases,input.cases);
+  assert.deepEqual(explained.context,{suppliedEvidenceCount:42,omittedEvidenceCount:0,omittedScenarioIds:[]});
+  await assert.rejects(()=>explainReport(client({explanations:compact.explanations.slice(0,1)}),input),/missing_scenario/);
+});
