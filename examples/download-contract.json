@@ -1,0 +1,10 @@
+{
+  "requirements": "Check approval without capture, one delivery after matching capture, repeated completion processing, and recovery of a lost successful capture response.",
+  "purchase": { "amountCents": 500, "currency": "USD", "productId": "sample-guide" },
+  "adapter": {
+    "version": "1.0",
+    "capabilities": ["create_order", "handle_buyer_return", "capture", "observe_application", "check_download", "process_again", "reconcile", "arm_fault"]
+  },
+  "fulfillmentTimeoutMs": 1000,
+  "fixtureMode": "corrected"
+}
