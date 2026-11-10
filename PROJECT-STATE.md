@@ -1,44 +1,37 @@
 # PayProbe project state
-Updated: 2026-11-10, approximately 12:00 MYT
+Updated: 2026-11-10, Asia/Kuala_Lumpur
 Canonical folder: <project-root>
-Full checklist: TASK-BOARD.md. Plan: PayProbe-Implementation-Gameplan-v2-2026-11-10.md; current-scope overrides supersede historical milestones.
 
 ## Current result
-The reviewed headless workflow is connected. Actual DeepSeek planning and explanation pass against a completed four-scenario simulated run with 42 evidence events. Approved graphite/amber/ivory/plum TUI/browser modules are connected via PR #24. Native terminal and browser workflow checks pass; browser export/filter checks pass. Non-video packaging and GitHub completion are underway. All video tasks are ON HOLD until the user discusses them again after implementation completion.
+All current local non-video implementation, observed bug fixes, packaging and GitHub prerelease work are complete. The CLI, interactive terminal ledger, browser workflow, deterministic simulator, persisted evidence/recovery and real DeepSeek planning/explanation are connected and verified at the documented scope.
 
-## Scope and working rules
-- Only deterministic simulated payments. No PayPal credentials or calls until the user resumes the deferred provider stage (#9).
-- Runtime AI uses DeepSeek through the openai SDK configured exclusively for DeepSeek. deepseek-flash is the documented rolling alias currently serving V4.1-Flash-1017, not an immutable snapshot.
-- User approved layout/interactions/states and requested another palette; Main selected graphite/amber/ivory/plum v1.1. No further approval gate for that authorized change.
-- No local Git initialization, commits or worktrees. Remote GitHub API commits use explicit file allowlists; never upload .env.local, private databases, dependencies or local evidence artifacts.
-- Six persistent workers operate under TASK-BOARD.md ownership. Main owns integration, root README, this file, task board and plan.
+Release: https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated
+Frozen package source: 32e036d3cae80a915625319140ffdfc01b736e6d (PR #31 merged).
+Archive: PayProbe-v0.1.0-simulated-source.zip, 97,697 bytes, 52 public source files plus manifest.
+SHA256: 9858c0759b8754272bda7956db96d7d6d88e51869cc5bcb9c487e11127ee84f3.
+Release tag points to frozen source; anonymous download matches the accepted archive hash. Final acceptance/status documentation may be newer than this immutable package source.
 
-## Integrated source
-Repository: https://github.com/desanv01/PayProbe
-Latest observed main: 78af09c16da5bcebe205f4750be74dc5388a30c8.
-- #8 foundation; #12 HTTP regression checks; #14 initial release docs.
-- #16 runner; #15 AI workflows; #18 reviewed CLI integration.
-- #19 actual process restart/redaction check; #20 safe categorical AI error diagnostics.
-- #22 concise explanation repair (e2a95dd); #13 approved UI modules/artifacts (b6b5d80); #23 command-aligned release docs (dd705c6).
-- #17 progress docs, #24 runtime UI, #26 terminal startup warning fix, and #27 final local acceptance merged. Final P1 test-discovery update merged via #28; P4 final verification docs and P6 delivery publication are next.
-Use exact current remote heads when publishing/merging; this snapshot is not a lock.
+## Verified scope
+- Foundation, runner, AI workflow, production UI and stabilization test groups pass in CI. Local app/test/config source parity checked against published source.
+- Real DeepSeek planner passed; reviewed execution completed all four simulated cases with 42 evidence events. Concise explainer repair passed on first real attempt with 9,138 input and 366 output tokens, valid citations for all four cases and no omitted evidence.
+- Actual process restart/recovery, reviewed source persistence, redaction, mismatch/missing evidence and duplicate-delivery checks pass. Known observed blocking bugs #10, #21 and #25 are fixed and closed.
+- Native terminal selection/filter/evidence/cleanup and browser wide/mobile plan/review/approval/report/export checks pass. Browser fixture used a disclosed AI client double; actual AI was verified separately via CLI.
+- Clean remote-source install/build/startup passed. Docker image build, loopback health and SQLite order persistence across restart passed with synthetic credentials; test services were cleaned up.
+- Final package independently verified: ZIP CRC/paths/allowlist, sidecar, all 52 hashes and frozen Git blob matches, complete TypeScript inputs, blank credential templates and packaged Markdown links. No further install was needed because dependencies/build inputs were unchanged and the small runtime changes had already been verified.
 
-## Observed checks
-- Node 24.14.1, npm 11.19.0. Build/typecheck, foundation, runner, AI workflow doubles and HTTP recovery checks passed for their relevant source revisions.
-- Real health probe: 81 total tokens. Real planner: 419 total tokens. Main reviewed the generated plan and executed all four simulated cases: PASS, 42 evidence events.
-- First explanation attempts truncated at 1,200 output tokens. Repair keeps provider budgets unchanged and requires concise text with 1–2 relevant references. Real repaired explanation: first attempt, 9,138 prompt + 366 completion = 9,504 tokens; all four cases, valid references, 42 supplied/0 omitted evidence. Issue #21 closed after verification.
-- Actual backend process stop/restart preserved reviewed plan/run identity and completed all four cases with one entitlement per purchase. Text/JSON redaction canaries and missing-review refusal passed. PR #19 merged.
-- P4 module checks: TUI navigation/restoration and browser session/CSRF ownership passed; seeded duplicate fixture yielded PASS PASS FAIL PASS using actual runner with an AI client double. Production wiring and native terminal checks pass; browser full fixture journey and responsive initial layout pass; browser export/filter checks passed. Clean install from published UI source passed.
-- No real PayPal verification, hosted access, video upload, hackathon eligibility or submission readiness claimed.
+## Durable constraints
+- VIDEO HOLD remains absolute until the user discusses/resumes video after implementation completion. No capture, render, assembly, storyboard work or MajuPilot video inspection. Preserve prior drafts privately. Future intended direction is HyperFrames using MajuPilot as the visual reference and actual PayProbe terminal footage.
+- Payments remain simulated. Real PayPal account setup, API integration and sandbox validation are deferred under issue #9. No PayPal calls or credentials requested.
+- Runtime AI uses DeepSeek exclusively through the compatible SDK. deepseek-flash is the configured rolling alias for the requested model; immutable model pinning is not claimed.
+- No local Git initialization/commits/worktrees. Remote changes use explicit public-file allowlists. Never publish .env.local, keys, databases, private artifacts or internal coordination identifiers.
+- Approved UI palette is graphite/amber/ivory/plum. User approved layout/interactions and delegated the palette adjustment.
 
-## Runtime notes
-The local validation server was stopped after verification; persisted evidence remains private.
-Run identifiers and artifacts remain in ignored local storage; credentials are never published.
-Default serve port is 4310. Commands: doctor, serve, plan CONTRACT --out DRAFT, plan --review DRAFT --out REVIEWED, run REVIEWED [--auto-approve-simulated], resume ID, report ID --format text|json, explain ID --out PATH.
-node:sqlite emits an experimental warning. Browser sessions are currently memory-only and expire after restart; underlying runs remain in SQLite.
+## What remains separately
+Issue #7 remains open for video (held), public live-demo hosting (needs selected host/account/access and persistent storage), and future hackathon submission/readiness. None is claimed complete. A public source prerelease is available; it is not a hosted demo or submitted entry.
+No known blocking defect remains in the tested current local workflows. This does not imply universal payment testing or production qualification.
 
-## Next work
-1. P1 implementation and wildcard stabilization test discovery are complete and merged.
-2. P4 actual browser export/filter verification passed; final record publication is underway. P5 local acceptance and clean installation are complete.
-3. P6 finalizes non-video packaging/deployment guidance and artifacts; P5 checks the package. No video or MajuPilot video inspection. Main integrates GitHub changes and shared docs.
-4. Public hosting/video/submission need actual access and evidence; do not infer readiness from local completion. Real PayPal stays separately deferred.
+## Run and handover
+Node 24.14+ within 24.x: npm ci; npm run build; npm start -- doctor; npm start -- serve. Browser: http://127.0.0.1:4310/demo. Saved terminal report: npm start -- ledger RUN_ID. See README.md and docs/release/SETUP.md for the complete command sequence.
+Browser sessions are memory-only and expire on restart; recorded runs persist in SQLite. node:sqlite emits its experimental warning before the TUI opens.
+Full phase/task checklist and worker ownership: TASK-BOARD.md. Detailed acceptance: docs/stabilization and docs/design/runtime-check. Package script/deployment templates: docs/release.
+Private validation evidence and video drafts remain in ignored local storage; no active validation server remains.
