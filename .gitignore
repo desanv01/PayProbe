@@ -11,4 +11,5 @@ coverage/
 *.db-*
 *.log
 .private/
+.payprobe-test-*/
 
