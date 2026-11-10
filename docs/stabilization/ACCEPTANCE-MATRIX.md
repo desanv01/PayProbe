@@ -10,7 +10,7 @@ This is a bounded checklist for the connected product, not a new test framework.
 | Approval | GET simulator approval is read-only; explicit POST approval alone grants no entitlement or download | P5 HTTP recovery test includes these preconditions |
 | Capture | Completed matching simulated capture produces exactly one accessible entitlement | P1 focused foundation check; P5 verifies after HTTP reconciliation |
 | Recovery | One-time suppression really fires after capture; target stays uncertain with zero entitlements; reopening DB and retry cannot recapture; target reconciliation restores one entitlement with same capture/operation IDs | P5 HTTP recovery regression |
-| Definite rejection | Premature capture followed by approval remains recoverable with original mutation ID | Reproduced defect #10; regression initially fails, P1 owns fix |
+| Definite rejection | Premature capture followed by approval remains recoverable with original mutation ID | #10 reproduced, then focused regression passes after P1 fix `c0aaef92fa884e1254d22e6c381ff6998ed92c60`; main integration pending |
 | Repeated processing | Three sequential calls preserve one entitlement and one capture | P5 HTTP recovery test after reconciliation; P2 runner verdict connection pending |
 | Deterministic verdicts | Seeded S1/S3/S4 faults fail; corrected four-scenario run passes with preconditions; wrong amount/currency/identity or missing provider observations cannot pass | Pending P2 interfaces, then bounded targeted checks |
 | Capability/errors | Missing hook => UNSUPPORTED; missing essential observation => INCONCLUSIVE; execution failure => ERROR | Pending P2 verdict projection |
