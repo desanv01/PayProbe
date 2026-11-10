@@ -2,6 +2,16 @@
 
 Not recorded. Use actual approved running UI only after P4 integration and targeted P5 verification; no fabricated screen, payment, report, or model response. If a planned beat is not working, repair or revise it before recording. This is a simulation-only demonstration, not PayPal verification or submission evidence.
 
+Current readiness: main observed a real planner response and all four simulated CLI checks passing with 42 evidence events. Explainer truncation repair is underway. Layout/interactions are approved with graphite/amber/ivory/plum v1.1; runtime UI verification is pending. Do not record the `docs/design/review-v1.1` previews or present their fixture data as a product run.
+
+## Narrow capture plan after main signals ready
+
+1. Main identifies the exact integrated SHA, working runtime browser URL, and verified explainer repair. Keep hosting described as local if no host exists. Use a real server and CLI sharing the same configuration/database; keep private configuration off screen.
+2. Rehearse only the proposed beats against that revision: a real planner request and explicit review, a disclosed premature-fulfillment sample run, a corrected four-scenario run, S4's recorded suppression/uncertainty/reconciliation, and the same persisted report with a real evidence-referenced explanation. Use new private output filenames and actual run IDs. An already captured response must be labeled recorded output, not a new model request.
+3. Capture the approved running browser for plan/review/report/evidence. Show the actual CLI briefly only if it is the working route for a required operation. Use `npm start -- plan ... --out ...`, `plan --review ... --out ...`, `run ... --auto-approve-simulated`, `report RUN_ID --format text`/`json`, and `explain RUN_ID --out ...` exactly as documented in setup. If a run pauses, use `resume RUN_ID --auto-approve-simulated`; never substitute a fresh run while calling it recovery.
+4. Assemble the 2m50 sequence below from actual runtime capture only; disclose cuts, fresh fixture runs, and waiting-time edits. If any required beat fails, stop capture, report it to main, and wait for repair rather than using design fixtures or invented results.
+5. Measure duration below three minutes, review playback for legible evidence and secret exposure, and provide a local artifact and source/run references for main's review. No public upload, paid service, or submission is part of this recording plan.
+
 Keep a visible “SIMULATED PAYMENTS” label throughout. Record the integrated commit SHA, plan/run IDs, fixture mode, and sanitized evidence references in release notes. Do not record keys, environment files, bearer/download tokens, private prompts, or buyer data. No video rendering or production imagery is required at this stage.
 
 | Time | Actual screen/action needed | Narration draft |
