@@ -1,0 +1,17 @@
+{
+  "id": "plan",
+  "duration": 22,
+  "entry": {
+    "direction": "left",
+    "duration": 0.45
+  },
+  "exit": {
+    "direction": "left"
+  },
+  "rules": [
+    "waterfall-entry",
+    "svg-path-draw",
+    "scale-swap-transition"
+  ],
+  "source": "approved nine-scene plan"
+}

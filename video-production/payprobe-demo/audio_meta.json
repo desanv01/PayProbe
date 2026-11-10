@@ -1,0 +1,2517 @@
+{
+    "voices":  [
+                   {
+                       "start":  112.4,
+                       "id":  "recovery",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  4,
+                                         "nativeStart":  0.2535,
+                                         "text":  "Here",
+                                         "start":  0.084499999999999992
+                                     },
+                                     {
+                                         "position":  88,
+                                         "count":  7,
+                                         "nativeStart":  2.1885,
+                                         "text":  "capture",
+                                         "start":  0.72949999999999993
+                                     },
+                                     {
+                                         "position":  96,
+                                         "count":  9,
+                                         "nativeStart":  3.3585,
+                                         "text":  "completed",
+                                         "start":  1.1195
+                                     },
+                                     {
+                                         "position":  107,
+                                         "count":  3,
+                                         "nativeStart":  6.0135,
+                                         "text":  "but",
+                                         "start":  2.0044999999999997
+                                     },
+                                     {
+                                         "position":  111,
+                                         "count":  3,
+                                         "nativeStart":  6.4034999999999993,
+                                         "text":  "its",
+                                         "start":  2.1344999999999996
+                                     },
+                                     {
+                                         "position":  115,
+                                         "count":  8,
+                                         "nativeStart":  6.8835,
+                                         "text":  "response",
+                                         "start":  2.2944999999999998
+                                     },
+                                     {
+                                         "position":  124,
+                                         "count":  3,
+                                         "nativeStart":  8.3235,
+                                         "text":  "was",
+                                         "start":  2.7744999999999997
+                                     },
+                                     {
+                                         "position":  128,
+                                         "count":  12,
+                                         "nativeStart":  8.7435,
+                                         "text":  "deliberately",
+                                         "start":  2.9144999999999994
+                                     },
+                                     {
+                                         "position":  141,
+                                         "count":  10,
+                                         "nativeStart":  10.2135,
+                                         "text":  "suppressed",
+                                         "start":  3.4044999999999996
+                                     },
+                                     {
+                                         "position":  153,
+                                         "count":  8,
+                                         "nativeStart":  14.1885,
+                                         "text":  "Recorded",
+                                         "start":  4.7295
+                                     },
+                                     {
+                                         "position":  162,
+                                         "count":  5,
+                                         "nativeStart":  15.4035,
+                                         "text":  "event",
+                                         "start":  5.1344999999999992
+                                     },
+                                     {
+                                         "position":  168,
+                                         "count":  6,
+                                         "nativeStart":  16.1985,
+                                         "text":  "thirty",
+                                         "start":  5.3995
+                                     },
+                                     {
+                                         "position":  175,
+                                         "count":  5,
+                                         "nativeStart":  17.008499999999998,
+                                         "text":  "seven",
+                                         "start":  5.6694999999999993
+                                     },
+                                     {
+                                         "position":  181,
+                                         "count":  5,
+                                         "nativeStart":  17.9685,
+                                         "text":  "shows",
+                                         "start":  5.9895
+                                     },
+                                     {
+                                         "position":  187,
+                                         "count":  3,
+                                         "nativeStart":  18.8985,
+                                         "text":  "the",
+                                         "start":  6.2994999999999992
+                                     },
+                                     {
+                                         "position":  191,
+                                         "count":  11,
+                                         "nativeStart":  19.2885,
+                                         "text":  "application",
+                                         "start":  6.4294999999999991
+                                     },
+                                     {
+                                         "position":  203,
+                                         "count":  9,
+                                         "nativeStart":  21.133499999999998,
+                                         "text":  "uncertain",
+                                         "start":  7.0444999999999993
+                                     },
+                                     {
+                                         "position":  213,
+                                         "count":  4,
+                                         "nativeStart":  22.4985,
+                                         "text":  "with",
+                                         "start":  7.4994999999999994
+                                     },
+                                     {
+                                         "position":  218,
+                                         "count":  4,
+                                         "nativeStart":  22.8585,
+                                         "text":  "zero",
+                                         "start":  7.6194999999999995
+                                     },
+                                     {
+                                         "position":  223,
+                                         "count":  12,
+                                         "nativeStart":  23.8035,
+                                         "text":  "entitlements",
+                                         "start":  7.9345
+                                     },
+                                     {
+                                         "position":  237,
+                                         "count":  3,
+                                         "nativeStart":  28.153499999999998,
+                                         "text":  "The",
+                                         "start":  9.3845
+                                     },
+                                     {
+                                         "position":  241,
+                                         "count":  8,
+                                         "nativeStart":  28.3635,
+                                         "text":  "provider",
+                                         "start":  9.4545
+                                     },
+                                     {
+                                         "position":  250,
+                                         "count":  11,
+                                         "nativeStart":  29.758499999999998,
+                                         "text":  "observation",
+                                         "start":  9.9195
+                                     },
+                                     {
+                                         "position":  262,
+                                         "count":  8,
+                                         "nativeStart":  31.543499999999998,
+                                         "text":  "confirms",
+                                         "start":  10.514499999999998
+                                     },
+                                     {
+                                         "position":  271,
+                                         "count":  2,
+                                         "nativeStart":  32.8635,
+                                         "text":  "an",
+                                         "start":  10.9545
+                                     },
+                                     {
+                                         "position":  274,
+                                         "count":  8,
+                                         "nativeStart":  33.1335,
+                                         "text":  "existing",
+                                         "start":  11.0445
+                                     },
+                                     {
+                                         "position":  283,
+                                         "count":  9,
+                                         "nativeStart":  34.378499999999995,
+                                         "text":  "completed",
+                                         "start":  11.459499999999998
+                                     },
+                                     {
+                                         "position":  293,
+                                         "count":  7,
+                                         "nativeStart":  35.7585,
+                                         "text":  "capture",
+                                         "start":  11.9195
+                                     },
+                                     {
+                                         "position":  302,
+                                         "count":  6,
+                                         "nativeStart":  39.5085,
+                                         "text":  "Target",
+                                         "start":  13.1695
+                                     },
+                                     {
+                                         "position":  309,
+                                         "count":  14,
+                                         "nativeStart":  40.5435,
+                                         "text":  "reconciliation",
+                                         "start":  13.5145
+                                     },
+                                     {
+                                         "position":  324,
+                                         "count":  4,
+                                         "nativeStart":  42.9285,
+                                         "text":  "then",
+                                         "start":  14.3095
+                                     },
+                                     {
+                                         "position":  329,
+                                         "count":  8,
+                                         "nativeStart":  43.4085,
+                                         "text":  "fulfills",
+                                         "start":  14.469499999999998
+                                     },
+                                     {
+                                         "position":  338,
+                                         "count":  3,
+                                         "nativeStart":  44.9085,
+                                         "text":  "the",
+                                         "start":  14.969499999999998
+                                     },
+                                     {
+                                         "position":  342,
+                                         "count":  8,
+                                         "nativeStart":  45.1335,
+                                         "text":  "purchase",
+                                         "start":  15.0445
+                                     },
+                                     {
+                                         "position":  351,
+                                         "count":  4,
+                                         "nativeStart":  46.363499999999995,
+                                         "text":  "once",
+                                         "start":  15.454499999999998
+                                     },
+                                     {
+                                         "position":  357,
+                                         "count":  6,
+                                         "nativeStart":  49.768499999999996,
+                                         "text":  "Follow",
+                                         "start":  16.589499999999997
+                                     },
+                                     {
+                                         "position":  364,
+                                         "count":  3,
+                                         "nativeStart":  50.698499999999996,
+                                         "text":  "the",
+                                         "start":  16.899499999999996
+                                     },
+                                     {
+                                         "position":  368,
+                                         "count":  8,
+                                         "nativeStart":  50.9835,
+                                         "text":  "recorded",
+                                         "start":  16.9945
+                                     },
+                                     {
+                                         "position":  377,
+                                         "count":  8,
+                                         "nativeStart":  52.183499999999995,
+                                         "text":  "sequence",
+                                         "start":  17.394499999999997
+                                     },
+                                     {
+                                         "position":  386,
+                                         "count":  4,
+                                         "nativeStart":  53.4585,
+                                         "text":  "from",
+                                         "start":  17.819499999999998
+                                     },
+                                     {
+                                         "position":  391,
+                                         "count":  3,
+                                         "nativeStart":  53.9835,
+                                         "text":  "the",
+                                         "start":  17.9945
+                                     },
+                                     {
+                                         "position":  395,
+                                         "count":  4,
+                                         "nativeStart":  54.223499999999994,
+                                         "text":  "lost",
+                                         "start":  18.074499999999997
+                                     },
+                                     {
+                                         "position":  400,
+                                         "count":  8,
+                                         "nativeStart":  55.0635,
+                                         "text":  "response",
+                                         "start":  18.354499999999998
+                                     },
+                                     {
+                                         "position":  410,
+                                         "count":  7,
+                                         "nativeStart":  57.793499999999995,
+                                         "text":  "through",
+                                         "start":  19.264499999999998
+                                     },
+                                     {
+                                         "position":  418,
+                                         "count":  11,
+                                         "nativeStart":  58.393499999999996,
+                                         "text":  "independent",
+                                         "start":  19.464499999999997
+                                     },
+                                     {
+                                         "position":  430,
+                                         "count":  11,
+                                         "nativeStart":  59.9235,
+                                         "text":  "observation",
+                                         "start":  19.9745
+                                     },
+                                     {
+                                         "position":  443,
+                                         "count":  2,
+                                         "nativeStart":  63.0135,
+                                         "text":  "to",
+                                         "start":  21.0045
+                                     },
+                                     {
+                                         "position":  446,
+                                         "count":  3,
+                                         "nativeStart":  63.3435,
+                                         "text":  "one",
+                                         "start":  21.1145
+                                     },
+                                     {
+                                         "position":  450,
+                                         "count":  10,
+                                         "nativeStart":  63.9135,
+                                         "text":  "accessible",
+                                         "start":  21.304499999999997
+                                     },
+                                     {
+                                         "position":  461,
+                                         "count":  8,
+                                         "nativeStart":  65.4885,
+                                         "text":  "download",
+                                         "start":  21.8295
+                                     },
+                                     {
+                                         "position":  470,
+                                         "count":  6,
+                                         "nativeStart":  67.0185,
+                                         "text":  "backed",
+                                         "start":  22.3395
+                                     },
+                                     {
+                                         "position":  477,
+                                         "count":  2,
+                                         "nativeStart":  67.828499999999991,
+                                         "text":  "by",
+                                         "start":  22.609499999999997
+                                     },
+                                     {
+                                         "position":  480,
+                                         "count":  3,
+                                         "nativeStart":  68.2635,
+                                         "text":  "the",
+                                         "start":  22.754499999999997
+                                     },
+                                     {
+                                         "position":  484,
+                                         "count":  4,
+                                         "nativeStart":  68.4885,
+                                         "text":  "same",
+                                         "start":  22.8295
+                                     },
+                                     {
+                                         "position":  489,
+                                         "count":  7,
+                                         "nativeStart":  69.343499999999992,
+                                         "text":  "capture",
+                                         "start":  23.114499999999996
+                                     }
+                                 ],
+                       "rate":  1,
+                       "text":  "Here, capture completed, but its response was deliberately suppressed. Recorded event thirty seven shows the application uncertain with zero entitlements. The provider observation confirms an existing completed capture. Target reconciliation then fulfills the purchase once. Follow the recorded sequence from the lost response, through independent observation, to one accessible download backed by the same capture.",
+                       "duration":  24.2795,
+                       "path":  "assets/audio/voice/recovery.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333331,
+                                         "nativeEnd":  72.8385
+                                     }
+                   },
+                   {
+                       "start":  90.4,
+                       "id":  "corrected",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  3,
+                                         "nativeStart":  0.2985,
+                                         "text":  "Now",
+                                         "start":  0.099499999999999991
+                                     },
+                                     {
+                                         "position":  86,
+                                         "count":  7,
+                                         "nativeStart":  1.0035,
+                                         "text":  "inspect",
+                                         "start":  0.3345
+                                     },
+                                     {
+                                         "position":  94,
+                                         "count":  1,
+                                         "nativeStart":  2.3385,
+                                         "text":  "a",
+                                         "start":  0.77949999999999986
+                                     },
+                                     {
+                                         "position":  96,
+                                         "count":  8,
+                                         "nativeStart":  2.5035,
+                                         "text":  "separate",
+                                         "start":  0.83449999999999991
+                                     },
+                                     {
+                                         "position":  105,
+                                         "count":  9,
+                                         "nativeStart":  3.7634999999999996,
+                                         "text":  "corrected",
+                                         "start":  1.2544999999999997
+                                     },
+                                     {
+                                         "position":  115,
+                                         "count":  7,
+                                         "nativeStart":  5.3235,
+                                         "text":  "fixture",
+                                         "start":  1.7745
+                                     },
+                                     {
+                                         "position":  124,
+                                         "count":  8,
+                                         "nativeStart":  9.5685,
+                                         "text":  "Approval",
+                                         "start":  3.1895
+                                     },
+                                     {
+                                         "position":  133,
+                                         "count":  5,
+                                         "nativeStart":  10.9935,
+                                         "text":  "alone",
+                                         "start":  3.6644999999999994
+                                     },
+                                     {
+                                         "position":  139,
+                                         "count":  5,
+                                         "nativeStart":  12.0735,
+                                         "text":  "keeps",
+                                         "start":  4.0245
+                                     },
+                                     {
+                                         "position":  145,
+                                         "count":  3,
+                                         "nativeStart":  13.1535,
+                                         "text":  "the",
+                                         "start":  4.3844999999999992
+                                     },
+                                     {
+                                         "position":  149,
+                                         "count":  7,
+                                         "nativeStart":  13.423499999999999,
+                                         "text":  "product",
+                                         "start":  4.474499999999999
+                                     },
+                                     {
+                                         "position":  157,
+                                         "count":  6,
+                                         "nativeStart":  14.833499999999999,
+                                         "text":  "locked",
+                                         "start":  4.9445
+                                     },
+                                     {
+                                         "position":  165,
+                                         "count":  1,
+                                         "nativeStart":  18.7335,
+                                         "text":  "A",
+                                         "start":  6.2444999999999995
+                                     },
+                                     {
+                                         "position":  167,
+                                         "count":  8,
+                                         "nativeStart":  19.1235,
+                                         "text":  "matching",
+                                         "start":  6.3744999999999994
+                                     },
+                                     {
+                                         "position":  176,
+                                         "count":  9,
+                                         "nativeStart":  20.4285,
+                                         "text":  "completed",
+                                         "start":  6.8095
+                                     },
+                                     {
+                                         "position":  186,
+                                         "count":  9,
+                                         "nativeStart":  22.0335,
+                                         "text":  "simulated",
+                                         "start":  7.3445
+                                     },
+                                     {
+                                         "position":  196,
+                                         "count":  7,
+                                         "nativeStart":  23.7735,
+                                         "text":  "capture",
+                                         "start":  7.9244999999999992
+                                     },
+                                     {
+                                         "position":  204,
+                                         "count":  6,
+                                         "nativeStart":  25.1835,
+                                         "text":  "yields",
+                                         "start":  8.394499999999999
+                                     },
+                                     {
+                                         "position":  211,
+                                         "count":  3,
+                                         "nativeStart":  26.2635,
+                                         "text":  "one",
+                                         "start":  8.7545
+                                     },
+                                     {
+                                         "position":  215,
+                                         "count":  11,
+                                         "nativeStart":  26.923499999999997,
+                                         "text":  "entitlement",
+                                         "start":  8.974499999999999
+                                     },
+                                     {
+                                         "position":  228,
+                                         "count":  5,
+                                         "nativeStart":  31.618499999999997,
+                                         "text":  "Three",
+                                         "start":  10.539499999999999
+                                     },
+                                     {
+                                         "position":  234,
+                                         "count":  10,
+                                         "nativeStart":  32.3835,
+                                         "text":  "sequential",
+                                         "start":  10.7945
+                                     },
+                                     {
+                                         "position":  245,
+                                         "count":  10,
+                                         "nativeStart":  34.0785,
+                                         "text":  "completion",
+                                         "start":  11.359499999999999
+                                     },
+                                     {
+                                         "position":  256,
+                                         "count":  5,
+                                         "nativeStart":  35.878499999999995,
+                                         "text":  "calls",
+                                         "start":  11.959499999999998
+                                     },
+                                     {
+                                         "position":  262,
+                                         "count":  8,
+                                         "nativeStart":  37.003499999999995,
+                                         "text":  "preserve",
+                                         "start":  12.334499999999998
+                                     },
+                                     {
+                                         "position":  271,
+                                         "count":  4,
+                                         "nativeStart":  38.2785,
+                                         "text":  "that",
+                                         "start":  12.7595
+                                     },
+                                     {
+                                         "position":  276,
+                                         "count":  3,
+                                         "nativeStart":  38.7885,
+                                         "text":  "one",
+                                         "start":  12.929499999999999
+                                     },
+                                     {
+                                         "position":  280,
+                                         "count":  8,
+                                         "nativeStart":  39.448499999999996,
+                                         "text":  "delivery",
+                                         "start":  13.149499999999998
+                                     },
+                                     {
+                                         "position":  289,
+                                         "count":  3,
+                                         "nativeStart":  40.9185,
+                                         "text":  "and",
+                                         "start":  13.6395
+                                     },
+                                     {
+                                         "position":  293,
+                                         "count":  3,
+                                         "nativeStart":  41.2785,
+                                         "text":  "the",
+                                         "start":  13.7595
+                                     },
+                                     {
+                                         "position":  297,
+                                         "count":  4,
+                                         "nativeStart":  41.503499999999995,
+                                         "text":  "same",
+                                         "start":  13.834499999999998
+                                     },
+                                     {
+                                         "position":  302,
+                                         "count":  7,
+                                         "nativeStart":  42.4785,
+                                         "text":  "capture",
+                                         "start":  14.159499999999998
+                                     },
+                                     {
+                                         "position":  311,
+                                         "count":  3,
+                                         "nativeStart":  46.7235,
+                                         "text":  "The",
+                                         "start":  15.5745
+                                     },
+                                     {
+                                         "position":  315,
+                                         "count":  6,
+                                         "nativeStart":  47.0235,
+                                         "text":  "report",
+                                         "start":  15.674499999999998
+                                     },
+                                     {
+                                         "position":  322,
+                                         "count":  5,
+                                         "nativeStart":  48.3135,
+                                         "text":  "keeps",
+                                         "start":  16.104499999999998
+                                     },
+                                     {
+                                         "position":  328,
+                                         "count":  4,
+                                         "nativeStart":  49.363499999999995,
+                                         "text":  "this",
+                                         "start":  16.454499999999996
+                                     },
+                                     {
+                                         "position":  333,
+                                         "count":  9,
+                                         "nativeStart":  49.948499999999996,
+                                         "text":  "corrected",
+                                         "start":  16.649499999999996
+                                     },
+                                     {
+                                         "position":  343,
+                                         "count":  3,
+                                         "nativeStart":  51.5385,
+                                         "text":  "run",
+                                         "start":  17.179499999999997
+                                     },
+                                     {
+                                         "position":  347,
+                                         "count":  8,
+                                         "nativeStart":  52.168499999999995,
+                                         "text":  "distinct",
+                                         "start":  17.389499999999998
+                                     },
+                                     {
+                                         "position":  356,
+                                         "count":  4,
+                                         "nativeStart":  53.5335,
+                                         "text":  "from",
+                                         "start":  17.844499999999996
+                                     },
+                                     {
+                                         "position":  361,
+                                         "count":  3,
+                                         "nativeStart":  54.1635,
+                                         "text":  "the",
+                                         "start":  18.054499999999997
+                                     },
+                                     {
+                                         "position":  365,
+                                         "count":  13,
+                                         "nativeStart":  54.5235,
+                                         "text":  "intentionally",
+                                         "start":  18.1745
+                                     },
+                                     {
+                                         "position":  379,
+                                         "count":  6,
+                                         "nativeStart":  56.473499999999994,
+                                         "text":  "faulty",
+                                         "start":  18.824499999999997
+                                     },
+                                     {
+                                         "position":  386,
+                                         "count":  6,
+                                         "nativeStart":  57.793499999999995,
+                                         "text":  "sample",
+                                         "start":  19.264499999999998
+                                     }
+                                 ],
+                       "rate":  0,
+                       "text":  "Now inspect a separate corrected fixture. Approval alone keeps the product locked. A matching completed simulated capture yields one entitlement. Three sequential completion calls preserve that one delivery and the same capture. The report keeps this corrected run distinct from the intentionally faulty sample.",
+                       "duration":  20.5445,
+                       "path":  "assets/audio/voice/corrected.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333331,
+                                         "nativeEnd":  61.6335
+                                     }
+                   },
+                   {
+                       "start":  156.4,
+                       "id":  "proof",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  3,
+                                         "nativeStart":  0.2985,
+                                         "text":  "The",
+                                         "start":  0.0995
+                                     },
+                                     {
+                                         "position":  86,
+                                         "count":  9,
+                                         "nativeStart":  0.5385,
+                                         "text":  "simulated",
+                                         "start":  0.17950000000000002
+                                     },
+                                     {
+                                         "position":  96,
+                                         "count":  6,
+                                         "nativeStart":  2.3385,
+                                         "text":  "source",
+                                         "start":  0.7795
+                                     },
+                                     {
+                                         "position":  103,
+                                         "count":  10,
+                                         "nativeStart":  3.3885,
+                                         "text":  "prerelease",
+                                         "start":  1.1295000000000002
+                                     },
+                                     {
+                                         "position":  114,
+                                         "count":  2,
+                                         "nativeStart":  5.2035,
+                                         "text":  "is",
+                                         "start":  1.7345000000000002
+                                     },
+                                     {
+                                         "position":  117,
+                                         "count":  9,
+                                         "nativeStart":  5.5785,
+                                         "text":  "available",
+                                         "start":  1.8595000000000002
+                                     },
+                                     {
+                                         "position":  127,
+                                         "count":  2,
+                                         "nativeStart":  7.0184999999999995,
+                                         "text":  "on",
+                                         "start":  2.3395
+                                     },
+                                     {
+                                         "position":  130,
+                                         "count":  6,
+                                         "nativeStart":  7.5734999999999992,
+                                         "text":  "GitHub",
+                                         "start":  2.5245
+                                     },
+                                     {
+                                         "position":  138,
+                                         "count":  4,
+                                         "nativeStart":  11.6235,
+                                         "text":  "Real",
+                                         "start":  3.8745000000000003
+                                     },
+                                     {
+                                         "position":  143,
+                                         "count":  6,
+                                         "nativeStart":  12.3285,
+                                         "text":  "PayPal",
+                                         "start":  4.1095000000000006
+                                     },
+                                     {
+                                         "position":  150,
+                                         "count":  10,
+                                         "nativeStart":  13.7235,
+                                         "text":  "validation",
+                                         "start":  4.5745000000000005
+                                     },
+                                     {
+                                         "position":  161,
+                                         "count":  7,
+                                         "nativeStart":  15.7935,
+                                         "text":  "remains",
+                                         "start":  5.2645000000000008
+                                     },
+                                     {
+                                         "position":  169,
+                                         "count":  8,
+                                         "nativeStart":  17.098499999999998,
+                                         "text":  "deferred",
+                                         "start":  5.6995
+                                     },
+                                     {
+                                         "position":  179,
+                                         "count":  8,
+                                         "nativeStart":  21.2085,
+                                         "text":  "PayProbe",
+                                         "start":  7.0695000000000014
+                                     },
+                                     {
+                                         "position":  188,
+                                         "count":  5,
+                                         "nativeStart":  22.7685,
+                                         "text":  "makes",
+                                         "start":  7.589500000000001
+                                     },
+                                     {
+                                         "position":  194,
+                                         "count":  3,
+                                         "nativeStart":  23.653499999999998,
+                                         "text":  "its",
+                                         "start":  7.8845
+                                     },
+                                     {
+                                         "position":  198,
+                                         "count":  9,
+                                         "nativeStart":  24.1635,
+                                         "text":  "supported",
+                                         "start":  8.0545
+                                     },
+                                     {
+                                         "position":  208,
+                                         "count":  5,
+                                         "nativeStart":  25.618499999999997,
+                                         "text":  "scope",
+                                         "start":  8.5395
+                                     },
+                                     {
+                                         "position":  214,
+                                         "count":  3,
+                                         "nativeStart":  26.758499999999998,
+                                         "text":  "and",
+                                         "start":  8.9195000000000011
+                                     },
+                                     {
+                                         "position":  218,
+                                         "count":  8,
+                                         "nativeStart":  27.1785,
+                                         "text":  "recorded",
+                                         "start":  9.0595000000000017
+                                     },
+                                     {
+                                         "position":  227,
+                                         "count":  8,
+                                         "nativeStart":  28.618499999999997,
+                                         "text":  "evidence",
+                                         "start":  9.5395
+                                     },
+                                     {
+                                         "position":  236,
+                                         "count":  11,
+                                         "nativeStart":  29.8185,
+                                         "text":  "inspectable",
+                                         "start":  9.9395
+                                     }
+                                 ],
+                       "rate":  0,
+                       "text":  "The simulated source prerelease is available on GitHub. Real PayPal validation remains deferred. PayProbe makes its supported scope and recorded evidence inspectable.",
+                       "duration":  11.4045,
+                       "path":  "assets/audio/voice/proof.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333337,
+                                         "nativeEnd":  34.213499999999996
+                                     }
+                   },
+                   {
+                       "start":  138.4,
+                       "id":  "explain",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  3,
+                                         "nativeStart":  0.2385,
+                                         "text":  "The",
+                                         "start":  0.079499999999999987
+                                     },
+                                     {
+                                         "position":  86,
+                                         "count":  7,
+                                         "nativeStart":  0.5085,
+                                         "text":  "explain",
+                                         "start":  0.16949999999999998
+                                     },
+                                     {
+                                         "position":  94,
+                                         "count":  7,
+                                         "nativeStart":  1.6635,
+                                         "text":  "command",
+                                         "start":  0.5545
+                                     },
+                                     {
+                                         "position":  102,
+                                         "count":  5,
+                                         "nativeStart":  2.6534999999999997,
+                                         "text":  "sends",
+                                         "start":  0.88449999999999984
+                                     },
+                                     {
+                                         "position":  108,
+                                         "count":  3,
+                                         "nativeStart":  3.5084999999999997,
+                                         "text":  "the",
+                                         "start":  1.1694999999999998
+                                     },
+                                     {
+                                         "position":  112,
+                                         "count":  8,
+                                         "nativeStart":  3.7634999999999996,
+                                         "text":  "recorded",
+                                         "start":  1.2544999999999997
+                                     },
+                                     {
+                                         "position":  121,
+                                         "count":  8,
+                                         "nativeStart":  4.8885,
+                                         "text":  "findings",
+                                         "start":  1.6294999999999997
+                                     },
+                                     {
+                                         "position":  130,
+                                         "count":  2,
+                                         "nativeStart":  6.1934999999999993,
+                                         "text":  "to",
+                                         "start":  2.0645
+                                     },
+                                     {
+                                         "position":  133,
+                                         "count":  8,
+                                         "nativeStart":  6.4784999999999995,
+                                         "text":  "DeepSeek",
+                                         "start":  2.1594999999999995
+                                     },
+                                     {
+                                         "position":  143,
+                                         "count":  5,
+                                         "nativeStart":  10.1085,
+                                         "text":  "Watch",
+                                         "start":  3.3694999999999995
+                                     },
+                                     {
+                                         "position":  149,
+                                         "count":  3,
+                                         "nativeStart":  10.7835,
+                                         "text":  "the",
+                                         "start":  3.5945
+                                     },
+                                     {
+                                         "position":  153,
+                                         "count":  6,
+                                         "nativeStart":  11.128499999999999,
+                                         "text":  "actual",
+                                         "start":  3.7094999999999994
+                                     },
+                                     {
+                                         "position":  160,
+                                         "count":  7,
+                                         "nativeStart":  12.1485,
+                                         "text":  "request",
+                                         "start":  4.0495
+                                     },
+                                     {
+                                         "position":  168,
+                                         "count":  3,
+                                         "nativeStart":  13.2135,
+                                         "text":  "and",
+                                         "start":  4.4045
+                                     },
+                                     {
+                                         "position":  172,
+                                         "count":  8,
+                                         "nativeStart":  13.5435,
+                                         "text":  "returned",
+                                         "start":  4.5145
+                                     },
+                                     {
+                                         "position":  181,
+                                         "count":  11,
+                                         "nativeStart":  14.5335,
+                                         "text":  "explanation",
+                                         "start":  4.8445
+                                     },
+                                     {
+                                         "position":  194,
+                                         "count":  4,
+                                         "nativeStart":  17.3535,
+                                         "text":  "with",
+                                         "start":  5.7844999999999995
+                                     },
+                                     {
+                                         "position":  199,
+                                         "count":  10,
+                                         "nativeStart":  17.7135,
+                                         "text":  "references",
+                                         "start":  5.9045
+                                     },
+                                     {
+                                         "position":  210,
+                                         "count":  2,
+                                         "nativeStart":  19.1235,
+                                         "text":  "to",
+                                         "start":  6.3744999999999994
+                                     },
+                                     {
+                                         "position":  213,
+                                         "count":  3,
+                                         "nativeStart":  19.4085,
+                                         "text":  "the",
+                                         "start":  6.4695
+                                     },
+                                     {
+                                         "position":  217,
+                                         "count":  8,
+                                         "nativeStart":  19.7685,
+                                         "text":  "evidence",
+                                         "start":  6.5894999999999992
+                                     },
+                                     {
+                                         "position":  227,
+                                         "count":  4,
+                                         "nativeStart":  23.098499999999998,
+                                         "text":  "Text",
+                                         "start":  7.6994999999999987
+                                     },
+                                     {
+                                         "position":  232,
+                                         "count":  3,
+                                         "nativeStart":  23.9235,
+                                         "text":  "and",
+                                         "start":  7.9745
+                                     },
+                                     {
+                                         "position":  236,
+                                         "count":  4,
+                                         "nativeStart":  24.2835,
+                                         "text":  "JSON",
+                                         "start":  8.0945
+                                     },
+                                     {
+                                         "position":  241,
+                                         "count":  7,
+                                         "nativeStart":  26.1135,
+                                         "text":  "reports",
+                                         "start":  8.7045
+                                     },
+                                     {
+                                         "position":  249,
+                                         "count":  6,
+                                         "nativeStart":  27.2835,
+                                         "text":  "retain",
+                                         "start":  9.0945
+                                     },
+                                     {
+                                         "position":  256,
+                                         "count":  3,
+                                         "nativeStart":  28.1835,
+                                         "text":  "the",
+                                         "start":  9.394499999999999
+                                     },
+                                     {
+                                         "position":  260,
+                                         "count":  4,
+                                         "nativeStart":  28.348499999999998,
+                                         "text":  "same",
+                                         "start":  9.4494999999999987
+                                     },
+                                     {
+                                         "position":  265,
+                                         "count":  13,
+                                         "nativeStart":  29.098499999999998,
+                                         "text":  "deterministic",
+                                         "start":  9.6994999999999987
+                                     },
+                                     {
+                                         "position":  279,
+                                         "count":  8,
+                                         "nativeStart":  30.8385,
+                                         "text":  "findings",
+                                         "start":  10.279499999999999
+                                     },
+                                     {
+                                         "position":  289,
+                                         "count":  3,
+                                         "nativeStart":  34.4985,
+                                         "text":  "The",
+                                         "start":  11.4995
+                                     },
+                                     {
+                                         "position":  293,
+                                         "count":  2,
+                                         "nativeStart":  34.8435,
+                                         "text":  "AI",
+                                         "start":  11.6145
+                                     },
+                                     {
+                                         "position":  296,
+                                         "count":  8,
+                                         "nativeStart":  35.698499999999996,
+                                         "text":  "explains",
+                                         "start":  11.899499999999998
+                                     },
+                                     {
+                                         "position":  305,
+                                         "count":  3,
+                                         "nativeStart":  37.018499999999996,
+                                         "text":  "the",
+                                         "start":  12.339499999999997
+                                     },
+                                     {
+                                         "position":  309,
+                                         "count":  12,
+                                         "nativeStart":  37.378499999999995,
+                                         "text":  "observations",
+                                         "start":  12.459499999999998
+                                     },
+                                     {
+                                         "position":  322,
+                                         "count":  5,
+                                         "nativeStart":  39.1485,
+                                         "text":  "while",
+                                         "start":  13.049499999999998
+                                     },
+                                     {
+                                         "position":  328,
+                                         "count":  4,
+                                         "nativeStart":  39.7935,
+                                         "text":  "code",
+                                         "start":  13.2645
+                                     },
+                                     {
+                                         "position":  333,
+                                         "count":  5,
+                                         "nativeStart":  40.6635,
+                                         "text":  "keeps",
+                                         "start":  13.554499999999999
+                                     },
+                                     {
+                                         "position":  339,
+                                         "count":  7,
+                                         "nativeStart":  41.4135,
+                                         "text":  "control",
+                                         "start":  13.804499999999999
+                                     },
+                                     {
+                                         "position":  347,
+                                         "count":  2,
+                                         "nativeStart":  42.5535,
+                                         "text":  "of",
+                                         "start":  14.1845
+                                     },
+                                     {
+                                         "position":  350,
+                                         "count":  3,
+                                         "nativeStart":  42.793499999999995,
+                                         "text":  "the",
+                                         "start":  14.264499999999998
+                                     },
+                                     {
+                                         "position":  354,
+                                         "count":  8,
+                                         "nativeStart":  42.988499999999995,
+                                         "text":  "verdicts",
+                                         "start":  14.329499999999998
+                                     }
+                                 ],
+                       "rate":  2,
+                       "text":  "The explain command sends the recorded findings to DeepSeek. Watch the actual request and returned explanation, with references to the evidence. Text and JSON reports retain the same deterministic findings. The AI explains the observations while code keeps control of the verdicts.",
+                       "duration":  15.3845,
+                       "path":  "assets/audio/voice/explain.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333331,
+                                         "nativeEnd":  46.1535
+                                     }
+                   },
+                   {
+                       "start":  62.4,
+                       "id":  "faulty",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  4,
+                                         "nativeStart":  0.2985,
+                                         "text":  "This",
+                                         "start":  0.099499999999999991
+                                     },
+                                     {
+                                         "position":  87,
+                                         "count":  6,
+                                         "nativeStart":  0.8235,
+                                         "text":  "sample",
+                                         "start":  0.27449999999999997
+                                     },
+                                     {
+                                         "position":  94,
+                                         "count":  12,
+                                         "nativeStart":  1.9785,
+                                         "text":  "deliberately",
+                                         "start":  0.6595
+                                     },
+                                     {
+                                         "position":  107,
+                                         "count":  8,
+                                         "nativeStart":  3.7485,
+                                         "text":  "contains",
+                                         "start":  1.2494999999999998
+                                     },
+                                     {
+                                         "position":  116,
+                                         "count":  1,
+                                         "nativeStart":  5.2935,
+                                         "text":  "a",
+                                         "start":  1.7645
+                                     },
+                                     {
+                                         "position":  118,
+                                         "count":  9,
+                                         "nativeStart":  5.4735,
+                                         "text":  "duplicate",
+                                         "start":  1.8244999999999998
+                                     },
+                                     {
+                                         "position":  128,
+                                         "count":  8,
+                                         "nativeStart":  7.0785,
+                                         "text":  "delivery",
+                                         "start":  2.3594999999999997
+                                     },
+                                     {
+                                         "position":  137,
+                                         "count":  6,
+                                         "nativeStart":  8.458499999999999,
+                                         "text":  "defect",
+                                         "start":  2.8194999999999997
+                                     },
+                                     {
+                                         "position":  145,
+                                         "count":  3,
+                                         "nativeStart":  12.673499999999999,
+                                         "text":  "The",
+                                         "start":  4.224499999999999
+                                     },
+                                     {
+                                         "position":  149,
+                                         "count":  6,
+                                         "nativeStart":  13.048499999999999,
+                                         "text":  "runner",
+                                         "start":  4.349499999999999
+                                     },
+                                     {
+                                         "position":  156,
+                                         "count":  8,
+                                         "nativeStart":  13.9185,
+                                         "text":  "compares",
+                                         "start":  4.6395
+                                     },
+                                     {
+                                         "position":  165,
+                                         "count":  3,
+                                         "nativeStart":  15.4035,
+                                         "text":  "the",
+                                         "start":  5.1344999999999992
+                                     },
+                                     {
+                                         "position":  169,
+                                         "count":  9,
+                                         "nativeStart":  15.6885,
+                                         "text":  "completed",
+                                         "start":  5.2295
+                                     },
+                                     {
+                                         "position":  179,
+                                         "count":  7,
+                                         "nativeStart":  17.293499999999998,
+                                         "text":  "payment",
+                                         "start":  5.7644999999999991
+                                     },
+                                     {
+                                         "position":  187,
+                                         "count":  11,
+                                         "nativeStart":  18.4935,
+                                         "text":  "observation",
+                                         "start":  6.1645
+                                     },
+                                     {
+                                         "position":  199,
+                                         "count":  4,
+                                         "nativeStart":  20.5935,
+                                         "text":  "with",
+                                         "start":  6.8645
+                                     },
+                                     {
+                                         "position":  204,
+                                         "count":  3,
+                                         "nativeStart":  21.043499999999998,
+                                         "text":  "the",
+                                         "start":  7.0144999999999991
+                                     },
+                                     {
+                                         "position":  208,
+                                         "count":  11,
+                                         "nativeStart":  21.4485,
+                                         "text":  "application",
+                                         "start":  7.1495
+                                     },
+                                     {
+                                         "position":  220,
+                                         "count":  11,
+                                         "nativeStart":  23.5785,
+                                         "text":  "fulfillment",
+                                         "start":  7.8594999999999988
+                                     },
+                                     {
+                                         "position":  232,
+                                         "count":  5,
+                                         "nativeStart":  25.4985,
+                                         "text":  "count",
+                                         "start":  8.4995
+                                     },
+                                     {
+                                         "position":  239,
+                                         "count":  8,
+                                         "nativeStart":  29.368499999999997,
+                                         "text":  "Repeated",
+                                         "start":  9.7894999999999985
+                                     },
+                                     {
+                                         "position":  248,
+                                         "count":  10,
+                                         "nativeStart":  30.7335,
+                                         "text":  "processing",
+                                         "start":  10.244499999999999
+                                     },
+                                     {
+                                         "position":  259,
+                                         "count":  10,
+                                         "nativeStart":  32.6385,
+                                         "text":  "multiplies",
+                                         "start":  10.8795
+                                     },
+                                     {
+                                         "position":  270,
+                                         "count":  8,
+                                         "nativeStart":  34.6035,
+                                         "text":  "delivery",
+                                         "start":  11.534499999999998
+                                     },
+                                     {
+                                         "position":  280,
+                                         "count":  2,
+                                         "nativeStart":  37.5135,
+                                         "text":  "so",
+                                         "start":  12.5045
+                                     },
+                                     {
+                                         "position":  283,
+                                         "count":  3,
+                                         "nativeStart":  38.143499999999996,
+                                         "text":  "the",
+                                         "start":  12.714499999999997
+                                     },
+                                     {
+                                         "position":  287,
+                                         "count":  8,
+                                         "nativeStart":  38.3985,
+                                         "text":  "mismatch",
+                                         "start":  12.799499999999998
+                                     },
+                                     {
+                                         "position":  296,
+                                         "count":  8,
+                                         "nativeStart":  39.8985,
+                                         "text":  "produces",
+                                         "start":  13.299499999999998
+                                     },
+                                     {
+                                         "position":  305,
+                                         "count":  1,
+                                         "nativeStart":  41.5485,
+                                         "text":  "a",
+                                         "start":  13.849499999999999
+                                     },
+                                     {
+                                         "position":  307,
+                                         "count":  7,
+                                         "nativeStart":  41.713499999999996,
+                                         "text":  "failure",
+                                         "start":  13.904499999999999
+                                     },
+                                     {
+                                         "position":  316,
+                                         "count":  6,
+                                         "nativeStart":  45.8985,
+                                         "text":  "Select",
+                                         "start":  15.299499999999998
+                                     },
+                                     {
+                                         "position":  323,
+                                         "count":  8,
+                                         "nativeStart":  47.2635,
+                                         "text":  "scenario",
+                                         "start":  15.7545
+                                     },
+                                     {
+                                         "position":  332,
+                                         "count":  5,
+                                         "nativeStart":  48.8535,
+                                         "text":  "three",
+                                         "start":  16.284499999999998
+                                     },
+                                     {
+                                         "position":  338,
+                                         "count":  2,
+                                         "nativeStart":  49.6785,
+                                         "text":  "in",
+                                         "start":  16.5595
+                                     },
+                                     {
+                                         "position":  341,
+                                         "count":  3,
+                                         "nativeStart":  50.0235,
+                                         "text":  "the",
+                                         "start":  16.6745
+                                     },
+                                     {
+                                         "position":  345,
+                                         "count":  6,
+                                         "nativeStart":  50.293499999999995,
+                                         "text":  "ledger",
+                                         "start":  16.764499999999998
+                                     },
+                                     {
+                                         "position":  353,
+                                         "count":  4,
+                                         "nativeStart":  52.738499999999995,
+                                         "text":  "then",
+                                         "start":  17.579499999999996
+                                     },
+                                     {
+                                         "position":  358,
+                                         "count":  4,
+                                         "nativeStart":  53.338499999999996,
+                                         "text":  "open",
+                                         "start":  17.7795
+                                     },
+                                     {
+                                         "position":  363,
+                                         "count":  3,
+                                         "nativeStart":  54.1635,
+                                         "text":  "its",
+                                         "start":  18.054499999999997
+                                     },
+                                     {
+                                         "position":  367,
+                                         "count":  8,
+                                         "nativeStart":  54.778499999999994,
+                                         "text":  "recorded",
+                                         "start":  18.259499999999996
+                                     },
+                                     {
+                                         "position":  376,
+                                         "count":  8,
+                                         "nativeStart":  56.2335,
+                                         "text":  "evidence",
+                                         "start":  18.7445
+                                     },
+                                     {
+                                         "position":  386,
+                                         "count":  3,
+                                         "nativeStart":  60.448499999999996,
+                                         "text":  "The",
+                                         "start":  20.149499999999996
+                                     },
+                                     {
+                                         "position":  390,
+                                         "count":  7,
+                                         "nativeStart":  60.6885,
+                                         "text":  "payment",
+                                         "start":  20.229499999999998
+                                     },
+                                     {
+                                         "position":  398,
+                                         "count":  3,
+                                         "nativeStart":  61.948499999999996,
+                                         "text":  "and",
+                                         "start":  20.649499999999996
+                                     },
+                                     {
+                                         "position":  402,
+                                         "count":  11,
+                                         "nativeStart":  62.3835,
+                                         "text":  "application",
+                                         "start":  20.7945
+                                     },
+                                     {
+                                         "position":  414,
+                                         "count":  12,
+                                         "nativeStart":  64.5285,
+                                         "text":  "observations",
+                                         "start":  21.509499999999996
+                                     },
+                                     {
+                                         "position":  427,
+                                         "count":  4,
+                                         "nativeStart":  66.8235,
+                                         "text":  "make",
+                                         "start":  22.274499999999996
+                                     },
+                                     {
+                                         "position":  432,
+                                         "count":  3,
+                                         "nativeStart":  67.5585,
+                                         "text":  "the",
+                                         "start":  22.519499999999997
+                                     },
+                                     {
+                                         "position":  436,
+                                         "count":  6,
+                                         "nativeStart":  67.9635,
+                                         "text":  "reason",
+                                         "start":  22.6545
+                                     },
+                                     {
+                                         "position":  443,
+                                         "count":  11,
+                                         "nativeStart":  68.983499999999992,
+                                         "text":  "inspectable",
+                                         "start":  22.994499999999995
+                                     }
+                                 ],
+                       "rate":  0,
+                       "text":  "This sample deliberately contains a duplicate delivery defect. The runner compares the completed payment observation with the application fulfillment count. Repeated processing multiplies delivery, so the mismatch produces a failure. Select scenario three in the ledger, then open its recorded evidence. The payment and application observations make the reason inspectable.",
+                       "duration":  24.4595,
+                       "path":  "assets/audio/voice/faulty.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333331,
+                                         "nativeEnd":  73.3785
+                                     }
+                   },
+                   {
+                       "start":  8.4,
+                       "id":  "boundary",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  8,
+                                         "nativeStart":  0.2385,
+                                         "text":  "PayProbe",
+                                         "start":  0.0795
+                                     },
+                                     {
+                                         "position":  91,
+                                         "count":  6,
+                                         "nativeStart":  1.4535,
+                                         "text":  "checks",
+                                         "start":  0.48450000000000004
+                                     },
+                                     {
+                                         "position":  98,
+                                         "count":  3,
+                                         "nativeStart":  2.2335,
+                                         "text":  "the",
+                                         "start":  0.7445
+                                     },
+                                     {
+                                         "position":  102,
+                                         "count":  8,
+                                         "nativeStart":  2.4585,
+                                         "text":  "boundary",
+                                         "start":  0.8195
+                                     },
+                                     {
+                                         "position":  111,
+                                         "count":  7,
+                                         "nativeStart":  3.5985,
+                                         "text":  "between",
+                                         "start":  1.1995000000000002
+                                     },
+                                     {
+                                         "position":  119,
+                                         "count":  7,
+                                         "nativeStart":  4.5285,
+                                         "text":  "payment",
+                                         "start":  1.5095000000000003
+                                     },
+                                     {
+                                         "position":  127,
+                                         "count":  5,
+                                         "nativeStart":  5.4135,
+                                         "text":  "state",
+                                         "start":  1.8045000000000002
+                                     },
+                                     {
+                                         "position":  133,
+                                         "count":  3,
+                                         "nativeStart":  6.1484999999999994,
+                                         "text":  "and",
+                                         "start":  2.0495
+                                     },
+                                     {
+                                         "position":  137,
+                                         "count":  7,
+                                         "nativeStart":  6.4784999999999995,
+                                         "text":  "product",
+                                         "start":  2.1595
+                                     },
+                                     {
+                                         "position":  145,
+                                         "count":  8,
+                                         "nativeStart":  7.5435,
+                                         "text":  "delivery",
+                                         "start":  2.5145000000000004
+                                     },
+                                     {
+                                         "position":  155,
+                                         "count":  4,
+                                         "nativeStart":  10.8735,
+                                         "text":  "This",
+                                         "start":  3.6245000000000003
+                                     },
+                                     {
+                                         "position":  160,
+                                         "count":  13,
+                                         "nativeStart":  11.3535,
+                                         "text":  "demonstration",
+                                         "start":  3.7845000000000004
+                                     },
+                                     {
+                                         "position":  174,
+                                         "count":  4,
+                                         "nativeStart":  13.228499999999999,
+                                         "text":  "uses",
+                                         "start":  4.4095
+                                     },
+                                     {
+                                         "position":  179,
+                                         "count":  9,
+                                         "nativeStart":  13.978499999999999,
+                                         "text":  "simulated",
+                                         "start":  4.6595
+                                     },
+                                     {
+                                         "position":  189,
+                                         "count":  8,
+                                         "nativeStart":  15.2385,
+                                         "text":  "payments",
+                                         "start":  5.0795
+                                     },
+                                     {
+                                         "position":  199,
+                                         "count":  8,
+                                         "nativeStart":  18.6135,
+                                         "text":  "DeepSeek",
+                                         "start":  6.2045
+                                     },
+                                     {
+                                         "position":  208,
+                                         "count":  8,
+                                         "nativeStart":  19.7685,
+                                         "text":  "proposes",
+                                         "start":  6.5895
+                                     },
+                                     {
+                                         "position":  217,
+                                         "count":  9,
+                                         "nativeStart":  21.0585,
+                                         "text":  "supported",
+                                         "start":  7.0195000000000007
+                                     },
+                                     {
+                                         "position":  227,
+                                         "count":  6,
+                                         "nativeStart":  22.258499999999998,
+                                         "text":  "checks",
+                                         "start":  7.4195
+                                     },
+                                     {
+                                         "position":  235,
+                                         "count":  13,
+                                         "nativeStart":  24.3435,
+                                         "text":  "deterministic",
+                                         "start":  8.1145000000000014
+                                     },
+                                     {
+                                         "position":  249,
+                                         "count":  4,
+                                         "nativeStart":  26.098499999999998,
+                                         "text":  "code",
+                                         "start":  8.6995
+                                     },
+                                     {
+                                         "position":  254,
+                                         "count":  7,
+                                         "nativeStart":  26.8635,
+                                         "text":  "assigns",
+                                         "start":  8.9545000000000012
+                                     },
+                                     {
+                                         "position":  262,
+                                         "count":  3,
+                                         "nativeStart":  27.9285,
+                                         "text":  "the",
+                                         "start":  9.3095000000000017
+                                     },
+                                     {
+                                         "position":  266,
+                                         "count":  8,
+                                         "nativeStart":  28.1235,
+                                         "text":  "verdicts",
+                                         "start":  9.3745000000000012
+                                     }
+                                 ],
+                       "rate":  2,
+                       "text":  "PayProbe checks the boundary between payment state and product delivery. This demonstration uses simulated payments. DeepSeek proposes supported checks; deterministic code assigns the verdicts.",
+                       "duration":  10.4245,
+                       "path":  "assets/audio/voice/boundary.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333337,
+                                         "nativeEnd":  31.2735
+                                     }
+                   },
+                   {
+                       "start":  0.4,
+                       "id":  "hook",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  1,
+                                         "nativeStart":  0.2535,
+                                         "text":  "A",
+                                         "start":  0.0845
+                                     },
+                                     {
+                                         "position":  84,
+                                         "count":  8,
+                                         "nativeStart":  0.5835,
+                                         "text":  "checkout",
+                                         "start":  0.19450000000000003
+                                     },
+                                     {
+                                         "position":  93,
+                                         "count":  3,
+                                         "nativeStart":  1.9184999999999999,
+                                         "text":  "can",
+                                         "start":  0.63950000000000007
+                                     },
+                                     {
+                                         "position":  97,
+                                         "count":  4,
+                                         "nativeStart":  2.5185,
+                                         "text":  "look",
+                                         "start":  0.83950000000000014
+                                     },
+                                     {
+                                         "position":  102,
+                                         "count":  10,
+                                         "nativeStart":  3.0135,
+                                         "text":  "successful",
+                                         "start":  1.0045000000000002
+                                     },
+                                     {
+                                         "position":  113,
+                                         "count":  5,
+                                         "nativeStart":  4.7684999999999995,
+                                         "text":  "while",
+                                         "start":  1.5895
+                                     },
+                                     {
+                                         "position":  119,
+                                         "count":  10,
+                                         "nativeStart":  5.4585,
+                                         "text":  "delivering",
+                                         "start":  1.8195000000000001
+                                     },
+                                     {
+                                         "position":  130,
+                                         "count":  3,
+                                         "nativeStart":  6.7334999999999994,
+                                         "text":  "too",
+                                         "start":  2.2445
+                                     },
+                                     {
+                                         "position":  134,
+                                         "count":  5,
+                                         "nativeStart":  7.3335,
+                                         "text":  "early",
+                                         "start":  2.4445
+                                     },
+                                     {
+                                         "position":  141,
+                                         "count":  10,
+                                         "nativeStart":  9.3735,
+                                         "text":  "delivering",
+                                         "start":  3.1245000000000003
+                                     },
+                                     {
+                                         "position":  152,
+                                         "count":  5,
+                                         "nativeStart":  10.6035,
+                                         "text":  "twice",
+                                         "start":  3.5345000000000004
+                                     },
+                                     {
+                                         "position":  159,
+                                         "count":  2,
+                                         "nativeStart":  12.958499999999999,
+                                         "text":  "or",
+                                         "start":  4.3195000000000006
+                                     },
+                                     {
+                                         "position":  162,
+                                         "count":  6,
+                                         "nativeStart":  13.3635,
+                                         "text":  "losing",
+                                         "start":  4.4545
+                                     },
+                                     {
+                                         "position":  169,
+                                         "count":  5,
+                                         "nativeStart":  14.2785,
+                                         "text":  "track",
+                                         "start":  4.7595
+                                     },
+                                     {
+                                         "position":  175,
+                                         "count":  2,
+                                         "nativeStart":  15.148499999999999,
+                                         "text":  "of",
+                                         "start":  5.0495
+                                     },
+                                     {
+                                         "position":  178,
+                                         "count":  1,
+                                         "nativeStart":  15.388499999999999,
+                                         "text":  "a",
+                                         "start":  5.1295
+                                     },
+                                     {
+                                         "position":  180,
+                                         "count":  9,
+                                         "nativeStart":  15.538499999999999,
+                                         "text":  "completed",
+                                         "start":  5.1795
+                                     },
+                                     {
+                                         "position":  190,
+                                         "count":  7,
+                                         "nativeStart":  16.8885,
+                                         "text":  "payment",
+                                         "start":  5.6295000000000011
+                                     }
+                                 ],
+                       "rate":  1,
+                       "text":  "A checkout can look successful while delivering too early, delivering twice, or losing track of a completed payment.",
+                       "duration":  6.7095,
+                       "path":  "assets/audio/voice/hook.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333337,
+                                         "nativeEnd":  20.1285
+                                     }
+                   },
+                   {
+                       "start":  42.4,
+                       "id":  "execute",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  3,
+                                         "nativeStart":  0.2535,
+                                         "text":  "Run",
+                                         "start":  0.0845
+                                     },
+                                     {
+                                         "position":  86,
+                                         "count":  3,
+                                         "nativeStart":  0.8085,
+                                         "text":  "the",
+                                         "start":  0.2695
+                                     },
+                                     {
+                                         "position":  90,
+                                         "count":  8,
+                                         "nativeStart":  1.0635,
+                                         "text":  "reviewed",
+                                         "start":  0.3545
+                                     },
+                                     {
+                                         "position":  99,
+                                         "count":  4,
+                                         "nativeStart":  2.0685,
+                                         "text":  "plan",
+                                         "start":  0.6895
+                                     },
+                                     {
+                                         "position":  104,
+                                         "count":  7,
+                                         "nativeStart":  2.8785,
+                                         "text":  "against",
+                                         "start":  0.9595
+                                     },
+                                     {
+                                         "position":  112,
+                                         "count":  3,
+                                         "nativeStart":  3.8834999999999997,
+                                         "text":  "the",
+                                         "start":  1.2945
+                                     },
+                                     {
+                                         "position":  116,
+                                         "count":  6,
+                                         "nativeStart":  4.1084999999999994,
+                                         "text":  "sample",
+                                         "start":  1.3695
+                                     },
+                                     {
+                                         "position":  123,
+                                         "count":  5,
+                                         "nativeStart":  5.1884999999999994,
+                                         "text":  "store",
+                                         "start":  1.7295
+                                     },
+                                     {
+                                         "position":  130,
+                                         "count":  9,
+                                         "nativeStart":  8.6085,
+                                         "text":  "Execution",
+                                         "start":  2.8695
+                                     },
+                                     {
+                                         "position":  140,
+                                         "count":  6,
+                                         "nativeStart":  10.4385,
+                                         "text":  "pauses",
+                                         "start":  3.4795000000000003
+                                     },
+                                     {
+                                         "position":  147,
+                                         "count":  3,
+                                         "nativeStart":  11.6235,
+                                         "text":  "for",
+                                         "start":  3.8745000000000003
+                                     },
+                                     {
+                                         "position":  151,
+                                         "count":  9,
+                                         "nativeStart":  12.013499999999999,
+                                         "text":  "simulated",
+                                         "start":  4.0045
+                                     },
+                                     {
+                                         "position":  161,
+                                         "count":  8,
+                                         "nativeStart":  13.5285,
+                                         "text":  "approval",
+                                         "start":  4.5095
+                                     },
+                                     {
+                                         "position":  171,
+                                         "count":  6,
+                                         "nativeStart":  17.1435,
+                                         "text":  "Resume",
+                                         "start":  5.7145
+                                     },
+                                     {
+                                         "position":  178,
+                                         "count":  9,
+                                         "nativeStart":  18.1035,
+                                         "text":  "continues",
+                                         "start":  6.0345
+                                     },
+                                     {
+                                         "position":  188,
+                                         "count":  3,
+                                         "nativeStart":  19.543499999999998,
+                                         "text":  "the",
+                                         "start":  6.5145
+                                     },
+                                     {
+                                         "position":  192,
+                                         "count":  4,
+                                         "nativeStart":  19.7685,
+                                         "text":  "same",
+                                         "start":  6.5895
+                                     },
+                                     {
+                                         "position":  197,
+                                         "count":  9,
+                                         "nativeStart":  20.6235,
+                                         "text":  "persisted",
+                                         "start":  6.8745000000000012
+                                     },
+                                     {
+                                         "position":  207,
+                                         "count":  3,
+                                         "nativeStart":  21.973499999999998,
+                                         "text":  "run",
+                                         "start":  7.3245000000000005
+                                     },
+                                     {
+                                         "position":  212,
+                                         "count":  5,
+                                         "nativeStart":  23.9235,
+                                         "text":  "using",
+                                         "start":  7.9745000000000008
+                                     },
+                                     {
+                                         "position":  218,
+                                         "count":  8,
+                                         "nativeStart":  24.868499999999997,
+                                         "text":  "recorded",
+                                         "start":  8.2895
+                                     },
+                                     {
+                                         "position":  227,
+                                         "count":  5,
+                                         "nativeStart":  26.083499999999997,
+                                         "text":  "order",
+                                         "start":  8.6945
+                                     },
+                                     {
+                                         "position":  233,
+                                         "count":  3,
+                                         "nativeStart":  26.8935,
+                                         "text":  "and",
+                                         "start":  8.964500000000001
+                                     },
+                                     {
+                                         "position":  237,
+                                         "count":  9,
+                                         "nativeStart":  27.223499999999998,
+                                         "text":  "operation",
+                                         "start":  9.0745
+                                     },
+                                     {
+                                         "position":  247,
+                                         "count":  10,
+                                         "nativeStart":  28.723499999999998,
+                                         "text":  "identities",
+                                         "start":  9.5745
+                                     },
+                                     {
+                                         "position":  259,
+                                         "count":  4,
+                                         "nativeStart":  32.9835,
+                                         "text":  "This",
+                                         "start":  10.9945
+                                     },
+                                     {
+                                         "position":  264,
+                                         "count":  8,
+                                         "nativeStart":  33.5085,
+                                         "text":  "explicit",
+                                         "start":  11.169500000000001
+                                     },
+                                     {
+                                         "position":  273,
+                                         "count":  8,
+                                         "nativeStart":  34.8885,
+                                         "text":  "approval",
+                                         "start":  11.629500000000002
+                                     },
+                                     {
+                                         "position":  282,
+                                         "count":  6,
+                                         "nativeStart":  35.9985,
+                                         "text":  "switch",
+                                         "start":  11.999500000000001
+                                     },
+                                     {
+                                         "position":  289,
+                                         "count":  7,
+                                         "nativeStart":  36.8685,
+                                         "text":  "affects",
+                                         "start":  12.2895
+                                     },
+                                     {
+                                         "position":  297,
+                                         "count":  9,
+                                         "nativeStart":  37.8735,
+                                         "text":  "simulator",
+                                         "start":  12.624500000000001
+                                     },
+                                     {
+                                         "position":  307,
+                                         "count":  6,
+                                         "nativeStart":  39.448499999999996,
+                                         "text":  "orders",
+                                         "start":  13.1495
+                                     },
+                                     {
+                                         "position":  314,
+                                         "count":  4,
+                                         "nativeStart":  40.4385,
+                                         "text":  "only",
+                                         "start":  13.479500000000002
+                                     },
+                                     {
+                                         "position":  320,
+                                         "count":  2,
+                                         "nativeStart":  43.7835,
+                                         "text":  "It",
+                                         "start":  14.5945
+                                     },
+                                     {
+                                         "position":  323,
+                                         "count":  5,
+                                         "nativeStart":  44.113499999999995,
+                                         "text":  "never",
+                                         "start":  14.7045
+                                     },
+                                     {
+                                         "position":  329,
+                                         "count":  10,
+                                         "nativeStart":  44.893499999999996,
+                                         "text":  "represents",
+                                         "start":  14.964500000000001
+                                     },
+                                     {
+                                         "position":  340,
+                                         "count":  1,
+                                         "nativeStart":  46.363499999999995,
+                                         "text":  "a",
+                                         "start":  15.4545
+                                     },
+                                     {
+                                         "position":  342,
+                                         "count":  4,
+                                         "nativeStart":  46.6185,
+                                         "text":  "real",
+                                         "start":  15.5395
+                                     },
+                                     {
+                                         "position":  347,
+                                         "count":  6,
+                                         "nativeStart":  47.2185,
+                                         "text":  "PayPal",
+                                         "start":  15.739500000000001
+                                     },
+                                     {
+                                         "position":  354,
+                                         "count":  5,
+                                         "nativeStart":  48.448499999999996,
+                                         "text":  "buyer",
+                                         "start":  16.1495
+                                     },
+                                     {
+                                         "position":  360,
+                                         "count":  8,
+                                         "nativeStart":  49.378499999999995,
+                                         "text":  "approval",
+                                         "start":  16.459500000000002
+                                     }
+                                 ],
+                       "rate":  1,
+                       "text":  "Run the reviewed plan against the sample store. Execution pauses for simulated approval. Resume continues the same persisted run, using recorded order and operation identities. This explicit approval switch affects simulator orders only. It never represents a real PayPal buyer approval.",
+                       "duration":  17.5745,
+                       "path":  "assets/audio/voice/execute.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333337,
+                                         "nativeEnd":  52.723499999999994
+                                     }
+                   },
+                   {
+                       "start":  20.4,
+                       "id":  "plan",
+                       "words":  [
+                                     {
+                                         "position":  82,
+                                         "count":  5,
+                                         "nativeStart":  0.2535,
+                                         "text":  "Start",
+                                         "start":  0.0845
+                                     },
+                                     {
+                                         "position":  88,
+                                         "count":  4,
+                                         "nativeStart":  1.2435,
+                                         "text":  "with",
+                                         "start":  0.41450000000000004
+                                     },
+                                     {
+                                         "position":  93,
+                                         "count":  3,
+                                         "nativeStart":  1.6184999999999998,
+                                         "text":  "the",
+                                         "start":  0.5395
+                                     },
+                                     {
+                                         "position":  97,
+                                         "count":  7,
+                                         "nativeStart":  1.8735,
+                                         "text":  "digital",
+                                         "start":  0.6245
+                                     },
+                                     {
+                                         "position":  105,
+                                         "count":  8,
+                                         "nativeStart":  2.9234999999999998,
+                                         "text":  "purchase",
+                                         "start":  0.9745
+                                     },
+                                     {
+                                         "position":  114,
+                                         "count":  11,
+                                         "nativeStart":  4.2284999999999995,
+                                         "text":  "requirement",
+                                         "start":  1.4095
+                                     },
+                                     {
+                                         "position":  127,
+                                         "count":  3,
+                                         "nativeStart":  8.2184999999999988,
+                                         "text":  "The",
+                                         "start":  2.7395
+                                     },
+                                     {
+                                         "position":  131,
+                                         "count":  4,
+                                         "nativeStart":  8.5484999999999989,
+                                         "text":  "real",
+                                         "start":  2.8495
+                                     },
+                                     {
+                                         "position":  136,
+                                         "count":  8,
+                                         "nativeStart":  9.1485,
+                                         "text":  "DeepSeek",
+                                         "start":  3.0495000000000005
+                                     },
+                                     {
+                                         "position":  145,
+                                         "count":  7,
+                                         "nativeStart":  10.5435,
+                                         "text":  "planner",
+                                         "start":  3.5145000000000004
+                                     },
+                                     {
+                                         "position":  153,
+                                         "count":  7,
+                                         "nativeStart":  11.5335,
+                                         "text":  "selects",
+                                         "start":  3.8445000000000005
+                                     },
+                                     {
+                                         "position":  161,
+                                         "count":  4,
+                                         "nativeStart":  12.7035,
+                                         "text":  "four",
+                                         "start":  4.2345000000000006
+                                     },
+                                     {
+                                         "position":  166,
+                                         "count":  9,
+                                         "nativeStart":  13.3485,
+                                         "text":  "supported",
+                                         "start":  4.4495000000000005
+                                     },
+                                     {
+                                         "position":  176,
+                                         "count":  9,
+                                         "nativeStart":  14.728499999999999,
+                                         "text":  "lifecycle",
+                                         "start":  4.9095
+                                     },
+                                     {
+                                         "position":  186,
+                                         "count":  6,
+                                         "nativeStart":  16.3035,
+                                         "text":  "checks",
+                                         "start":  5.4345000000000008
+                                     },
+                                     {
+                                         "position":  194,
+                                         "count":  3,
+                                         "nativeStart":  19.993499999999997,
+                                         "text":  "The",
+                                         "start":  6.6644999999999994
+                                     },
+                                     {
+                                         "position":  198,
+                                         "count":  9,
+                                         "nativeStart":  20.278499999999998,
+                                         "text":  "generated",
+                                         "start":  6.7595
+                                     },
+                                     {
+                                         "position":  208,
+                                         "count":  4,
+                                         "nativeStart":  21.688499999999998,
+                                         "text":  "plan",
+                                         "start":  7.2295
+                                     },
+                                     {
+                                         "position":  213,
+                                         "count":  2,
+                                         "nativeStart":  22.543499999999998,
+                                         "text":  "is",
+                                         "start":  7.5145
+                                     },
+                                     {
+                                         "position":  216,
+                                         "count":  5,
+                                         "nativeStart":  22.8735,
+                                         "text":  "saved",
+                                         "start":  7.6245000000000012
+                                     },
+                                     {
+                                         "position":  222,
+                                         "count":  3,
+                                         "nativeStart":  23.743499999999997,
+                                         "text":  "for",
+                                         "start":  7.9145
+                                     },
+                                     {
+                                         "position":  226,
+                                         "count":  10,
+                                         "nativeStart":  24.208499999999997,
+                                         "text":  "inspection",
+                                         "start":  8.0695
+                                     },
+                                     {
+                                         "position":  238,
+                                         "count":  6,
+                                         "nativeStart":  28.2135,
+                                         "text":  "Review",
+                                         "start":  9.4045
+                                     },
+                                     {
+                                         "position":  245,
+                                         "count":  7,
+                                         "nativeStart":  29.083499999999997,
+                                         "text":  "accepts",
+                                         "start":  9.6945
+                                     },
+                                     {
+                                         "position":  253,
+                                         "count":  4,
+                                         "nativeStart":  30.3735,
+                                         "text":  "that",
+                                         "start":  10.124500000000001
+                                     },
+                                     {
+                                         "position":  258,
+                                         "count":  5,
+                                         "nativeStart":  30.8235,
+                                         "text":  "exact",
+                                         "start":  10.274500000000002
+                                     },
+                                     {
+                                         "position":  264,
+                                         "count":  4,
+                                         "nativeStart":  31.8735,
+                                         "text":  "plan",
+                                         "start":  10.624500000000001
+                                     },
+                                     {
+                                         "position":  269,
+                                         "count":  6,
+                                         "nativeStart":  32.7885,
+                                         "text":  "before",
+                                         "start":  10.9295
+                                     },
+                                     {
+                                         "position":  276,
+                                         "count":  9,
+                                         "nativeStart":  33.6885,
+                                         "text":  "execution",
+                                         "start":  11.2295
+                                     },
+                                     {
+                                         "position":  287,
+                                         "count":  3,
+                                         "nativeStart":  37.9935,
+                                         "text":  "The",
+                                         "start":  12.6645
+                                     },
+                                     {
+                                         "position":  291,
+                                         "count":  5,
+                                         "nativeStart":  38.2035,
+                                         "text":  "model",
+                                         "start":  12.7345
+                                     },
+                                     {
+                                         "position":  297,
+                                         "count":  4,
+                                         "nativeStart":  39.1485,
+                                         "text":  "does",
+                                         "start":  13.0495
+                                     },
+                                     {
+                                         "position":  302,
+                                         "count":  3,
+                                         "nativeStart":  39.838499999999996,
+                                         "text":  "not",
+                                         "start":  13.2795
+                                     },
+                                     {
+                                         "position":  306,
+                                         "count":  6,
+                                         "nativeStart":  40.4985,
+                                         "text":  "invent",
+                                         "start":  13.499500000000001
+                                     },
+                                     {
+                                         "position":  313,
+                                         "count":  9,
+                                         "nativeStart":  41.4135,
+                                         "text":  "endpoints",
+                                         "start":  13.8045
+                                     },
+                                     {
+                                         "position":  324,
+                                         "count":  7,
+                                         "nativeStart":  44.1735,
+                                         "text":  "execute",
+                                         "start":  14.7245
+                                     },
+                                     {
+                                         "position":  332,
+                                         "count":  7,
+                                         "nativeStart":  45.5685,
+                                         "text":  "payment",
+                                         "start":  15.189500000000002
+                                     },
+                                     {
+                                         "position":  340,
+                                         "count":  10,
+                                         "nativeStart":  46.588499999999996,
+                                         "text":  "operations",
+                                         "start":  15.5295
+                                     },
+                                     {
+                                         "position":  352,
+                                         "count":  2,
+                                         "nativeStart":  49.6335,
+                                         "text":  "or",
+                                         "start":  16.544500000000003
+                                     },
+                                     {
+                                         "position":  355,
+                                         "count":  6,
+                                         "nativeStart":  49.9935,
+                                         "text":  "decide",
+                                         "start":  16.6645
+                                     },
+                                     {
+                                         "position":  362,
+                                         "count":  7,
+                                         "nativeStart":  51.1185,
+                                         "text":  "whether",
+                                         "start":  17.0395
+                                     },
+                                     {
+                                         "position":  370,
+                                         "count":  5,
+                                         "nativeStart":  51.823499999999996,
+                                         "text":  "money",
+                                         "start":  17.2745
+                                     },
+                                     {
+                                         "position":  376,
+                                         "count":  5,
+                                         "nativeStart":  52.6485,
+                                         "text":  "moved",
+                                         "start":  17.549500000000002
+                                     }
+                                 ],
+                       "rate":  1,
+                       "text":  "Start with the digital purchase requirement. The real DeepSeek planner selects four supported lifecycle checks. The generated plan is saved for inspection. Review accepts that exact plan before execution. The model does not invent endpoints, execute payment operations, or decide whether money moved.",
+                       "duration":  18.6045,
+                       "path":  "assets/audio/voice/plan.wav",
+                       "alignment":  {
+                                         "method":  "native SAPI progress and end bookmark aligned to measured WAV duration",
+                                         "scale":  0.33333333333333337,
+                                         "nativeEnd":  55.8135
+                                     }
+                   }
+               ],
+    "synthetic":  true,
+    "provider":  "local Microsoft Speech API",
+    "language":  "en-US",
+    "voice":  "Microsoft Zira Desktop",
+    "cloned":  false
+}
