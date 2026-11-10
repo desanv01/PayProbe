@@ -2,11 +2,13 @@
 
 Read PayProbe-Implementation-Gameplan-v2-2026-11-10.md and PROJECT-STATE.md before phase work. User instructions prevail.
 
+Current user scope override (2026-11-10): implement and fix all current phases using an explicitly simulated, deterministic payment provider. Default provider is simulated; no PayPal network/API calls or PayPal credential requests. Real PayPal integration/validation is a separate deferred stage after implementation/stabilization. Only DeepSeek is a current external API dependency. Never describe simulated approval/capture as PayPal verification or established submission readiness. Preserve the user's .env.local and key. Use documented deepseek-flash API alias (currently DeepSeek-V4.1-Flash-1017; rolling alias, not immutable pinning).
+
 - Work only in C:\Users\Dv\Desktop\PayProbe. No worktrees, local git initialization, or local Git commits.
 - Remote repository: desanv01/PayProbe. Publish each coherent completed task/subtask and fix using GitHub APIs, preserving granular commits and one draft PR per main phase. Never recursively upload the workspace. Explicitly exclude secrets, .env.local, databases, node_modules and private artifacts.
-- Use one persistent Sol Medium worker chat per main phase; do not spawn more workers. Main orchestrator owns cross-phase coordination. Reuse phase chats for repair.
+- User update: run all six phase workers concurrently, one persistent Sol Medium chat per phase. Reuse these chats for repairs; no extra subtask/audit fleet. Main owns shared docs, integration and the task board; phase workers have exclusive file ownership documented in TASK-BOARD.md. Worker/main and worker-to-worker coordination messages are explicitly authorized. Implement independent work in parallel; dependent integration checks wait for actual components. UI implementation still requires explicit mockup approval.
 - Implement/connect P1-P4 before broad stabilization P5. Fix blockers now; track nonblocking bugs and continue. No repeated broad reviews/suites or speculative refactors.
-- Sandbox PayPal only, actual buyer approval and independently observed payment truth. No hardcoded successes presented as implementation.
+- Current payment provider is explicitly simulated. No PayPal network calls. A later real-provider stage must use sandbox, actual buyer approval and independent observations. No hardcoded successes presented as implementation.
 - Runtime AI uses DeepSeek, not OpenAI. The openai npm package is permitted as transport only with explicit DeepSeek baseURL/key. No provider fallback or separate desktop harness.
 - User must approve actual UI mockups before branded TUI, styled CLI or browser UI implementation. Plain headless commands/JSON diagnostics are allowed earlier. UI APPROVAL IS PENDING.
 - Create .env.local without overwriting existing content, ignore it and never print secrets. Commit blank .env.example only. Prefer checking credential presence without revealing values.
