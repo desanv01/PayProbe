@@ -58,4 +58,14 @@ Reference is design inspiration only. No FollowThrough code is copied. Downloade
 
 P2 owns run/case/evidence truth; P3 owns reviewed-plan and report command projection. UI consumes these projections and never assigns verdicts, repairs target fulfillment, invents success or discovers private files. All actions must route through supported engine commands/endpoints. Main owns shared CLI/API/package edits and resolves those interfaces.
 
-Render/package paths and actual visual checks are added to P4 handoff when generation completes. Approval must identify this proposal version and concrete reviewed artifacts; elapsed time is not approval.
+## Authoritative review artifacts
+
+Approval target: `review-v1/index.html`, `review-v1/browser.html`, and the 28 `review-v1/*-120x36.svg` / `*-80x24.svg` state renders. `build-review.mjs` reproduces these design-only refinements. They retain selected 12ui direction A's black/cyan stacked frame language while correcting AI-generated labels and fitting exact terminal grids. These are source-rendered proposals, not a running terminal UI or product verification.
+
+Browser-captured PNGs: `review-v1/ledger-120x36.png`, `ledger-80x24.png`, `evidence-80x24.png`, `plan-120x36.png`, `browser-wide.png`, `browser-compact.png`. Browser widths: 1000 and 390 CSS pixels. Native SVG dimensions include a 20-pixel outer margin; each terminal cell is 10 × 22 pixels. `snapshots.json` records exact row/column source content and synthetic provenance.
+
+Four original 12ui candidate images and seven branch images were inspected. Raw exploration (`direction-a.png`, `api-state-mockups/*`) contains generated copy errors and is not the approval target. Notably it used an outdated model alias, premature outcomes and an out-of-scope checkout card; final review-v1 corrects those. The local converter failed with Windows spawn EINVAL; API conversion recovered the existing generated screens, but final prototype packaging hit fsync EPERM. Completed generated pages remain local exploration inputs; the self-contained final gallery is the review artifact.
+
+All 14 states are available in both grid sizes: doctor, missing-key, plan, approval, running, uncertain, reconcile, ledger, evidence, inconclusive, unsupported, error, empty, filter. This is more explicit than the eight grouped conceptual screens. Gallery controls select snapshots; browser buttons/exports navigate or download synthetic preview content only. Runtime j/k/filter/input handling remains a proposed interaction contract for implementation after approval.
+
+Approval must identify proposal v1 and these concrete reviewed artifacts; elapsed time is not approval. No user approval has been recorded.
