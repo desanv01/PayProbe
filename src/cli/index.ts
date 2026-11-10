@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { loadConfig,credentialPresence } from '../core/config.js';
 import { buildServer } from '../api/server.js';
-import { DeepSeekClient } from '../providers/deepseek.js';
+import { DeepSeekClient,safeDeepSeekDiagnostics } from '../providers/deepseek.js';
 import { AppError } from '../core/schemas.js';
 import { Store } from '../storage/database.js';
 import { HttpAdapter } from '../adapters/http.js';
@@ -49,4 +49,4 @@ registerWorkflowCommands(program,{
   report:(runId)=>withStore(store=>report(store,runId)),
 });
 try { await program.parseAsync(); }
-catch (error) { console.error(JSON.stringify({error:error instanceof AppError ? error.code : 'command_failed'})); process.exitCode=1; }
+catch (error) { console.error(JSON.stringify({error:error instanceof AppError ? error.code : 'command_failed',...safeDeepSeekDiagnostics(error)})); process.exitCode=1; }
