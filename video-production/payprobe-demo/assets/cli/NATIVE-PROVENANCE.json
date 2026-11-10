@@ -1,0 +1,119 @@
+[
+  {
+    "crop": "960:420:0:0",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      0.8,
+      20.8
+    ],
+    "asset": "assets/cli/native-execute.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "EXECUTION-C",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:0",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      2,
+      8
+    ],
+    "asset": "assets/cli/native-faulty-overview.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "FAULTY-A",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:160",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      8,
+      30
+    ],
+    "asset": "assets/cli/native-faulty-evidence.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "FAULTY-A",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:0",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      2,
+      10
+    ],
+    "asset": "assets/cli/native-corrected-overview.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "CORRECTED-B",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:120",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      10,
+      24
+    ],
+    "asset": "assets/cli/native-corrected-evidence.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "CORRECTED-B",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:0",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      2,
+      7
+    ],
+    "asset": "assets/cli/native-s4-overview.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "CORRECTED-B",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:120",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      7,
+      28
+    ],
+    "asset": "assets/cli/native-s4-evidence.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "CORRECTED-B",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:0",
+    "syntheticFixtureIdsVisible": true,
+    "identifierMasking": false,
+    "sourceRange": [
+      4,
+      7
+    ],
+    "asset": "assets/cli/native-export.mp4",
+    "kind": "literal dedicated console-window screen recording",
+    "publicAlias": "FAULTY-A",
+    "changes": "time excerpt and actual-pixel crop only; no fabricated UI or outcome"
+  },
+  {
+    "crop": "960:420:0:0",
+    "asset": "assets/cli/native-api.mp4",
+    "syntheticFixtureIdsVisible": true,
+    "sourceRange": [
+      13.5,
+      28.5
+    ],
+    "changes": "continuous15s excerpt and actual-pixel crop; full request/wait/response preserved, no internal cut",
+    "publicAlias": "FAULTY-A",
+    "identifierMasking": false,
+    "kind": "literal dedicated console-window screen recording"
+  }
+]

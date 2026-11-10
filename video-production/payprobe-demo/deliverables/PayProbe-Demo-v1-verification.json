@@ -1,0 +1,24 @@
+{
+  "file": "PayProbe-Demo-v1.mp4",
+  "bytes": 20497780,
+  "sha256": "94af5559e653a112b5b3758baf07f1491286c4f5ff3def66e4bf67e6f2213368",
+  "duration": 170.0,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "frames": "5100"
+  },
+  "audio": {
+    "codec": "aac",
+    "sampleRate": "48000",
+    "channels": 2,
+    "truePeakDbfs": -1.1,
+    "integratedLufs": "-13.3"
+  },
+  "fullDecodePassed": true,
+  "renderedContactSheet": "PayProbe-Demo-v1-contact-sheet.jpg",
+  "finalEncodeAuthorized": true,
+  "externalUploadPerformed": false
+}

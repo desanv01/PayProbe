@@ -1,0 +1,98 @@
+{
+  "plan": [
+    {
+      "duration": 5,
+      "src": "assets/cli/plan-request.mp4",
+      "sourceStart": 0,
+      "editedPager": true,
+      "at": 0
+    },
+    {
+      "duration": 9,
+      "src": "assets/cli/plan-request.mp4",
+      "sourceStart": 18.3,
+      "editedPager": true,
+      "at": 5
+    },
+    {
+      "duration": 8,
+      "src": "assets/cli/plan-review.mp4",
+      "sourceStart": 0,
+      "editedPager": true,
+      "at": 14
+    }
+  ],
+  "execute": [
+    {
+      "duration": 20,
+      "at": 0,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-execute.mp4"
+    }
+  ],
+  "faulty": [
+    {
+      "duration": 6,
+      "at": 0,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-faulty-overview.mp4"
+    },
+    {
+      "duration": 22,
+      "at": 6,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-faulty-evidence.mp4"
+    }
+  ],
+  "corrected": [
+    {
+      "duration": 8,
+      "at": 0,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-corrected-overview.mp4"
+    },
+    {
+      "duration": 14,
+      "at": 8,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-corrected-evidence.mp4"
+    }
+  ],
+  "recovery": [
+    {
+      "duration": 5,
+      "at": 0,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-s4-overview.mp4"
+    },
+    {
+      "duration": 21,
+      "at": 5,
+      "sourceStart": 0,
+      "native": true,
+      "src": "assets/cli/native-s4-evidence.mp4"
+    }
+  ],
+  "explain": [
+    {
+      "sourceStart": 0,
+      "native": true,
+      "at": 0,
+      "src": "assets/cli/native-api.mp4",
+      "duration": 15
+    },
+    {
+      "sourceStart": 0,
+      "native": true,
+      "at": 15,
+      "src": "assets/cli/native-export.mp4",
+      "duration": 3
+    }
+  ]
+}

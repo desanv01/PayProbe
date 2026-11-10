@@ -1,0 +1,16 @@
+{
+  "name": "payprobe-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.9.28 preview",
+    "check": "npx --yes hyperframes@0.9.28 check",
+    "render": "npx --yes hyperframes@0.9.28 render",
+    "publish": "npx --yes hyperframes@0.9.28 publish"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "0.9.28",
+    "gsap": "3.15.0",
+    "hyperframes": "0.9.28"
+  }
+}
