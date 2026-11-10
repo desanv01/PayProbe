@@ -12,7 +12,7 @@ import { ReviewedPlanStore } from '../ai/review-store.js';
 import { registerWorkflowCommands } from './commands/index.js';
 import { showReportTui } from '../ui/tui.js';
 
-const program = new Command().name('payprobe').description('Headless payment diagnostics (simulated provider)').version('0.1.0');
+const program = new Command().name('payprobe').description('Payment diagnostics with CLI, ledger and browser demo (simulated provider)').version('0.1.0');
 program.command('doctor').action(()=>{
   const config=loadConfig();
   console.log(JSON.stringify({node:process.version,provider:'simulated',credentials:credentialPresence(config),paypalRequired:false,realPayPalVerified:false},null,2));
