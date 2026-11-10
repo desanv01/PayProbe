@@ -1,0 +1,4 @@
+# Keep the language summary focused on application source.
+# The editable demonstration film is supporting project documentation.
+video-production/** linguist-documentation
+docs/** linguist-documentation

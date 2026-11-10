@@ -25,4 +25,4 @@ Verification artifacts:
 - [Rendered contact sheet](video-production/payprobe-demo/deliverables/PayProbe-Demo-v1-contact-sheet.jpg)
 - [Preview and rendered-frame acceptance](docs/demo/video-preview-acceptance.md)
 
-Public video upload and hackathon submission are complete. Public live-demo hosting and real PayPal integration remain separate follow-up stages. The later FollowThrough-style repository presentation task remains deferred under the user's saved brief.
+Public video upload and the PayPal AI Hackathon 2026 submission are complete. Public live-demo hosting and real PayPal integration remain separate follow-up stages. The user subsequently invoked the saved FollowThrough-style repository presentation brief as a separate task; the approved film is unchanged.
