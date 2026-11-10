@@ -1,4 +1,5 @@
 import type { Store } from '../storage/database.js';
+import { AppError } from '../core/schemas.js';
 import { loadSavedPlan,toRunnerPlan,type SavedPlan } from './planner.js';
 
 /** Keep the reviewed source artifact independent of AI availability and run execution. */
@@ -15,9 +16,9 @@ export class ReviewedPlanStore {
   attach(runId:string,input:unknown) {
     const saved=this.save(input);
     const row=this.store.db.prepare('SELECT plan_json FROM runner_runs WHERE id=?').get(runId);
-    if(!row||JSON.stringify(JSON.parse(String(row.plan_json)))!==JSON.stringify(toRunnerPlan(saved.plan)))throw new Error('reviewed_run_plan_mismatch');
+    if(!row||JSON.stringify(JSON.parse(String(row.plan_json)))!==JSON.stringify(toRunnerPlan(saved.plan)))throw new AppError('reviewed_run_plan_mismatch');
     const prior=this.store.db.prepare('SELECT hash FROM reviewed_plan_runs WHERE run_id=?').get(runId);
-    if(prior&&prior.hash!==saved.hash)throw new Error('reviewed_run_identity_conflict');
+    if(prior&&prior.hash!==saved.hash)throw new AppError('reviewed_run_identity_conflict');
     this.store.db.prepare('INSERT OR IGNORE INTO reviewed_plan_runs VALUES(?,?)').run(runId,saved.hash);
   }
   forRun(runId:string):SavedPlan|undefined {

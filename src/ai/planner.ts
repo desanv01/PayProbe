@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { createHash } from 'node:crypto';
-import { capabilities, purchaseSchema } from '../core/schemas.js';
+import { AppError, capabilities, purchaseSchema } from '../core/schemas.js';
 import type { DeepSeekClient } from '../providers/deepseek.js';
 import { runnerPlanSchema, type RunnerPlan } from '../runner/types.js';
 
@@ -33,11 +33,11 @@ export const scenarioCapabilities:Record<typeof scenarioIds[number],readonly str
 };
 export function validatePlan(input:unknown):Plan {
   const plan=planSchema.parse(input),ids=plan.selection.scenarios.map(s=>s.id);
-  if (new Set(ids).size!==ids.length) throw new Error('plan_duplicate_scenario');
-  if (ids.includes('S3')&&!ids.includes('S2')) throw new Error('plan_S3_requires_S2');
-  if (new Set(plan.contract.adapter.capabilities).size!==plan.contract.adapter.capabilities.length) throw new Error('plan_duplicate_capability');
+  if (new Set(ids).size!==ids.length) throw new AppError('plan_duplicate_scenario');
+  if (ids.includes('S3')&&!ids.includes('S2')) throw new AppError('plan_S3_requires_S2');
+  if (new Set(plan.contract.adapter.capabilities).size!==plan.contract.adapter.capabilities.length) throw new AppError('plan_duplicate_capability');
   for (const id of ids) for (const capability of scenarioCapabilities[id]) {
-    if (!plan.contract.adapter.capabilities.includes(capability as typeof capabilities[number])) throw new Error(`plan_${id}_missing_${capability}`);
+    if (!plan.contract.adapter.capabilities.includes(capability as typeof capabilities[number])) throw new AppError(`plan_${id}_missing_${capability}`);
   }
   return plan;
 }
@@ -45,8 +45,8 @@ export function validatePlan(input:unknown):Plan {
 export function planHash(plan:unknown) { return createHash('sha256').update(JSON.stringify(validatePlan(plan))).digest('hex'); }
 export function loadSavedPlan(input:unknown,requireReviewed=false):SavedPlan {
   const saved=savedPlanSchema.parse(input),hash=planHash(saved.plan);
-  if (saved.hash!==hash || (saved.review && saved.review.hash!==hash)) throw new Error('plan_hash_mismatch');
-  if (requireReviewed&&!saved.review) throw new Error('plan_review_required');
+  if (saved.hash!==hash || (saved.review && saved.review.hash!==hash)) throw new AppError('plan_hash_mismatch');
+  if (requireReviewed&&!saved.review) throw new AppError('plan_review_required');
   return saved;
 }
 export function reviewPlan(input:unknown):SavedPlan {
