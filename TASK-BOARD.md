@@ -85,7 +85,7 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P6.11 Project story, technical disclosures, repository/build/video links, judge instructions, confirmed declarations/survey and final terms saved in Devpost.
 - DONE P6.12 Actual Submit project completed; Project submitted! confirmation and event listing for PayPal AI Hackathon 2026 observed. Entry: https://devpost.com/software/payprobe-wng98r . Private screenshot/receipt saved; public receipt in SUBMISSION-RECEIPT.md.
 - TODO P6.13 Optional hosted judge experience and independent signed-out link checks. No public live backend, judge account or supplied AI key exists; local setup/build is the submitted access route.
-- ACTIVE P6.14 User invoked the Desktop FollowThrough brief; README/About/topics/homepage/assets and supporting content updated for PayPal AI Hackathon 2026. Rendered verification and remote publication under issue #37.
+- DONE P6.14 FollowThrough-style README, actual capture gallery, About/topics/homepage and supporting setup/contribution content updated for PayPal AI Hackathon 2026 through PR #38. GitHub rendering, all 10 embedded images/badges, 76 local links, navigation and readable architecture checked. Required CI passes; scope/attribution retained. See docs/release/PRESENTATION.md.
 
 Release: https://github.com/desanv01/PayProbe/releases/tag/v0.1.0-simulated
 Archive SHA256: 9858c0759b8754272bda7956db96d7d6d88e51869cc5bcb9c487e11127ee84f3
