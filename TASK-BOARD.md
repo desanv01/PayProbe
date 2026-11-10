@@ -1,5 +1,5 @@
 # PayProbe task board
-Updated: 2026-11-10 — parallel execution.
+Updated: 2026-11-10 — non-video parallel execution; all video work ON HOLD by user.
 Legend: DONE = implemented/observed at stated scope; ACTIVE = underway; TODO = not yet completed; WAIT = external/approval/dependency; DEFERRED = intentionally later.
 Payment scope: explicit simulator only. Real DeepSeek probe passed. No real PayPal behavior is verified.
 Main owns this board; workers update docs/handoffs/Pn.md and send meaningful progress.
@@ -11,7 +11,7 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE Dedicated PayProbe Codex project and six persistent phase chats.
 - ACTIVE Parallel ownership, shared state and remote branch integration.
 
-## P1 — Foundation [DONE; UI integration ACTIVE]
+## P1 — Foundation [DONE]
 - DONE P1.1 Node/TypeScript/package/lockfile setup.
 - DONE P1.2 Private .env.local preserved; public blank template and validated configuration.
 - DONE P1.3 DeepSeek key available and model normalized to deepseek-flash (V4.1-Flash-1017 alias).
@@ -25,7 +25,7 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P1.11 Seeded premature/duplicate target hooks for P2.
 - DONE P1.12 Preapproval-capture bug #10 fixed; P5 2/2 recovery regressions pass and are merged.
 - DONE P1.13 CLI integration and handover published/merged via PR #18; review binding precedes execution.
-- ACTIVE P1.14 Connect approved TUI/browser exports; add UI/process tests to CI and package scripts.
+- DONE P1.14 Approved TUI/browser connected via PR #24; actual production session flow and CLI ledger passed. UI/process tests in CI. Final wildcard inclusion of all five stabilization checks merged via PR #28 with green CI.
 
 ## P2 — Scenario engine [DONE at simulated scope]
 - DONE P2.1 Shared RunnerPlan contract and HTTP adapter implemented locally.
@@ -55,32 +55,32 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P4.4 Results/evidence/verdict/empty/filter/error previews exist.
 - DONE P4.5 Browser mockups rendered; copy refinements applied. Complete review-v1 gallery ready.
 - DONE P4.6 User approved all layout/interactions/states with requested palette change. Main selected graphite/amber/ivory/plum, v1.1.
-- DONE P4.7 Warm v1.1 previews/spec and TUI module implemented; focused grid/navigation/restoration checks pass. CLI binding pending.
-- DONE P4.8 Browser session/plan/review/approval/report modules implemented; actual runner test PASS PASS FAIL PASS for seeded duplicate fixture. Source, tests and warm palette artifacts merged in PR #13 at b6b5d80. Production bindings pending.
-- TODO P4.9 Local packaging, hosting configuration/persistent storage and access.
-- ACTIVE P4.10 P1 connecting approved UI to production CLI/server; P4 visual check and P5 integration checks follow. Module handover/publication complete.
+- DONE P4.7 Warm v1.1 previews/spec and TUI module implemented; focused grid/navigation/restoration checks pass. CLI binding merged and verified.
+- DONE P4.8 Browser session/plan/review/approval/report modules implemented; actual runner test PASS PASS FAIL PASS for seeded duplicate fixture. Source, tests and warm palette artifacts merged in PR #13 at b6b5d80. Production bindings merged and verified.
+- ACTIVE P4.9 Local package/container configuration prepared by P6; public hosting/access remains pending.
+- DONE P4.10 Runtime wiring merged #24; native terminal verified and warning fix merged #26. Actual browser wide/mobile, full fixture workflow, filtering, evidence and text/JSON downloads verified. Final verification documentation publication underway.
 
-## P5 — Stabilization [ACTIVE preparation; final pass dependency-gated]
-- ACTIVE P5.1 Small acceptance matrix for existing interfaces.
-- ACTIVE P5.2 Reproduce central-path defects and track issues.
+## P5 — Stabilization [DONE at local simulated scope; P4 visuals separate]
+- DONE P5.1 Focused acceptance matrix with actual evidence and limitations.
+- DONE P5.2 Observed blocking defects tracked, fixed and verified (#10, #21, #25).
 - DONE P5.3 Targeted recovery regressions 2/2 pass after fix; PR #12 merged. Issue #10 closed.
 - DONE P5.4 Actual process-stop/restart/redaction test passes, PR #19 merged at 21884b9; AI explanation truncation fixed and real verification passed.
-- TODO P5.5 Verify amount/currency, repeated delivery, missing evidence and resume.
+- DONE P5.5 Wrong amount/currency refuses PASS; repeated delivery, missing evidence and resume checks passed.
 - DONE P5.6 Process test confirms text/JSON redaction and missing-review refusal; safe categorical model error diagnostics merged in PR #20.
-- WAIT P5.7 UI fidelity/usability checks after approved UI exists.
-- WAIT P5.8 Clean-install and hosted access rehearsal when packaged.
-- TODO P5.9 Close resolved bugs, document limitations, publish PR/handover.
+- DONE P5.7 Production browser access/session/origin/missing-key boundaries checked; actual visual/native terminal inspection belongs to P4.
+- DONE P5.8 Clean install from exact remote UI source, npm ci/build/compiled doctor/server/demo passed. Hosted access remains unverified and separately pending.
+- DONE P5.9 Final tests/matrix/handover merged via PR #27 at f09860f. No outstanding known blocking defect in tested local paths.
 
 ## P6 — Delivery [ACTIVE preparation]
 - DONE P6.1 Simulation-only narrative/attribution draft; actual release claims remain gated.
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Under-three-minute script/storyboard prepared; no recording yet.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- WAIT P6.5 Record actual completed app after approved UI exists.
+- WAIT P6.5 VIDEO HOLD: no further capture/render/assembly or MajuPilot reference inspection until implementation complete and user discussion. Prior drafts preserved.
 - TODO P6.6 Verify public repo/video/demo links and access.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
 - TODO P6.8 Final release and actual submission verification when ready.
-- ACTIVE P6.9 Preparation and command-alignment docs/handover merged via PRs #14 and #23; final release materials pending actual UI verification/recording.
+- ACTIVE P6.9 Preparation and command-alignment docs/handover merged via PRs #14 and #23; allowlisted local source package with hashes and container templates prepared, non-video publication/package verification underway; video remains on hold.
 
 ## Deferred real-provider stage
 - DEFERRED D1 PayPal developer account access and private sandbox credentials.
@@ -89,10 +89,10 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DEFERRED D4 Update claims and submission readiness using actual evidence.
 
 ## Ownership and threads
-
-
-
-
+P1: existing providers/*, sample-store/*, storage/*, core/config.ts, core/schemas.ts, api/server.ts, cli/index.ts, package/lockfile/tsconfig/env/initial CI.
+P2: new src/runner/*, src/scenarios/*, src/adapters/*.
+P3: new src/ai/*, src/reporting/*, src/cli/commands/*.
+P4: docs/design/* plus new src/ui/* and src/web/* after user approval; P1 owns shared CLI/API/package integration.
 P5: tests/stabilization/*, docs/stabilization/*.
 P6: docs/release/*, docs/demo/*.
 Each worker owns docs/handoffs/Pn.md.

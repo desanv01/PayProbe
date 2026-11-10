@@ -13,6 +13,8 @@ Execution update, 10 November: GitHub access was verified with network-enabled e
 
 This version supersedes the Python/OpenAI-runtime plan. The product architecture and four scenarios remain agreed. Runtime AI is DeepSeek. Implementation is TypeScript. Final UI requires explicit user approval of concrete mockups. Git history is created remotely, without local Git commits or worktrees.
 
+LATEST USER OVERRIDE — 10 November 2026: Finish all remaining non-video implementation, fixes, packaging and GitHub tasks in parallel. All video tasks remain ON HOLD until everything else is complete and the user discusses the video again. Do not capture, render, assemble, inspect MajuPilot video assets or continue storyboard production. Future video is intended to use HyperFrames and MajuPilot as a design reference with the actual PayProbe terminal, but execution is not authorized now.
+
 ## 1. Agreed decisions
 
 - Standalone PayPal integration diagnostic tool, not a MajuPilot extension.
