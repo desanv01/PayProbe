@@ -21,4 +21,4 @@ Read [UI-SPEC.md](UI-SPEC.md) for palette, interactions, scope and boundaries. R
 
 Actual checks: all 28 grids are bounded to declared columns/rows; wide ledger and plan, compact evidence and responsive browser were visually inspected; browser plan/report/evidence controls switch expected local states; browser document has no horizontal overflow at 390px. The only observed browser console resource error was an absent favicon. This is design verification, not engine integration.
 
-The approved layout uses the warm v1.1 palette. These artifacts remain design references; runtime source is in src/ui and src/web. Full P4 completion still needs P1/Main wiring and actual access verification.
+The approved layout uses the warm v1.1 palette. These artifacts remain design references; runtime source is in src/ui and src/web. P1/Main wiring and local runtime checks are complete; see [actual UI observations](runtime-check/README.md). Hosted access and delivery remain separate gates.
