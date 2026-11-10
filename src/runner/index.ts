@@ -117,8 +117,9 @@ export async function run(options:Options & {plan:RunnerPlan}){
 }
 export function report(store:Store,runId:string){return new RunRepository(store).report(runId);}
 export async function resume(options:Options & {runId:string}){
-  if(active.has(options.runId))throw new Error('Run already executing');active.add(options.runId);
+  if(active.has(options.runId))throw new Error('Run already executing');
   const repo=new RunRepository(options.store),initial=repo.report(options.runId);
+  active.add(options.runId);
   try {
     if(initial.state==='finished')return initial;
     repo.state(initial.id,'running');
@@ -132,8 +133,8 @@ export async function resume(options:Options & {runId:string}){
       try {repo.result(initial.id,await executeCase(c));}
       catch(error){
         if(error instanceof ApprovalPending){repo.state(initial.id,'awaiting_approval');return repo.report(initial.id);}
-        const absent=error instanceof MissingEvidence || error instanceof AdapterError && ['invalid_adapter_observation','adapter_transport_unavailable'].includes(error.code);
-        const unsupported=error instanceof AdapterError && [404,405,501].includes(error.status);
+        const absent=error instanceof MissingEvidence || error instanceof AdapterError && ['invalid_adapter_observation','adapter_transport_unavailable','provider_order_not_found'].includes(error.code);
+        const unsupported=!absent && error instanceof AdapterError && [404,405,501].includes(error.status);
         c.event('runner','execution-boundary',{code:error instanceof AdapterError?error.code:error instanceof MissingEvidence?'missing_evidence':'execution_error'});
         repo.result(initial.id,c.result(unsupported?'UNSUPPORTED':absent?'INCONCLUSIVE':'ERROR',error instanceof MissingEvidence?error.message:unsupported?'Required adapter hook unavailable':absent?'Essential observations could not be retrieved':'Scenario execution failed; inspect sanitized boundary evidence'));
       }

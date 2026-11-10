@@ -60,6 +60,8 @@ test('missing hooks, unavailable provider evidence and execution rejection remai
     const observe=f.adapter.observeProvider.bind(f.adapter);
     f.adapter.observeProvider=async()=>{throw new (await import('./types.js')).AdapterError('invalid_adapter_observation',502);};
     assert.equal((await run({...f,plan:plan({scenarios:['S1']}),autoApproveSimulated:true})).cases[0]!.verdict,'INCONCLUSIVE');
+    f.adapter.observeProvider=async()=>{throw new (await import('./types.js')).AdapterError('provider_order_not_found',404);};
+    assert.equal((await run({...f,plan:plan({scenarios:['S1']}),autoApproveSimulated:true})).cases[0]!.verdict,'INCONCLUSIVE');
     f.adapter.observeProvider=observe;
     f.adapter.buyerReturn=async()=>{throw new (await import('./types.js')).AdapterError('rejected',409);};
     assert.equal((await run({...f,plan:plan({scenarios:['S1']}),autoApproveSimulated:true})).cases[0]!.verdict,'ERROR');
