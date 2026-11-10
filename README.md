@@ -218,16 +218,19 @@ The [simulated prerelease](https://github.com/desanv01/PayProbe/releases/tag/v0.
 ## Architecture
 
 ~~~mermaid
-flowchart LR
-    A[Purchase requirement] --> B[DeepSeek draft plan]
-    B --> C[Explicit human review]
-    C --> D[Deterministic scenario runner]
-    D --> E[Sample application and delivery]
-    D --> F[Separate simulated payment ledger]
-    E --> G[Persisted observations and evidence]
+flowchart TB
+    subgraph Planning[Plan and review]
+        direction LR
+        A[Purchase requirement] --> B[DeepSeek draft]
+        B --> C[Human review]
+    end
+    C --> D[Deterministic runner]
+    D --> E[Sample app and delivery]
+    D --> F[Simulated payment ledger]
+    E --> G[Persisted evidence]
     F --> G
     G --> H[Deterministic verdicts]
-    H --> I[CLI ledger and browser reports]
+    H --> I[CLI and browser reports]
     G --> J[DeepSeek explanation with references]
     J --> I
 ~~~
