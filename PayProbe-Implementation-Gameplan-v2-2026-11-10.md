@@ -1,15 +1,15 @@
 # PayProbe — Updated Implementation Game Plan
 Version: 2 — 10 November 2026
-Canonical folder: C:\Users\Dv\Desktop\PayProbe
+Canonical folder: <project-root>
 Deadline: 13 November 2026, 04:00 Asia/Kuala_Lumpur
 Internal submission target: 12 November 2026, 22:00
 Status: Repository baseline complete; six phase workers are active in parallel. Current progress is in PROJECT-STATE.md and TASK-BOARD.md.
 
-PARALLEL EXECUTION OVERRIDE — 10 November 2026: User explicitly requests all phases to progress concurrently. Use the six persistent Sol Medium phase chats with exclusive file ownership and active orchestrator coordination. Earlier sequential scheduling below is superseded. P5 prepares/checks available components in parallel; full connected-system stabilization still depends on connected implementation. P6 prepares delivery materials now; recording/submission readiness depends on real completed behavior. P4 produces actual mockups now and waits for explicit user approval before production UI. Main maintains the full concise task board, updates progress in chat, owns shared docs and integrates phase branches. Worker-to-worker and worker/main status messages are authorized. No local Git commits/worktrees; granular remote source publication continues.
+PARALLEL EXECUTION OVERRIDE — 10 November 2026: User explicitly requests all phases to progress concurrently. Use the six persistent Sol Medium phase chats with exclusive file ownership and active orchestrator coordination. Earlier sequential scheduling below is superseded. P5 prepares/checks available components in parallel; full connected-system stabilization still depends on connected implementation. P6 prepares delivery materials now; recording/submission readiness depends on real completed behavior. P4 mockups were approved by the user with a delegated palette change; production implementation is now authorized with graphite/amber/ivory/plum v1.1. Main maintains the full concise task board, updates progress in chat, owns shared docs and integrates phase branches. Worker-to-worker and worker/main status messages are authorized. No local Git commits/worktrees; granular remote source publication continues.
 
 CURRENT SCOPE OVERRIDE — 10 November 2026: User defers PayPal developer-account integration and all PayPal network/API calls until current implementation phases and bug fixing are complete. Current P1-P6 work uses an explicit deterministic simulated payment provider by default, including simulated approval and provider observations. No PayPal credentials are required/requested. DeepSeek is the only current external API dependency; use documented deepseek-flash alias, currently DeepSeek-V4.1-Flash-1017, without claiming an immutable version pin. Current acceptance is connected simulated workflows plus an actual bounded DeepSeek response. Real sandbox purchase verification, hackathon eligibility and submission readiness are NOT established by simulation; add a separate deferred real-provider integration/validation stage after stabilization. Earlier live-provider requirements below describe that deferred stage and must not block current implementation. UI approval and source-publication gates remain unchanged.
 
-Execution update, 10 November: GitHub access was verified with network-enabled execution and https://github.com/desanv01/PayProbe was created. Access blockers described later in this planning snapshot are now resolved. Restricted-shell network errors were misleading; do not ask the user to log in again without an unrestricted verification. The PayProbe folder is registered as its own Codex project. Phase 1 starts after baseline publication. UI approval remains pending.
+Execution update, 10 November: GitHub access was verified with network-enabled execution and https://github.com/desanv01/PayProbe was created. Access blockers described later in this planning snapshot are now resolved. Restricted-shell network errors were misleading; do not ask the user to log in again without an unrestricted verification. The PayProbe folder is registered as its own Codex project. The headless workflow, real DeepSeek planner/explainer, and simulated scenario checks now pass. Approved UI integration is underway. Current details are in TASK-BOARD.md.
 
 This version supersedes the Python/OpenAI-runtime plan. The product architecture and four scenarios remain agreed. Runtime AI is DeepSeek. Implementation is TypeScript. Final UI requires explicit user approval of concrete mockups. Git history is created remotely, without local Git commits or worktrees.
 
@@ -479,7 +479,7 @@ SQLite records runs, cases, events, operations, sample orders and entitlements. 
 ## 14. Remote GitHub workflow
 
 Intended public repository: desanv01/PayProbe.
-Canonical local working files: C:\Users\Dv\Desktop\PayProbe.
+Canonical local working files: <project-root>.
 No local git init/commit or worktrees required.
 
 GitHub still requires commits to represent repository versions. Create them remotely through the Contents/Git Database APIs:

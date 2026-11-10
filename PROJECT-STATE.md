@@ -1,44 +1,44 @@
 # PayProbe project state
-Updated: 2026-11-10
-Canonical folder: C:\Users\Dv\Desktop\PayProbe
-Plan: PayProbe-Implementation-Gameplan-v2-2026-11-10.md (current-scope override applies)
-Status: P1-P6 active concurrently; simulated payments, real DeepSeek. Main maintains TASK-BOARD.md as the complete subtask/status and worker ownership record.
+Updated: 2026-11-10, approximately 12:00 MYT
+Canonical folder: <project-root>
+Full checklist: TASK-BOARD.md. Plan: PayProbe-Implementation-Gameplan-v2-2026-11-10.md; current-scope overrides supersede historical milestones.
 
-## Current scope and rules
-- User defers all PayPal API calls and credentials until implementation/stabilization finish. No PayPal calls made.
-- Deterministic simulated provider is the only/default provider; payment observations are labeled simulated.
-- DeepSeek is the sole external API dependency. deepseek-flash rolling alias currently serves DeepSeek-V4.1-Flash-1017; immutable snapshot pinning is not claimed.
-- UI approval PENDING. Only headless commands/JSON endpoints implemented.
-- No local Git initialization/commits/worktrees. Explicit allowlists for remote publication; no secrets/private artifacts.
-- P1-P4 implementation before broad P5 stabilization; fix blockers, track nonblocking problems.
+## Current result
+The reviewed headless workflow is connected. Actual DeepSeek planning and explanation pass against a completed four-scenario simulated run with 42 evidence events. Approved graphite/amber/ivory/plum TUI/browser modules are merged; P1 is connecting them to the production CLI and server. Actual UI verification and delivery remain pending.
 
-## Phases and source
-P0 complete: PR #1 merged at 6be96e5a434288b83aa730d5dfc43de4e9505fea.
-P1 worker: 01a1c372-f490-7330-8752-76918f34d8e5 (local), persistent phase worker.
-P1 branch: codex/p1-foundation. Draft PR #8: https://github.com/desanv01/PayProbe/pull/8
-Latest reported P1 head: 4f09e9c57eb54c139f072165265e75fa98904cf2; backend commit 92d385606f7c3fa508931b7ee3d9519c52e27ab8. PR #8 is not yet merged.
-Tracking issues: #2 P1, #3 P2, #4 P3, #5 P4, #6 P5, #7 P6.
-P2-P6 worker chats are active. IDs and exclusive file ownership are in TASK-BOARD.md. P4 produces mockups; UI implementation still requires user approval. P5/P6 prepare and check available components; full stabilization/recording depend on connected implementation. Real PayPal remains deferred (#9); eligibility/readiness not established.
+## Scope and working rules
+- Only deterministic simulated payments. No PayPal credentials or calls until the user resumes the deferred provider stage (#9).
+- Runtime AI uses DeepSeek through the openai SDK configured exclusively for DeepSeek. deepseek-flash is the documented rolling alias currently serving V4.1-Flash-1017, not an immutable snapshot.
+- User approved layout/interactions/states and requested another palette; Main selected graphite/amber/ivory/plum v1.1. No further approval gate for that authorized change.
+- No local Git initialization, commits or worktrees. Remote GitHub API commits use explicit file allowlists; never upload .env.local, private databases, dependencies or local evidence artifacts.
+- Six persistent workers operate under TASK-BOARD.md ownership. Main owns integration, root README, this file, task board and plan.
 
-## Implemented locally
-- Node 24 TypeScript package/lockfile, validated config, ignored .env.local preserving existing content, blank public .env.example.
-- SQLite runs/cases/events, sample orders/entitlements, separate simulated provider ledger, persisted mutation IDs and uncertainty.
-- Fastify/Commander headless plumbing, protected download, strict inputs, loopback default and required bearer token beyond loopback.
-- Simulated create/approval/get/capture; target return does not capture. Completed matching capture grants one entitlement.
-- One-time capture-response suppression at target transport boundary; target reconciliation retrieves existing provider state.
-- DeepSeek-only bounded JSON client, explicit thinking disabled, schema validation, bounded attempts/deadline, no fallback.
+## Integrated source
+Repository: https://github.com/desanv01/PayProbe
+Latest observed main: dd705c62931cf7952e6aeaa849f68cfd448b9ddd.
+- #8 foundation; #12 HTTP regression checks; #14 initial release docs.
+- #16 runner; #15 AI workflows; #18 reviewed CLI integration.
+- #19 actual process restart/redaction check; #20 safe categorical AI error diagnostics.
+- #22 concise explanation repair (e2a95dd); #13 approved UI modules/artifacts (b6b5d80); #23 command-aligned release docs (dd705c6).
+- #17 shared progress docs needs refresh/merge. P1 new UI integration PR is next.
+Use exact current remote heads when publishing/merging; this snapshot is not a lock.
 
-## Actual checks
-- Node v24.14.1/npm 11.19.0; npm install succeeded with network-enabled execution.
-- P1 reports typecheck/build and three focused foundation checks passed; remote build checks observed successful, newest run queued.
-- P5 reproduced preapproval capture becoming stuck uncertain (issue #10); P1 fix and targeted P5 regression are underway. HTTP lost-response/reopen recovery check passed.
-- Doctor: DeepSeek key present; PayPal absent and unnecessary. No credential values printed.
-- .env.local model normalized to deepseek-flash preserving all other configuration.
-- One actual DeepSeek JSON probe succeeded: requested/returned deepseek-flash, {ok:true,service:payprobe}, 70 prompt/11 completion/81 total tokens, one attempt, thinking disabled. No PayPal calls.
-- No live PayPal verification, real buyer approval, eligibility or submission readiness claimed.
+## Observed checks
+- Node 24.14.1, npm 11.19.0. Build/typecheck, foundation, runner, AI workflow doubles and HTTP recovery checks passed for their relevant source revisions.
+- Real health probe: 81 total tokens. Real planner: 419 total tokens. Main reviewed the generated plan and executed all four simulated cases: PASS, 42 evidence events.
+- First explanation attempts truncated at 1,200 output tokens. Repair keeps provider budgets unchanged and requires concise text with 1–2 relevant references. Real repaired explanation: first attempt, 9,138 prompt + 366 completion = 9,504 tokens; all four cases, valid references, 42 supplied/0 omitted evidence. Issue #21 closed after verification.
+- Actual backend process stop/restart preserved reviewed plan/run identity and completed all four cases with one entitlement per purchase. Text/JSON redaction canaries and missing-review refusal passed. PR #19 merged.
+- P4 module checks: TUI navigation/restoration and browser session/CSRF ownership passed; seeded duplicate fixture yielded PASS PASS FAIL PASS using actual runner with an AI client double. Production bindings and actual-browser visual checks still pending.
+- No real PayPal verification, hosted access, video upload, hackathon eligibility or submission readiness claimed.
 
-## Commands and next needs
-npm run dev -- doctor; npm run dev -- serve; npm run dev -- deepseek-probe (one real API request).
-npm run typecheck; npm run build; npm test.
-Parallel interface handoffs and implementation are ongoing; main integrates remote phase branches and keeps the board current. No PayPal access needed now.
-Known limitation: node:sqlite emits Node 24 experimental warning. No further DeepSeek probe needed absent a defect.
+## Runtime notes
+Local validation used an isolated loopback server and private SQLite database; these artifacts are excluded from publication.
+Validation run identifiers and artifacts remain in the ignored local evidence directory. Credentials must never be printed or published.
+Default serve port is 4310. Commands: doctor, serve, plan CONTRACT --out DRAFT, plan --review DRAFT --out REVIEWED, run REVIEWED [--auto-approve-simulated], resume ID, report ID --format text|json, explain ID --out PATH.
+node:sqlite emits an experimental warning. Browser sessions are currently memory-only and expire after restart; underlying runs remain in SQLite.
+
+## Next work
+1. P1 binds /demo and TUI, updates scripts/CI to include actual process and UI tests.
+2. P4 checks actual UI appearance/interaction; P5 checks connected interfaces and clean installation once ready, without repeating unchanged suites.
+3. P6 prepares actual runtime recording and concrete deployment/package guidance. Main integrates README/progress docs.
+4. Public hosting/video/submission need actual access and evidence; do not infer readiness from local completion. Real PayPal stays separately deferred.
