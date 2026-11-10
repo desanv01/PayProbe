@@ -11,7 +11,7 @@ PayProbe compares application delivery with separately recorded simulated paymen
 - Sequential repeated processing should not multiply fulfillment.
 - A completed capture whose response is suppressed should be reconciled from existing payment state.
 
-The sample store, protected download, simulator ledger, deterministic runner, and reviewed headless CLI workflow are connected. Main observed an actual DeepSeek planner response and a reviewed simulated run with all four checks passing and 42 evidence events. That is one observed journey, not full product validation. The real explainer passed after a concise-output repair: all four cases have valid citations and all 42 evidence events were supplied. Runtime UI verification remains pending. Approved graphite/amber/ivory/plum UI modules are merged and production bindings are underway. Hosting is not provisioned.
+The sample store, protected download, simulator ledger, deterministic runner, and reviewed headless CLI workflow are connected. Main observed an actual DeepSeek planner response and a reviewed simulated run with all four checks passing and 42 evidence events. That is one observed journey, not full product validation. The real explainer passed after a concise-output repair: all four cases have valid citations and all 42 evidence events were supplied. The approved graphite/amber/ivory/plum terminal ledger and browser interface are connected and locally verified. Public hosting is not provisioned.
 
 DeepSeek selects supported scenarios and is used for optional evidence explanations; deterministic code assigns verdicts. AI text is not payment truth. The `deepseek-flash` model name is a rolling API alias, currently DeepSeek-V4.1-Flash-1017. The OpenAI-compatible SDK is configured exclusively for DeepSeek; no OpenAI runtime key is required.
 
@@ -27,6 +27,8 @@ npm start -- run .private/demo/reviewed-plan.json --auto-approve-simulated
 ```
 
 The planner makes a real DeepSeek request. Review and execution do not replan. `--auto-approve-simulated` affects simulated orders only; omit it to pause for simulated approval. Use the actual run ID for `npm start -- resume RUN_ID --auto-approve-simulated`, `npm start -- report RUN_ID --format text` (or `json`), and optional `npm start -- explain RUN_ID --out .private/demo/explanation.json`. `explain` makes a real DeepSeek request; its concise-output repair has passed one actual API verification. New output files never overwrite existing paths. See setup for configuration and persistence details.
+
+Open `http://127.0.0.1:4310/demo` while the server is running for the browser workflow. Use `npm start -- ledger RUN_ID` to inspect a saved report interactively in a terminal; non-interactive output falls back to text. Browser sessions expire on server restart, while saved runs remain in SQLite.
 
 See [setup](docs/release/SETUP.md), [release gates](docs/release/CHECKLIST.md), and [contribution and limitations](docs/release/CONTRIBUTING-LIMITATIONS.md).
 
