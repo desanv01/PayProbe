@@ -2,7 +2,7 @@
 
 Completed 10 November 2026 after the user reviewed the full HyperFrames preview and approved it.
 
-The final local master is `video-production/payprobe-demo/deliverables/PayProbe-Demo-v1.mp4`. The MP4 is delivered locally; it has not been uploaded to a video service or submitted to a hackathon. The editable project and referenced preview assets are preserved in the repository.
+The final local master is `video-production/payprobe-demo/deliverables/PayProbe-Demo-v1.mp4`. The approved film is now [public on YouTube](https://youtu.be/N5HF1Um5x_U) and linked in the [submitted PayProbe entry](https://devpost.com/software/payprobe-wng98r). Publication and Devpost's Project submitted! confirmation were observed on 10 November 2026. The editable project and referenced preview assets are preserved in the repository. See [submission receipt](SUBMISSION-RECEIPT.md).
 
 | Property | Verified result |
 | --- | --- |
@@ -25,4 +25,4 @@ Verification artifacts:
 - [Rendered contact sheet](video-production/payprobe-demo/deliverables/PayProbe-Demo-v1-contact-sheet.jpg)
 - [Preview and rendered-frame acceptance](docs/demo/video-preview-acceptance.md)
 
-Video hosting/upload, public live-demo hosting, real PayPal integration and hackathon submission remain separate stages. The later FollowThrough-style repository presentation task remains deferred under the user's saved brief.
+Public video upload and hackathon submission are complete. Public live-demo hosting and real PayPal integration remain separate follow-up stages. The later FollowThrough-style repository presentation task remains deferred under the user's saved brief.
