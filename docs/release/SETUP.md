@@ -1,6 +1,6 @@
 # Local setup and proposed hosting
 
-Status: implementation-stage instructions checked against P1 source on 10 November 2026. Payments are deterministic simulations. No PayPal account, credentials, or API access is needed. DeepSeek is the only external runtime API.
+Status: instructions checked against the integrated P1/P3 headless command source on 10 November 2026. Payments are deterministic simulations. No PayPal account, credentials, or API access is needed. DeepSeek is the only external runtime API. Main observed a real planner response and a reviewed simulated run with all four checks passing; the live explainer truncation repair and running UI verification are still pending.
 
 ## Local headless setup
 
@@ -31,7 +31,38 @@ Leave PayPal fields blank. No `OPENAI_API_KEY` is needed. The `openai` package i
 
 With the server running, `Invoke-RestMethod http://127.0.0.1:4310/health` should identify the simulated provider and `realPayPalVerified: false`. Health is a process check, not full workflow verification. `doctor` reports credential presence without values. Node's experimental SQLite warning is expected on the current Node 24 runtime.
 
-Current P1 commands are `doctor`, `serve`, and `deepseek-probe`. Use CLI help for the integrated revision before documenting later `plan`, `run`, `resume`, `report`, or `explain` arguments. No approved graphical interface or public judge URL is established by these instructions.
+## Reviewed plan, execution, and reports
+
+Keep `npm start -- serve` running in one terminal. Open a second terminal at the same project root, using the same configuration and SQLite path. The CLI calls the configured HTTP adapter at `PAYPROBE_PUBLIC_URL`; it does not start the server automatically. Use the shipped `examples/download-contract.json` for the corrected digital-download sample.
+
+```powershell
+New-Item -ItemType Directory -Force .private/demo | Out-Null
+npm start -- plan examples/download-contract.json --out .private/demo/draft-plan.json
+# Inspect the exact draft plan and selected scenarios before accepting it:
+Get-Content .private/demo/draft-plan.json
+npm start -- plan --review .private/demo/draft-plan.json --out .private/demo/reviewed-plan.json
+npm start -- run .private/demo/reviewed-plan.json --auto-approve-simulated
+```
+
+`plan CONTRACT --out PATH` makes a real bounded DeepSeek request and needs the private API key. `plan --review DRAFT --out REVIEWED` explicitly accepts the inspected draft; it does not ask the model again. Review does not execute payment operations. Generated plans must pass schema and scenario/capability checks; an unreviewed or modified plan cannot be run.
+
+`run REVIEWED --auto-approve-simulated` explicitly authorizes approval of simulated orders only. Without that flag, `run REVIEWED` pauses for simulated approval. The report includes simulator approval information; an approval requires POST, and reading a link does not approve anything. To continue an existing paused/interrupted run with explicit simulated autoapproval, use its recorded ID:
+
+```powershell
+# Replace this with the id from the actual run output; do not start a replacement run:
+$runId = 'PASTE_ACTUAL_RUN_ID'
+npm start -- resume $runId --auto-approve-simulated
+npm start -- report $runId --format text
+npm start -- report $runId --format json
+# Optional real DeepSeek request; live truncation repair is still under verification:
+npm start -- explain $runId --out .private/demo/explanation.json
+```
+
+`resume` uses persisted run/order/operation state and does not replan. `report` defaults to text and also supports `--format json`. `run` and `resume` emit JSON reports. Deterministic findings remain separate from the optional AI explanation; an explanation failure does not establish a failed payment check or change its verdict. Both planner and explainer calls may consume API credit; report/review/run/resume do not call DeepSeek.
+
+Output paths for `plan` and `explain --out` use exclusive creation: choose new filenames for later attempts; existing files are never overwritten. `.private/` is ignored and must remain outside API publication allowlists. Use synthetic sample requirements and inspect artifacts before sharing them. Check `npm start -- COMMAND --help` for the selected integrated revision.
+
+UI layout/interactions are approved with a graphite/amber/ivory/plum palette adjustment; P4 runtime implementation is underway. These CLI instructions do not establish final UI verification or a public judge URL. Design preview fixtures are not runtime evidence.
 
 Stop with Ctrl+C. Keep the SQLite file to preserve state. Do not delete it as a recovery technique or publish it as demonstration evidence. Redacted report export must be checked separately.
 
