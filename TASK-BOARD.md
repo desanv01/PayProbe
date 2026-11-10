@@ -76,7 +76,7 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P6.2 Setup/release instructions and README proposal prepared.
 - DONE P6.3 Initial historical storyboard prepared. Future video must use HyperFrames/MajuPilot reference after a new discussion; all related work held.
 - DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
-- ACTIVE P6.5 User approved 170-second MajuPilot-style HyperFrames video with actual CLI and standard synthetic English narration. P6 composition/P4 capture/P5 preview verification. Complete Studio preview before any final film render.
+- DONE P6.5 Complete 170-second MajuPilot-style narrated HyperFrames preview built. Genuine native console recordings include actual DeepSeek request/full six-second wait/returned response, execution, observed FAIL, corrected case and S4 evidence. Checks and normal-speed 170/170 playback pass. Studio: http://localhost:4390/#project/payprobe-demo. Source/assets: draft PR #35. User reviewed the preview and approved it; final HyperFrames rendering and artifact verification ACTIVE.
 - DONE P6.6 Public repository and prerelease tag/assets verified, including anonymous ZIP download and checksum. Video/public live-demo links remain future work.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
 - DONE P6.8 Simulated GitHub prerelease v0.1.0-simulated published; hackathon submission remains a separate uncompleted stage.

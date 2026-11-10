@@ -1,6 +1,6 @@
 # PayProbe development rules
 
-Current user update: non-video local implementation and prerelease are complete. User approved the 170-second MajuPilot-style HyperFrames plan and authorizes video authoring/capture/assembly now, with the actual CLI and standard synthetic English preview narration (no voice imitation). Show the complete checked Studio preview and WAIT for explicit user approval before final film rendering. P6 owns video-production/payprobe-demo, P4 owns private native CLI capture, P5 verifies preview. Repository presentation redesign remains deferred until video and submission are complete.
+Current user update: non-video local implementation and prerelease are complete. User approved the 170-second MajuPilot-style HyperFrames plan and authorizes video authoring/capture/assembly now, with the actual CLI and standard synthetic English preview narration (no voice imitation). The complete checked Studio preview was shown; the user reviewed it and said it looks good. Final rendering of that approved composition is now authorized. Do not upload the finished film externally or submit it without the corresponding user instruction. P6 owns video-production/payprobe-demo, P4 owns private native CLI capture, P5 verifies preview. Repository presentation redesign remains deferred until video and submission are complete.
 
 Read PayProbe-Implementation-Gameplan-v2-2026-11-10.md and PROJECT-STATE.md before phase work. User instructions prevail.
 
