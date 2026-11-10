@@ -2,7 +2,7 @@
 
 Updated 2026-11-10. Payment provenance: **simulated** throughout current acceptance. No PayPal calls, buyer approval, real-provider verification, eligibility or submission readiness is established by these checks. DeepSeek is the only current external dependency; no repeated paid probes are needed here.
 
-This is a bounded checklist for the connected product, not a new test framework. Full stabilization is gated on P1-P4 being connected and actual UI approval/implementation. Run a focused regression after its owning component or fix becomes available; do not repeatedly run broad suites against concurrent edits.
+This is a bounded checklist for the connected product, not a new test framework. User approved UI structure/interactions with the v1.1 graphite/amber/ivory/plum palette; actual P4 implementation is still required before UI acceptance. Run a focused regression after its owning component or fix becomes available; do not repeatedly run broad suites against concurrent edits.
 
 | Priority / boundary | Small acceptance check | Current evidence / dependency |
 | --- | --- | --- |
@@ -15,8 +15,8 @@ This is a bounded checklist for the connected product, not a new test framework.
 | Deterministic verdicts | Seeded S1/S3/S4 faults fail; corrected four-scenario run passes with preconditions; wrong amount/currency/identity or missing provider observations cannot pass | Pending P2 interfaces, then bounded targeted checks |
 | Capability/errors | Missing hook => UNSUPPORTED; missing essential observation => INCONCLUSIVE; execution failure => ERROR | Pending P2 verdict projection |
 | Planning / review | Valid DeepSeek plan requires explicit review; saved plan executes without another model request; blank/invalid/truncated outputs cannot silently execute | Pending P3; use local transport responses for edge cases, actual probe evidence belongs to P1 |
-| Resume / report | Interrupted run resumes existing orders/mutation IDs; text/JSON reports preserve evidence references and simulated provenance; reports redact tokens/key material | Pending P2/P3 connected run/report interfaces |
-| UI / access | Approved representative sizes, keyboard/filter/evidence flow and judge access work; read-only navigation makes no mutations | Gated on explicit UI approval and P4 implementation |
+| Resume / report | Interrupted run resumes existing orders/mutation IDs; text/JSON reports preserve evidence references and simulated provenance; reports redact tokens/key material | P5 actual child-process check PASSED: approval pause, backend stop/restart, persisted reviewed source, same-run four-scenario completion, two purchases/captures/entitlements, text/JSON canary redaction; missing source refuses resume before payment operation |
+| UI / access | Approved representative sizes, keyboard/filter/evidence flow and judge access work; read-only navigation makes no mutations | UI structure/interactions approved; actual P4 implementation still pending acceptance |
 | Rehearsal | One clean install and hosted central journey against integrated revision after fixes | Pending P1-P4 integration and deployment; main coordinates |
 
 ## Focused command
@@ -24,3 +24,7 @@ This is a bounded checklist for the connected product, not a new test framework.
 `node --import tsx --test tests/stabilization/payment-http.test.ts`
 
 Uses explicit test-only config, in-process Fastify injection and a temporary workspace SQLite DB that is removed after closing the backend. It never loads `.env.local`, listens on a port, calls a model, or contacts PayPal. It validates route and persistence integration; it is not a network/hosted or runner acceptance claim. Package/CI inclusion belongs to main; P5 does not edit package/CI files.
+
+`node --import tsx --test tests/stabilization/cli-process.test.ts`
+
+One process-level check (1 pass, 0 fail, zero skips; approximately 20 seconds) against connected CLI main `5a9f8fa84c8fd56ff08acefce89a569e5956822a`. Starts the actual CLI backend on an isolated ephemeral loopback port and uses separate CLI processes sharing a temporary SQLite DB. Empty model/PayPal credentials and an isolated cwd prevent loading the user's `.env.local` or making model calls. Stops/restarts the backend at a simulated approval pause; inspects durable reviewed-source linkage; resumes the same run; checks persisted capture/purchase identity counts and report redaction using synthetic contaminated evidence. Removes the review association to verify fail-closed resume. Reports are read with the backend stopped. All test processes and temporary data were cleaned up. Network-enabled execution was used because restricted-shell loopback is known to fail; this is not hosted-access or abrupt-mid-capture crash validation. P1 owns adding this exact path to CI. Do not repeat unchanged checks.
