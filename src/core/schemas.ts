@@ -4,6 +4,8 @@ export const purchaseSchema = z.object({
   currency: z.literal('USD').default('USD'), productId: z.literal('sample-guide').default('sample-guide'),
 }).strict();
 export type PurchaseInput = z.infer<typeof purchaseSchema>;
+export const fixtureModeSchema = z.enum(['corrected','premature_fulfillment','duplicate_processing']);
+export type FixtureMode = z.infer<typeof fixtureModeSchema>;
 export const operationSchema = z.object({ operationId: z.string().uuid() }).strict();
 export const adapterVersion = '1.0';
 export const capabilities = ['create_order','handle_buyer_return','capture','observe_application','check_download','process_again','reconcile','arm_fault'] as const;

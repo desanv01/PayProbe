@@ -67,3 +67,21 @@ test('headless HTTP contract authenticates mutations and independent observer st
     assert.equal((await app.inject({method:'POST',url:'/api/deepseek/probe',headers})).json().error,'deepseek_key_missing');
   } finally {await app.close();}
 });
+
+test('explicit seeded fixture behaviors expose premature and duplicate deliveries through observations',async()=>{
+  const db=new Store(':memory:'),provider=new SimulatedProvider(db,'http://localhost:4310'),target=new SampleStore(db,provider);
+  try {
+    const premature=randomUUID();
+    const first=await target.create({purchaseId:premature,amountCents:100,currency:'USD',productId:'sample-guide'},randomUUID(),'premature_fulfillment');
+    await provider.approve(first.providerOrderId!);
+    assert.equal((await target.buyerReturn(premature)).entitlementCount,1);
+    assert.equal((await provider.get(first.providerOrderId!)).captures.length,0);
+    const repeated=randomUUID();
+    const second=await target.create({purchaseId:repeated,amountCents:100,currency:'USD',productId:'sample-guide'},randomUUID(),'duplicate_processing');
+    await provider.approve(second.providerOrderId!);
+    assert.equal((await target.capture(repeated,randomUUID())).entitlementCount,1);
+    assert.equal((await target.reconcile(repeated)).entitlementCount,2);
+    assert.equal((await provider.get(second.providerOrderId!)).captures.length,1);
+    assert.equal('fixtureMode' in target.observe(repeated),false);
+  } finally {db.close();}
+});
