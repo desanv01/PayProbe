@@ -21,39 +21,39 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - DONE P1.7 Lost-response transport hook and target reconciliation foundation.
 - DONE P1.8 Bounded DeepSeek JSON adapter; one real probe passed (81 total tokens).
 - DONE P1.9 Worker-reported typecheck/build and three focused foundation checks.
-- ACTIVE P1.10 Remote granular commits, PR #8 and CI result verification.
-- ACTIVE P1.11 Seeded premature/duplicate target hooks for P2.
-- ACTIVE P1.12 Fix reproduced preapproval capture becoming stuck uncertain; P5 regression.
-- TODO P1.13 Final handover/integration merge.
+- DONE P1.10 Foundation remote commits/green CI; PR #8 merged at 871b613.
+- DONE P1.11 Seeded premature/duplicate target hooks for P2.
+- DONE P1.12 Preapproval-capture bug #10 fixed; P5 2/2 recovery regressions pass and are merged.
+- ACTIVE P1.13 Foundation handover complete; final CLI integration waits for P2/P3 merges. Include post-merge handover commit a843169 in integration publication.
 
 ## P2 — Scenario engine [ACTIVE]
-- ACTIVE P2.1 Shared RunnerPlan contract and HTTP adapter.
-- ACTIVE P2.2 Persisted run lifecycle, evidence sequence and resume.
-- TODO P2.3 S1 approval without fulfillment.
-- TODO P2.4 S2 matching completed capture with one fulfillment.
-- TODO P2.5 S3 repeated processing without duplicate entitlement.
-- TODO P2.6 S4 lost-response target reconciliation.
-- TODO P2.7 PASS/FAIL/INCONCLUSIVE/UNSUPPORTED/ERROR semantics.
-- TODO P2.8 Seeded fault detection using observations, not fixture flags.
-- TODO P2.9 Minimal connected checks, remote commits/PR and handover.
+- DONE P2.1 Shared RunnerPlan contract and HTTP adapter implemented locally.
+- DONE P2.2 Persisted run lifecycle/resume and interrupted-capture no-recapture check.
+- DONE P2.3 S1 approval without fulfillment implemented and focused check passed.
+- DONE P2.4 S2 matching completed capture implemented and focused check passed.
+- DONE P2.5 S3 repeated processing implemented and focused check passed.
+- DONE P2.6 S4 lost-response reconciliation implemented and focused check passed.
+- DONE P2.7 Five verdict categories implemented; focused distinctions checked.
+- DONE P2.8 Seeded premature/duplicate faults detected from observations.
+- DONE P2.9 Five focused checks, publication/handover; PR #16 merged e1d78c4 after CI success.
 
 ## P3 — DeepSeek and commands [ACTIVE]
-- ACTIVE P3.1 Strict planner schema and semantic validation.
-- ACTIVE P3.2 Shared P2 RunnerPlan mapping and reviewed plan persistence.
-- TODO P3.3 Bounded planner using P1 DeepSeek client.
-- TODO P3.4 Evidence-grounded explainer and reference validation.
-- TODO P3.5 Text/JSON report projections.
-- TODO P3.6 plan/run/resume/report/explain command registration.
-- TODO P3.7 Wiring into P1 entrypoint through owner coordination.
-- TODO P3.8 Complete headless journey, targeted checks, remote commits/PR/handover.
+- DONE P3.1 Strict planner schema and semantic validation.
+- DONE P3.2 Shared RunnerPlan mapping and reviewed plan persistence.
+- DONE P3.3 Bounded planner using P1 DeepSeek client implemented.
+- DONE P3.4 Evidence-grounded explainer/reference validation implemented.
+- DONE P3.5 Text/JSON report projections.
+- DONE P3.6 plan/run/resume/report/explain command registration exports.
+- ACTIVE P3.7 P1 worker wiring actual entrypoint on new integration branch.
+- ACTIVE P3.8 Five focused workflow tests with model doubles pass; PR #15 merged 0d4ac37. Live planner/explainer semantic check pending wiring.
 
 ## P4 — UI and judge access [ACTIVE, approval gate]
-- ACTIVE P4.1 FollowThrough reference inspection and design specification.
-- ACTIVE P4.2 Actual wide/compact terminal mockups.
-- TODO P4.3 Doctor, plan review, simulated approval, running/uncertain/reconcile states.
-- TODO P4.4 Results, evidence, five verdict types, empty/filter/error states.
-- TODO P4.5 Small responsive browser/judge mockups.
-- WAIT P4.6 Present complete package here and receive explicit user approval.
+- DONE P4.1 FollowThrough reference inspection and design specification.
+- DONE P4.2 Actual wide/compact rendered proposal layouts exist; final package inspection underway.
+- DONE P4.3 Doctor, plan, simulated approval, running/uncertain/reconcile previews exist.
+- DONE P4.4 Results/evidence/verdict/empty/filter/error previews exist.
+- DONE P4.5 Browser mockups rendered; copy refinements applied. Complete review-v1 gallery ready.
+- WAIT P4.6 Main presented actual images/full gallery and asked explicit approval in chat; user reply pending.
 - WAIT P4.7 Implement approved terminal components/navigation.
 - WAIT P4.8 Implement approved browser interface and backend connections.
 - TODO P4.9 Local packaging, hosting configuration/persistent storage and access.
@@ -62,7 +62,7 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 ## P5 — Stabilization [ACTIVE preparation; final pass dependency-gated]
 - ACTIVE P5.1 Small acceptance matrix for existing interfaces.
 - ACTIVE P5.2 Reproduce central-path defects and track issues.
-- ACTIVE P5.3 Targeted regression for preapproval capture and lost-response recovery.
+- DONE P5.3 Targeted recovery regressions 2/2 pass after fix; PR #12 merged. Issue #10 closed.
 - TODO P5.4 Verify startup and full central journey after connections.
 - TODO P5.5 Verify amount/currency, repeated delivery, missing evidence and resume.
 - TODO P5.6 Validate model error handling and report redaction without redundant paid calls.
@@ -71,10 +71,10 @@ Main owns this board; workers update docs/handoffs/Pn.md and send meaningful pro
 - TODO P5.9 Close resolved bugs, document limitations, publish PR/handover.
 
 ## P6 — Delivery [ACTIVE preparation]
-- ACTIVE P6.1 Accurate simulation-only narrative and source attribution.
-- ACTIVE P6.2 Setup/release instructions and README proposal.
-- ACTIVE P6.3 Under-three-minute script/storyboard.
-- ACTIVE P6.4 Submission draft, release checklist and hosting proposal.
+- DONE P6.1 Simulation-only narrative/attribution draft; actual release claims remain gated.
+- DONE P6.2 Setup/release instructions and README proposal prepared.
+- DONE P6.3 Under-three-minute script/storyboard prepared; no recording yet.
+- DONE P6.4 Submission draft, release checklist and hosting proposal; docs PR #14 merged.
 - WAIT P6.5 Record actual completed app after approved UI exists.
 - TODO P6.6 Verify public repo/video/demo links and access.
 - WAIT P6.7 Reassess real integration/eligibility before claiming submission readiness.
