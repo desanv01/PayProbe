@@ -35,11 +35,22 @@ VIDEO HOLD: capture, rendering, assembly, storyboard work and reference-project 
 - [ ] Record real run below three minutes with persistent simulation disclosure; verify playback and duration.
 - [ ] Verify repository/video/demo links in a signed-out context and document any required access.
 
-## Deferred submission / release decision
+## Local simulated GitHub prerelease
+
+This prerelease packages the locally implemented simulation-only product. Main is authorized to publish the verified source ZIP/checksum through GitHub. Held video, public hosting and real PayPal validation do not gate this explicitly simulated prerelease.
+
+- [x] Local implementation/CLI/UI and focused acceptance checks recorded; payment provenance remains simulated.
+- [x] Concrete package script, deployment templates and local Docker build/health/restart checks prepared.
+- [ ] Main merges the owned delivery PR and selects the final source revision.
+- [ ] Final ZIP/sidecar/per-file hashes, complete public source input set and packaged Markdown links pass remote-match and P5 artifact review.
+- [ ] Main publishes a GitHub prerelease explicitly labeled simulated, attaches the verified ZIP/checksum, and verifies its source/assets/access.
+- [ ] Release notes clearly keep video, hosted access, real provider verification and hackathon eligibility/submission pending.
+
+## Deferred hackathon submission / real-provider qualification
 
 - [ ] Separate real PayPal sandbox integration and validation completed when authorized, or explicit scope mismatch resolved with user before any submission decision.
 - [ ] Current official rules/deadline/eligibility and contribution disclosures checked; simulation never represented as live provider verification.
-- [ ] User authorizes actual external submission/release; no external upload in current P6 preparation task.
+- [ ] User authorizes actual hackathon submission or later real-provider release; the current local simulated GitHub prerelease is separate.
 - [ ] Actual submission receipt/completion independently observed before claiming submitted.
 - [ ] Release notes tie source SHA, supported behavior, checks, limitations, access instructions, and recorded artifact together.
 

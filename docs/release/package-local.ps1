@@ -16,7 +16,7 @@ New-Item -ItemType Directory -Force -Path $outputRoot | Out-Null
 
 # Public source boundaries, not a workspace archive. No dist, environment, DB,
 # dependencies, private data, design previews, or captured payment artifacts.
-$paths = @('package.json','package-lock.json','tsconfig.json','.env.example','LICENSE','README.md','examples/download-contract.json',
+$paths = @('package.json','package-lock.json','tsconfig.json','.env.example','.gitignore','LICENSE','README.md','examples/download-contract.json',
   'docs/release/SETUP.md','docs/release/CHECKLIST.md','docs/release/CONTRIBUTING-LIMITATIONS.md','docs/release/LOCAL-DELIVERY.md','docs/release/package-local.ps1',
   'docs/release/deploy/Dockerfile','docs/release/deploy/Dockerfile.dockerignore','docs/release/deploy/compose.yaml','docs/release/deploy/env.example')
 foreach ($directory in @('src','tests')) {
